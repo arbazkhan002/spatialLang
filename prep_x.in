@@ -1,0 +1,333 @@
+We/PRP
+'re/VBP
+sitting/VBG
+in/IN
+Baretto/NNP
+'s/POS
+in/IN
+the/DT
+Alan/NNP
+Gilbert/NNP
+Building/NNP
+,/,
+across/IN
+Grattan/JJ
+street/NN
+is/VBZ
+one/CD
+of/IN
+the/DT
+medical/JJ
+buildings/NNS
+./.
+***
+nsubj(sitting-3, We-1)
+aux(sitting-3, 're-2)
+root(ROOT-0, sitting-3)
+prep_in(sitting-3, Baretto-5)
+possessive(Baretto-5, 's-6)
+det(Building-11, the-8)
+nn(Building-11, Alan-9)
+nn(Building-11, Gilbert-10)
+prep_in(sitting-3, Building-11)
+amod(street-15, Grattan-14)
+prep_across(sitting-3, street-15)
+cop(one-17, is-16)
+rcmod(street-15, one-17)
+det(buildings-21, the-19)
+amod(buildings-21, medical-20)
+prep_of(one-17, buildings-21)
+
+Down/IN
+the/DT
+hill/NN
+along/IN
+Grattan/NNP
+street/NN
+the/DT
+new/JJ
+building/NN
+being/VBG
+constructed/VBN
+is/VBZ
+the/DT
+Peter/NNP
+Doherty/NNP
+Institute/NNP
+and/CC
+diagonally/NN
+across/IN
+the/DT
+road/NN
+-LRB-/-LRB-
+Royal/NNP
+Parade/NNP
+-RRB-/-RRB-
+is/VBZ
+Melbourne/NNP
+Hospital/NNP
+./.
+***
+det(hill-3, the-2)
+prep_down(Institute-16, hill-3)
+nn(street-6, Grattan-5)
+prep_along(hill-3, street-6)
+det(building-9, the-7)
+amod(building-9, new-8)
+nsubj(Institute-16, building-9)
+auxpass(constructed-11, being-10)
+partmod(building-9, constructed-11)
+cop(Institute-16, is-12)
+det(Institute-16, the-13)
+nn(Institute-16, Peter-14)
+nn(Institute-16, Doherty-15)
+root(ROOT-0, Institute-16)
+nsubj(Hospital-28, diagonally-18)
+det(road-21, the-20)
+prep_across(diagonally-18, road-21)
+nn(Parade-24, Royal-23)
+appos(road-21, Parade-24)
+cop(Hospital-28, is-26)
+nn(Hospital-28, Melbourne-27)
+conj_and(Institute-16, Hospital-28)
+
+In/IN
+the/DT
+other/JJ
+direction/NN
+the/DT
+open/JJ
+area/NN
+is/VBZ
+University/NNP
+square/NN
+-LRB-/-LRB-
+there/EX
+is/VBZ
+a/DT
+carpark/NN
+underneath/NN
+-RRB-/-RRB-
+at/IN
+the/DT
+city/NN
+end/NN
+of/IN
+University/NNP
+square/NN
+is/VBZ
+the/DT
+law/NN
+building/NN
+./.
+***
+det(direction-4, the-2)
+amod(direction-4, other-3)
+prep_in(square-10, direction-4)
+det(area-7, the-5)
+amod(area-7, open-6)
+nsubj(square-10, area-7)
+cop(square-10, is-8)
+nn(square-10, University-9)
+dep(is-25, square-10)
+expl(is-13, there-12)
+parataxis(square-10, is-13)
+det(underneath-16, a-14)
+nn(underneath-16, carpark-15)
+nsubj(is-13, underneath-16)
+det(end-21, the-19)
+nn(end-21, city-20)
+prep_at(square-10, end-21)
+prep_of(end-21, University-23)
+nsubj(is-25, square-24)
+root(ROOT-0, is-25)
+det(building-28, the-26)
+nn(building-28, law-27)
+attr(is-25, building-28)
+
+Across/IN
+Grattan/JJ
+street/NN
+from/IN
+University/NNP
+square/NN
+there/EX
+is/VBZ
+an/DT
+entrance/NN
+to/TO
+the/DT
+campus/NN
+,/,
+straight/JJ
+ahead/RB
+is/VBZ
+an/DT
+overpass/NN
+building/NN
+and/CC
+to/TO
+the/DT
+right/NN
+are/VBP
+the/DT
+various/JJ
+Engineering/NNP
+buildings/NNS
+./.
+***
+amod(street-3, Grattan-2)
+prep_across(is-8, street-3)
+nn(square-6, University-5)
+prep_from(street-3, square-6)
+expl(is-8, there-7)
+ccomp(building-20, is-8)
+det(entrance-10, an-9)
+nsubj(is-8, entrance-10)
+det(campus-13, the-12)
+prep_to(entrance-10, campus-13)
+nsubj(building-20, straight-15)
+advmod(building-20, ahead-16)
+cop(building-20, is-17)
+det(building-20, an-18)
+nn(building-20, overpass-19)
+root(ROOT-0, building-20)
+det(right-24, the-23)
+prep_to(buildings-29, right-24)
+cop(buildings-29, are-25)
+det(buildings-29, the-26)
+amod(buildings-29, various-27)
+nn(buildings-29, Engineering-28)
+conj_and(building-20, buildings-29)
+
+The/DT
+road/NN
+goes/VBZ
+in/IN
+a/DT
+big/JJ
+loop/NN
+around/IN
+the/DT
+campus/NN
+you/PRP
+can/MD
+either/RB
+go/VB
+left/VBN
+towards/IN
+the/DT
+Medical/NNP
+buildings/NNS
+or/CC
+right/JJ
+passed/VBD
+the/DT
+Engineering/NNP
+buildings/NNS
+then/RB
+head/NN
+North/JJ
+-LRB-/-LRB-
+away/RB
+from/IN
+University/NNP
+square/NN
+-RRB-/-RRB-
+./.
+***
+det(road-2, The-1)
+nsubj(goes-3, road-2)
+dep(passed-22, goes-3)
+det(loop-7, a-5)
+amod(loop-7, big-6)
+prep_in(goes-3, loop-7)
+det(campus-10, the-9)
+prep_around(loop-7, campus-10)
+dobj(go-14, campus-10)
+nsubj(go-14, you-11)
+aux(go-14, can-12)
+advmod(go-14, either-13)
+rcmod(campus-10, go-14)
+dep(go-14, left-15)
+det(buildings-19, the-17)
+nn(buildings-19, Medical-18)
+prep_towards(left-15, buildings-19)
+dep(go-14, right-21)
+conj_or(left-15, right-21)
+root(ROOT-0, passed-22)
+det(buildings-25, the-23)
+nn(buildings-25, Engineering-24)
+dobj(passed-22, buildings-25)
+advmod(passed-22, then-26)
+nsubj(passed-22, head-27)
+amod(head-27, North-28)
+nn(square-33, University-32)
+prep_away_from(North-28, square-33)
+
+One/CD
+other/JJ
+area/NN
+you/PRP
+may/MD
+want/VB
+to/TO
+explore/VB
+is/VBZ
+South/NNP
+Lawn/NNP
+which/WDT
+you/PRP
+can/MD
+get/VB
+to/TO
+by/IN
+going/VBG
+underneath/IN
+the/DT
+overpass/NN
+building/VBG
+directly/RB
+in/IN
+front/NN
+of/IN
+you/PRP
+when/WRB
+you/PRP
+enter/VBP
+the/DT
+campus/NN
+./.
+***
+num(area-3, One-1)
+amod(area-3, other-2)
+dobj(want-6, area-3)
+nsubj(Lawn-11, area-3)
+nsubj(want-6, you-4)
+xsubj(explore-8, you-4)
+aux(want-6, may-5)
+rcmod(area-3, want-6)
+aux(explore-8, to-7)
+xcomp(want-6, explore-8)
+cop(Lawn-11, is-9)
+nn(Lawn-11, South-10)
+root(ROOT-0, Lawn-11)
+dobj(get-15, Lawn-11)
+rel(get-15, which-12)
+nsubj(get-15, you-13)
+xsubj(to-16, you-13)
+aux(get-15, can-14)
+rcmod(Lawn-11, get-15)
+xcomp(get-15, to-16)
+prepc_by(get-15, going-18)
+det(overpass-21, the-20)
+prep_underneath(going-18, overpass-21)
+partmod(overpass-21, building-22)
+advmod(building-22, directly-23)
+prep_in_front_of(building-22, you-27)
+advmod(enter-30, when-28)
+nsubj(enter-30, you-29)
+advcl(building-22, enter-30)
+det(campus-32, the-31)
+dobj(enter-30, campus-32)
+
