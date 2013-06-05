@@ -109,26 +109,26 @@ def output_parser(f):
 
 		counter=0
 		for tag in pos:
-			key,value=tag.split("/")
+			try:
+				key,value=tag.split("/")
+			except ValueError:
+				reverse_index=tag[::-1].find("/")
+				index=len(tag)-reverse_index-1
+				key,value=tag[:index],tag[index+1:]	
 			#~ print key,value
 			#~ add_to_pos(key,value)
 			pos_dict[key]=value
 			loc_dict[key]=counter
 			counter+=1
 		
-		triples = []					
 		raw_triples = []			#triples with the word postions
 		for rel in deps:
 			s=rel
 			raw_gov,raw_dep=s[s.find("(")+1:s.find(")")].split(",")
 			raw_gov=raw_gov.strip()	
-			gov=raw_gov[:raw_gov.find("-")]
 			raw_dep=raw_dep.strip()	
-			dep=raw_dep[:raw_dep.find("-")]
 			rel=s[:s.find("(")]
 			rel.strip()
-			#~ print rel,gov,dep,s
-			triples.append([rel,gov,dep])
 			raw_triples.append([rel,raw_gov,raw_dep])
 		
 		#~ print triples	
@@ -137,39 +137,45 @@ def output_parser(f):
 		for rel,raw_gov,raw_dep in raw_triples:
 			gov,dep=map(unraw,[raw_gov,raw_dep])
 			if rel.startswith("prep_"):
-				
-				#~ Direct case of a noun preposition noun				
-				if pos_dict[gov]==pos_dict[dep]:
+				if 1:
+					#~ Direct case of a noun preposition noun				
+					if pos_dict[gov]==pos_dict[dep]:
+						
+						#~ Get the spatial relation out from the grammatical relation
+						sr = rel[rel.find("prep_")+5:]
+						#~ print raw_gov,rel,raw_dep
+						
+						#~ Find the list of modifiers adjoining the nouns
+						l = find_modifiers(raw_triples,raw_gov)
+						
+						ro = find_modifiers(raw_triples,raw_dep)
+						
+						
+						#--------------- For gov  -------------------#
 					
-					#~ Get the spatial relation out from the grammatical relation
-					sr = rel[rel.find("prep_")+5:]
-					
-					#~ Find the list of modifiers adjoining the nouns
-					l = find_modifiers(triples, raw_triples,raw_gov)
-					
-					ro = find_modifiers(triples, raw_triples,raw_dep)
-					
-					
-					#--------------- For gov  -------------------#
-				
-					# Identifying locatum (l), RO(ro) and spatial relation (sr)
-					print " ".join([l,sr,ro])
+						# Identifying locatum (l), RO(ro) and spatial relation (sr)
+						print ":".join([l,sr,ro])
+				else:
+					print "Error!!!"
+					exit		
 
 #~ raw word is as it is mentioned in typed dependencies
-#~ 'house-8' is raw, 'house' is unraw
+#~ 'house-8' is raw, 'house' is unraw. A general example is 't-intersection-6'
 def unraw(raw_word):
-	return raw_word[:raw_word.find("-")]
+	reverse_ind = raw_word[::-1].find("-")
+	ind = len(raw_word)-reverse_ind-1
+	return raw_word[:ind]
 								
 #~ Take the set of all typed dependencies for a sentence and return a word with all its modifiers attached in
 #~ the order of occurrence in the sentence
 """ ASSUMPTION : Finds the modifiers from the triplets where it stays in the gov position """
-def find_modifiers (triples, raw_triples, raw_gov):
+def find_modifiers (raw_triples, raw_gov):
 		
 		gov = unraw(raw_gov)
-		gov_pos = int(raw_gov[raw_gov.find("-")+1:])
+		gov_pos = find_position_in_raw_word(raw_gov)
 		#~ Find all the triplets where our word occurs at gov position
-		result= query_triplet(triples,None,gov,None)
-		
+		result= query_triplet(raw_triples,None,raw_gov,None)
+	
 		#~ Attach the modifiers in the order they occured in the sentence
 		sorted_mods=[]
 		mods=[]
@@ -177,16 +183,14 @@ def find_modifiers (triples, raw_triples, raw_gov):
 		#~ raw_gov_word=raw_triples[result[0][1]][GOV_POS]				# Since, result is of the form [  [[rel_r,gov_r,dep_r],tindex] , ... ]
 		#~ gov_pos=int(raw_gov_word[raw_gov_word.find("-")+1:])
 		
-		#~ if gov=="house":
-			#~ print result,raw_triples[result[0][1]], raw_gov_word
 		for [[rel_r,gov_r,dep_r],tindex] in result:
 			if rel_r in modifiers:			
 				#~ find the word position of the modifier
 				#~ raw_triples[tindex] has the word in raw form
 				alpha = raw_triples[tindex][DEP_POS]
-				if alpha.startswith(dep_r+"-"):
-					dep_r_pos=int(alpha[alpha.find("-")+1:])
-					mods.append([dep_r_pos,dep_r])
+				if alpha.startswith(dep_r):
+					dep_r_pos=find_position_in_raw_word(dep_r)
+					mods.append([dep_r_pos,unraw(dep_r)])
 					
 				
 
@@ -194,6 +198,13 @@ def find_modifiers (triples, raw_triples, raw_gov):
 		mods.sort()
 		sorted_mods = map(listGet(1),mods)
 		return " ".join(sorted_mods)
+
+#~ Give 6 from 'house-6' or 1 from 't-intersection-1'
+def find_position_in_raw_word(raw_word):
+	reverse_ind = raw_word[::-1].find("-")
+	ind = len(raw_word)-reverse_ind-1
+	word_pos=raw_word[ind+1:]
+	return (word_pos)	
 		
 #~ print len(sentences)
 if __name__=="__main__":

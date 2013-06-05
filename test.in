@@ -114,3 +114,4492 @@ prep_from(Its-1, head-7)
 det(alley-10, the-9)
 prep_of(head-7, alley-10)
 
+I/PRP
+'m/VBP
+on/IN
+the/DT
+Docklands/JJ
+esplanade/NN
+in/IN
+the/DT
+multi/JJ
+colored/JJ
+6/CD
+story/NN
+building/NN
+./.
+***
+nsubj('m-2, I-1)
+root(ROOT-0, 'm-2)
+det(esplanade-6, the-4)
+amod(esplanade-6, Docklands-5)
+prep_on('m-2, esplanade-6)
+det(building-13, the-8)
+amod(building-13, multi-9)
+amod(building-13, colored-10)
+num(building-13, 6-11)
+nn(building-13, story-12)
+prep_in(esplanade-6, building-13)
+
+If/IN
+coming/VBG
+down/RP
+La/NNP
+Trobe/NNP
+Street/NNP
+past/IN
+Etihad/NNP
+Stadium/NNP
+turn/VBP
+right/RB
+when/WRB
+you/PRP
+hit/VBD
+the/DT
+Esplanade/NNP
+and/CC
+we/PRP
+are/VBP
+the/DT
+second/JJ
+building/NN
+on/IN
+your/PRP$
+right/NN
+./.
+***
+mark(coming-2, If-1)
+csubj(turn-10, coming-2)
+prt(coming-2, down-3)
+nn(Street-6, La-4)
+nn(Street-6, Trobe-5)
+dobj(coming-2, Street-6)
+nn(Stadium-9, Etihad-8)
+prep_past(Street-6, Stadium-9)
+root(ROOT-0, turn-10)
+advmod(turn-10, right-11)
+advmod(hit-14, when-12)
+nsubj(hit-14, you-13)
+advcl(turn-10, hit-14)
+det(Esplanade-16, the-15)
+dobj(hit-14, Esplanade-16)
+nsubj(building-22, we-18)
+cop(building-22, are-19)
+det(building-22, the-20)
+amod(building-22, second-21)
+advcl(turn-10, building-22)
+conj_and(hit-14, building-22)
+poss(right-25, your-24)
+prep_on(building-22, right-25)
+
+In/IN
+Swan/NNP
+St/NNP
+Optometrist/NNP
+in/IN
+Docker/NNP
+Street/NNP
+,/,
+seven/CD
+meters/NNS
+from/IN
+the/DT
+North-east/NN
+corner/VB
+of/IN
+Swan/NNP
+St/NNP
+,/,
+opposite/IN
+the/DT
+stone-coloured/JJ
+Beretta/NNP
+'s/POS
+Hotel/NN
+and/CC
+next/RB
+to/TO
+the/DT
+public/JJ
+car/NN
+park/NN
+./.
+./.
+***
+nn(Optometrist-4, Swan-2)
+nn(Optometrist-4, St-3)
+prep_in(corner-14, Optometrist-4)
+nn(Street-7, Docker-6)
+prep_in(Optometrist-4, Street-7)
+num(meters-10, seven-9)
+nsubj(corner-14, meters-10)
+det(North-east-13, the-12)
+prep_from(meters-10, North-east-13)
+root(ROOT-0, corner-14)
+prep(corner-14, of-15)
+nn(St-17, Swan-16)
+pobj(of-15, St-17)
+prep(corner-14, opposite-19)
+conj_and(of-15, opposite-19)
+det(Hotel-24, the-20)
+amod(Hotel-24, stone-coloured-21)
+poss(Hotel-24, Beretta-22)
+pobj(opposite-19, Hotel-24)
+prep(corner-14, next-26)
+conj_and(of-15, next-26)
+dep(of-15, to-27)
+det(park-31, the-28)
+amod(park-31, public-29)
+nn(park-31, car-30)
+pobj(to-27, park-31)
+
+on/IN
+Morotai/NNP
+Parade/NNP
+,/,
+at/IN
+a/DT
+t-intersection/NN
+of/IN
+Coomalie/NNP
+Crescent/NNP
+,/,
+7o/JJ
+meters/NNS
+from/IN
+The/DT
+Tobruk/NNP
+Avenue/NNP
+end/NN
+of/IN
+the/DT
+Bell/NNP
+St/NNP
+Mall/VBN
+in/IN
+West/NNP
+Heidelberg/NNP
+./.
+***
+nn(Parade-3, Morotai-2)
+prep_on(Mall-23, Parade-3)
+det(t-intersection-7, a-6)
+prep_at(Mall-23, t-intersection-7)
+nn(Crescent-10, Coomalie-9)
+prep_of(t-intersection-7, Crescent-10)
+amod(meters-13, 7o-12)
+nsubj(Mall-23, meters-13)
+det(end-18, The-15)
+nn(end-18, Tobruk-16)
+nn(end-18, Avenue-17)
+prep_from(meters-13, end-18)
+det(St-22, the-20)
+nn(St-22, Bell-21)
+prep_of(end-18, St-22)
+root(ROOT-0, Mall-23)
+nn(Heidelberg-26, West-25)
+prep_in(Mall-23, Heidelberg-26)
+
+In/IN
+my/PRP$
+apartment/NN
+in/IN
+the/DT
+big/JJ
+block/NN
+of/IN
+flats/NNS
+on/IN
+the/DT
+corner/NN
+of/IN
+Park/NNP
+Street/NNP
+and/CC
+Kings/NNPS
+Way/NNP
+./.
+***
+root(ROOT-0, In-1)
+poss(apartment-3, my-2)
+pobj(In-1, apartment-3)
+det(block-7, the-5)
+amod(block-7, big-6)
+prep_in(apartment-3, block-7)
+prep_of(block-7, flats-9)
+det(corner-12, the-11)
+prep_on(flats-9, corner-12)
+nn(Street-15, Park-14)
+prep_of(corner-12, Street-15)
+nn(Way-18, Kings-17)
+prep_of(corner-12, Way-18)
+conj_and(Street-15, Way-18)
+
+The/DT
+apartments/NNS
+take/VBP
+up/RP
+the/DT
+whole/JJ
+block/NN
+of/IN
+Park/NNP
+Street/NNP
+,/,
+Eastern/NNP
+Road/NNP
+,/,
+Napier/NNP
+Street/NNP
+and/CC
+Kings/NNPS
+Way/NNP
+./.
+***
+det(apartments-2, The-1)
+nsubj(take-3, apartments-2)
+root(ROOT-0, take-3)
+prt(take-3, up-4)
+det(block-7, the-5)
+amod(block-7, whole-6)
+dobj(take-3, block-7)
+nn(Street-10, Park-9)
+prep_of(block-7, Street-10)
+nn(Road-13, Eastern-12)
+prep_of(block-7, Road-13)
+conj_and(Street-10, Road-13)
+nn(Street-16, Napier-15)
+prep_of(block-7, Street-16)
+conj_and(Street-10, Street-16)
+nn(Way-19, Kings-18)
+prep_of(block-7, Way-19)
+conj_and(Street-10, Way-19)
+
+You/PRP
+enter/VBP
+my/PRP$
+flat/NN
+on/IN
+Napier/NNP
+Street/NNP
+./.
+***
+nsubj(enter-2, You-1)
+root(ROOT-0, enter-2)
+poss(flat-4, my-3)
+dobj(enter-2, flat-4)
+nn(Street-7, Napier-6)
+prep_on(enter-2, Street-7)
+
+At/IN
+9/CD
+Lee/NNP
+Street/NNP
+Flemington/VBZ
+where/WRB
+I/PRP
+am/VBP
+in/IN
+my/PRP$
+house/NN
+which/WDT
+is/VBZ
+on/IN
+the/DT
+right/JJ
+side/NN
+if/IN
+you/PRP
+'re/VBP
+facing/VBG
+the/DT
+city/NN
+and/CC
+about/RB
+half/PDT
+way/NN
+down/RB
+the/DT
+street/NN
+./.
+***
+prep_at(Flemington-5, 9-2)
+nn(Street-4, Lee-3)
+nsubj(Flemington-5, Street-4)
+root(ROOT-0, Flemington-5)
+advmod(am-8, where-6)
+nsubj(am-8, I-7)
+advcl(Flemington-5, am-8)
+poss(house-11, my-10)
+prep_in(am-8, house-11)
+nsubj(is-13, house-11)
+rcmod(house-11, is-13)
+det(side-17, the-15)
+amod(side-17, right-16)
+prep_on(is-13, side-17)
+mark(facing-21, if-18)
+nsubj(facing-21, you-19)
+aux(facing-21, 're-20)
+advcl(is-13, facing-21)
+det(city-23, the-22)
+dobj(facing-21, city-23)
+quantmod(half-26, about-25)
+num(way-27, half-26)
+npadvmod(down-28, way-27)
+dobj(facing-21, down-28)
+advmod(city-23, down-28)
+conj_and(city-23, down-28)
+det(street-30, the-29)
+dobj(facing-21, street-30)
+conj_and(city-23, street-30)
+
+There/EX
+is/VBZ
+an/DT
+arch/NN
+with/IN
+roses/NNS
+growing/VBG
+on/IN
+it/PRP
+at/IN
+the/DT
+gate/NN
+and/CC
+the/DT
+house/NN
+is/VBZ
+a/DT
+double-fronted/JJ
+Victorian/JJ
+house/NN
+./.
+***
+expl(is-2, There-1)
+root(ROOT-0, is-2)
+det(arch-4, an-3)
+nsubj(is-2, arch-4)
+prep_with(arch-4, roses-6)
+partmod(roses-6, growing-7)
+prep_on(growing-7, it-9)
+det(gate-12, the-11)
+prep_at(growing-7, gate-12)
+det(house-15, the-14)
+nsubj(house-20, house-15)
+cop(house-20, is-16)
+det(house-20, a-17)
+amod(house-20, double-fronted-18)
+amod(house-20, Victorian-19)
+conj_and(is-2, house-20)
+
+Melbourne/NNP
+central/JJ
+office/NN
+towers/NNS
+,/,
+near/IN
+Melbourne/NNP
+Central/NNP
+shopping/NN
+center/NN
+./.
+***
+root(ROOT-0, Melbourne-1)
+amod(towers-4, central-2)
+nn(towers-4, office-3)
+dep(Melbourne-1, towers-4)
+nn(center-10, Melbourne-7)
+nn(center-10, Central-8)
+nn(center-10, shopping-9)
+prep_near(Melbourne-1, center-10)
+
+Its/PRP$
+on/IN
+Elizabeth/NNP
+st/VBP
+,/,
+just/RB
+down/RB
+from/IN
+the/DT
+intersection/NN
+of/IN
+Elizabeth/NNP
+and/CC
+Latrobe/NNP
+./.
+***
+nsubj(st-4, Its-1)
+prep_on(Its-1, Elizabeth-3)
+root(ROOT-0, st-4)
+advmod(down-7, just-6)
+advmod(st-4, down-7)
+det(intersection-10, the-9)
+prep_from(st-4, intersection-10)
+prep_of(intersection-10, Elizabeth-12)
+prep_of(intersection-10, Latrobe-14)
+conj_and(Elizabeth-12, Latrobe-14)
+
+Opposite/RB
+the/DT
+Harley/NNP
+shop/NN
+on/IN
+Elizabeth/NNP
+st./VBP
+I/PRP
+am/VBP
+in/IN
+apartment/NN
+22/CD
+of/IN
+the/DT
+Byfass/NNP
+apartment/NN
+in/IN
+8/CD
+Trenerry/NNP
+Crescent/NNP
+in/IN
+Abbotsford/NNP
+./.
+***
+advmod(st.-7, Opposite-1)
+det(shop-4, the-2)
+nn(shop-4, Harley-3)
+nsubj(st.-7, shop-4)
+prep_on(shop-4, Elizabeth-6)
+root(ROOT-0, st.-7)
+nsubj(am-9, I-8)
+ccomp(st.-7, am-9)
+prep_in(am-9, apartment-11)
+num(apartment-11, 22-12)
+det(apartment-16, the-14)
+nn(apartment-16, Byfass-15)
+prep_of(apartment-11, apartment-16)
+num(Crescent-20, 8-18)
+nn(Crescent-20, Trenerry-19)
+prep_in(am-9, Crescent-20)
+prep_in(Crescent-20, Abbotsford-22)
+
+Trennery/NNP
+Crescent/NNP
+is/VBZ
+the/DT
+last/JJ
+street/NN
+on/IN
+the/DT
+north/NN
+side/NN
+of/IN
+Johnston/NNP
+St/NNP
+before/IN
+you/PRP
+cross/VBP
+the/DT
+Yarra/NNP
+river/NN
+going/VBG
+east/RB
+./.
+***
+nn(Crescent-2, Trennery-1)
+nsubj(street-6, Crescent-2)
+cop(street-6, is-3)
+det(street-6, the-4)
+amod(street-6, last-5)
+root(ROOT-0, street-6)
+det(side-10, the-8)
+nn(side-10, north-9)
+prep_on(street-6, side-10)
+nn(St-13, Johnston-12)
+prep_of(side-10, St-13)
+mark(cross-16, before-14)
+nsubj(cross-16, you-15)
+advcl(street-6, cross-16)
+det(river-19, the-17)
+nn(river-19, Yarra-18)
+nsubj(going-20, river-19)
+dep(cross-16, going-20)
+advmod(going-20, east-21)
+
+The/DT
+Byfass/NNP
+building/NN
+-LRB-/-LRB-
+No/CD
+8/CD
+-RRB-/-RRB-
+is/VBZ
+a/DT
+three/CD
+storey/NN
+red/JJ
+brick/NN
+building/NN
+and/CC
+is/VBZ
+on/IN
+the/DT
+east/JJ
+-LRB-/-LRB-
+right/RB
+-RRB-/-RRB-
+side/NN
+of/IN
+Trenerry/NNP
+crescent/VB
+100/CD
+metres/NNS
+in/IN
+from/IN
+Johnston/NNP
+St./NNP
+At/IN
+the/DT
+Murdoch/NNP
+Childrens/NNP
+Research/NNP
+Institute/NNP
+,/,
+in/IN
+office/NN
+W1043/NN
+,/,
+on/IN
+the/DT
+10th/JJ
+Floor/NN
+of/IN
+the/DT
+Royal/NNP
+Children/NNP
+'s/POS
+Hospital/NNP
+,/,
+Flemington/NNP
+Road/NNP
+,/,
+Parkville/NNP
+,/,
+Victoria/NNP
+,/,
+3052/CD
+./.
+***
+det(building-3, The-1)
+nn(building-3, Byfass-2)
+nsubj(building-14, building-3)
+nsubj(is-16, building-3)
+number(8-6, No-5)
+dep(building-3, 8-6)
+cop(building-14, is-8)
+det(building-14, a-9)
+num(building-14, three-10)
+nn(building-14, storey-11)
+amod(building-14, red-12)
+nn(building-14, brick-13)
+root(ROOT-0, building-14)
+conj_and(building-14, is-16)
+det(side-23, the-18)
+amod(side-23, east-19)
+dep(east-19, right-21)
+prep_on(is-16, side-23)
+prep_of(side-23, Trenerry-25)
+dep(building-14, crescent-26)
+num(metres-28, 100-27)
+dobj(crescent-26, metres-28)
+prep(crescent-26, in-29)
+pcomp(in-29, from-30)
+nn(St.-32, Johnston-31)
+pobj(from-30, St.-32)
+det(Institute-38, the-34)
+nn(Institute-38, Murdoch-35)
+nn(Institute-38, Childrens-36)
+nn(Institute-38, Research-37)
+prep_at(crescent-26, Institute-38)
+nn(W1043-42, office-41)
+prep_in(crescent-26, W1043-42)
+det(Floor-47, the-45)
+amod(Floor-47, 10th-46)
+prep_on(crescent-26, Floor-47)
+det(Children-51, the-49)
+nn(Children-51, Royal-50)
+poss(Victoria-60, Children-51)
+nn(Victoria-60, Hospital-53)
+nn(Road-56, Flemington-55)
+dep(Victoria-60, Road-56)
+appos(Road-56, Parkville-58)
+prep_of(Floor-47, Victoria-60)
+conj_and(building-14, 3052-62)
+dobj(building-14, 3052-62)
+
+I/PRP
+'m/VBP
+in/IN
+the/DT
+Baillieu/NNP
+library/NN
+in/IN
+the/DT
+University/NNP
+of/IN
+Melbourne/NNP
+./.
+***
+nsubj('m-2, I-1)
+root(ROOT-0, 'm-2)
+det(library-6, the-4)
+nn(library-6, Baillieu-5)
+prep_in('m-2, library-6)
+det(University-9, the-8)
+prep_in(library-6, University-9)
+prep_of(University-9, Melbourne-11)
+
+This/DT
+is/VBZ
+in/IN
+Carlton\/Parkville/NNP
+in/IN
+the/DT
+city/NN
+of/IN
+Melbourne/NNP
+;/:
+between/IN
+Royal/NNP
+Pde/NNP
+&/CC
+Swanston/NNP
+Street/NNP
+-LRB-/-LRB-
+from/IN
+West/NNP
+to/TO
+East/NNP
+-RRB-/-RRB-
+and/CC
+between/IN
+Grattan/NNP
+St./NNP
+&/CC
+College/NNP
+Crescent/NNP
+-LRB-/-LRB-
+from/IN
+South/NNP
+to/TO
+North/NNP
+-RRB-/-RRB-
+./.
+***
+nsubj(is-2, This-1)
+nsubj(is-2', This-1)
+nsubj(is-2'', This-1)
+root(ROOT-0, is-2)
+conj_and(is-2, is-2')
+conj_and(is-2, is-2'')
+prep_in(is-2, Carlton\/Parkville-4)
+det(city-7, the-6)
+prep_in(Carlton\/Parkville-4, city-7)
+prep_of(city-7, Melbourne-9)
+nn(Pde-13, Royal-12)
+prep_between(is-2', Pde-13)
+nn(Street-16, Swanston-15)
+prep_between(is-2', Street-16)
+conj_and(Pde-13, Street-16)
+dep(Pde-13, from-18)
+pobj(from-18, West-19)
+prep_to(West-19, East-21)
+nn(St.-26, Grattan-25)
+prep_between(is-2'', St.-26)
+nn(Crescent-29, College-28)
+prep_between(is-2'', Crescent-29)
+conj_and(St.-26, Crescent-29)
+dep(St.-26, from-31)
+pobj(from-31, South-32)
+prep_to(South-32, North-34)
+
+I/PRP
+'m/VBP
+on/IN
+the/DT
+1st/CD
+floor/NN
+of/IN
+the/DT
+library/NN
+in/IN
+the/DT
+Percy/NNP
+Baxter/NNP
+Collaborative/NNP
+Learning/NNP
+Centre/NNP
+siting/VBG
+in/IN
+my/PRP$
+chair/NN
+at/IN
+computer/NN
+terminal/JJ
+no./CD
+3/CD
+-/:
+5/CD
+-LRB-/-LRB-
+Group/NNP
+3/CD
+,/,
+Computer/NNP
+5/CD
+-RRB-/-RRB-
+,/,
+facing/VBG
+the/DT
+screen/NN
+in/IN
+a/DT
+roughly/RB
+south-easterly/JJ
+direction/NN
+./.
+***
+nsubj(siting-17, I-1)
+aux(siting-17, 'm-2)
+det(floor-6, the-4)
+num(floor-6, 1st-5)
+prep_on(siting-17, floor-6)
+det(library-9, the-8)
+prep_of(floor-6, library-9)
+det(Centre-16, the-11)
+nn(Centre-16, Percy-12)
+nn(Centre-16, Baxter-13)
+nn(Centre-16, Collaborative-14)
+nn(Centre-16, Learning-15)
+prep_in(library-9, Centre-16)
+root(ROOT-0, siting-17)
+poss(chair-20, my-19)
+prep_in(siting-17, chair-20)
+prep_at(siting-17, computer-22)
+amod(computer-22, terminal-23)
+number(3-25, no.-24)
+dep(terminal-23, 3-25)
+dep(3-25, 5-27)
+appos(5-27, Group-29)
+num(Group-29, 3-30)
+dep(Group-29, Computer-32)
+num(Computer-32, 5-33)
+partmod(5-27, facing-36)
+det(screen-38, the-37)
+dobj(facing-36, screen-38)
+det(direction-43, a-40)
+advmod(direction-43, roughly-41)
+amod(direction-43, south-easterly-42)
+prep_in(screen-38, direction-43)
+
+I/PRP
+am/VBP
+on/IN
+high/JJ
+street/NN
+facing/VBG
+beauty/NN
+park/NN
+./.
+***
+nsubj(am-2, I-1)
+root(ROOT-0, am-2)
+amod(street-5, high-4)
+prep_on(am-2, street-5)
+partmod(street-5, facing-6)
+nn(park-8, beauty-7)
+dobj(facing-6, park-8)
+
+This/DT
+park/NN
+has/VBZ
+a/DT
+lake/NN
+which/WDT
+overflows/VBZ
+when/WRB
+a/DT
+heavy/JJ
+rainfall/NNS
+happens/VBZ
+which/WDT
+suggests/VBZ
+there/EX
+is/VBZ
+inadequate/JJ
+drainage/NN
+for/IN
+this/DT
+region/NN
+./.
+***
+det(park-2, This-1)
+nsubj(has-3, park-2)
+root(ROOT-0, has-3)
+det(lake-5, a-4)
+dobj(has-3, lake-5)
+nsubj(overflows-7, lake-5)
+rcmod(lake-5, overflows-7)
+advmod(happens-12, when-8)
+det(rainfall-11, a-9)
+amod(rainfall-11, heavy-10)
+nsubj(happens-12, rainfall-11)
+advcl(overflows-7, happens-12)
+nsubj(suggests-14, which-13)
+ccomp(happens-12, suggests-14)
+expl(is-16, there-15)
+ccomp(suggests-14, is-16)
+amod(drainage-18, inadequate-17)
+nsubj(is-16, drainage-18)
+det(region-21, this-20)
+prep_for(drainage-18, region-21)
+
+There/EX
+is/VBZ
+constant/JJ
+construction/NN
+which/WDT
+keeps/VBZ
+all/DT
+residents/NNS
+up/RP
+at/IN
+night/NN
+./.
+***
+expl(is-2, There-1)
+root(ROOT-0, is-2)
+amod(construction-4, constant-3)
+nsubj(is-2, construction-4)
+nsubj(keeps-6, construction-4)
+rcmod(construction-4, keeps-6)
+det(residents-8, all-7)
+dobj(keeps-6, residents-8)
+prt(keeps-6, up-9)
+prep_at(keeps-6, night-11)
+
+The/DT
+view/NN
+towards/IN
+the/DT
+beach/NN
+has/VBZ
+a/DT
+colorful/JJ
+sunset/NN
+most/JJS
+of/IN
+the/DT
+time/NN
+;/:
+except/IN
+during/IN
+overcast/JJ
+days/NNS
+./.
+***
+det(view-2, The-1)
+nsubj(has-6, view-2)
+det(beach-5, the-4)
+prep_towards(view-2, beach-5)
+root(ROOT-0, has-6)
+det(sunset-9, a-7)
+amod(sunset-9, colorful-8)
+dobj(has-6, sunset-9)
+amod(sunset-9, most-10)
+det(time-13, the-12)
+prep_of(sunset-9, time-13)
+prep(sunset-9, except-15)
+pcomp(except-15, during-16)
+amod(days-18, overcast-17)
+pobj(during-16, days-18)
+
+I/PRP
+am/VBP
+at/IN
+a/DT
+private/JJ
+residence/NN
+located/VBN
+on/IN
+the/DT
+western/JJ
+side/NN
+of/IN
+Barrington/NNP
+Avenue/NNP
+in/IN
+Kew/NNP
+,/,
+approximately/RB
+halfway/CD
+along/IN
+the/DT
+street/NN
+./.
+***
+nsubj(am-2, I-1)
+root(ROOT-0, am-2)
+det(residence-6, a-4)
+amod(residence-6, private-5)
+prep_at(am-2, residence-6)
+partmod(residence-6, located-7)
+det(side-11, the-9)
+amod(side-11, western-10)
+prep_on(located-7, side-11)
+nn(Avenue-14, Barrington-13)
+prep_of(side-11, Avenue-14)
+prep_in(Avenue-14, Kew-16)
+quantmod(halfway-19, approximately-18)
+appos(Kew-16, halfway-19)
+det(street-22, the-21)
+prep_along(halfway-19, street-22)
+
+I/PRP
+am/VBP
+in/IN
+the/DT
+lobby/NN
+of/IN
+the/DT
+University/NNP
+House/NNP
+-/:
+you/PRP
+will/MD
+find/VB
+me/PRP
+in/IN
+the/DT
+room/NN
+just/RB
+to/TO
+your/PRP$
+left/NN
+after/IN
+passing/VBG
+the/DT
+concierge/NN
+./.
+***
+nsubj(am-2, I-1)
+root(ROOT-0, am-2)
+det(lobby-5, the-4)
+prep_in(am-2, lobby-5)
+det(House-9, the-7)
+nn(House-9, University-8)
+prep_of(lobby-5, House-9)
+nsubj(find-13, you-11)
+aux(find-13, will-12)
+parataxis(am-2, find-13)
+dobj(find-13, me-14)
+det(room-17, the-16)
+prep_in(find-13, room-17)
+advmod(room-17, just-18)
+poss(left-21, your-20)
+prep_to(just-18, left-21)
+prepc_after(find-13, passing-23)
+det(concierge-25, the-24)
+dobj(passing-23, concierge-25)
+
+Waiting/VBG
+in/IN
+front/NN
+of/IN
+the/DT
+state/NN
+library/NN
+-/:
+under/IN
+the/DT
+statue/NN
+of/IN
+Redmond/NNP
+Barry/NNP
+;/:
+actually/RB
+I/PRP
+did/VBD
+n't/RB
+know/VB
+it/PRP
+is/VBZ
+his/PRP$
+,/,
+but/CC
+it/PRP
+is/VBZ
+the/DT
+one/NN
+just/RB
+in/IN
+front/NN
+of/IN
+the/DT
+entrance/NN
+./.
+***
+root(ROOT-0, Waiting-1)
+prep_in(Waiting-1, front-3)
+det(library-7, the-5)
+nn(library-7, state-6)
+prep_of(front-3, library-7)
+det(statue-11, the-10)
+prep_under(Waiting-1, statue-11)
+nn(Barry-14, Redmond-13)
+prep_of(statue-11, Barry-14)
+advmod(know-20, actually-16)
+nsubj(know-20, I-17)
+aux(know-20, did-18)
+neg(know-20, n't-19)
+parataxis(Waiting-1, know-20)
+nsubj(his-23, it-21)
+cop(his-23, is-22)
+ccomp(know-20, his-23)
+nsubj(one-29, it-26)
+cop(one-29, is-27)
+det(one-29, the-28)
+parataxis(Waiting-1, one-29)
+conj_but(know-20, one-29)
+advmod(one-29, just-30)
+det(entrance-35, the-34)
+prep_in_front_of(one-29, entrance-35)
+
+In/IN
+my/PRP$
+office/NN
+on/IN
+the/DT
+7th/JJ
+floor/NN
+of/IN
+the/DT
+Babel/NNP
+building/NN
+on/IN
+the/DT
+University/NNP
+of/IN
+Melbourne/NNP
+Parkville/NNP
+campus/NN
+./.
+***
+root(ROOT-0, In-1)
+poss(office-3, my-2)
+pobj(In-1, office-3)
+det(floor-7, the-5)
+amod(floor-7, 7th-6)
+prep_on(office-3, floor-7)
+det(building-11, the-9)
+nn(building-11, Babel-10)
+prep_of(floor-7, building-11)
+det(campus-18, the-13)
+dep(campus-18, University-14)
+nn(Parkville-17, Melbourne-16)
+prep_of(University-14, Parkville-17)
+prep_on(building-11, campus-18)
+
+I/PRP
+am/VBP
+on/IN
+the/DT
+south/JJ
+side/NN
+of/IN
+the/DT
+building/NN
+,/,
+which/WDT
+us/PRP
+just/RB
+to/TO
+the/DT
+left/NN
+of/IN
+professors/NNS
+walk/VBP
+./.
+***
+nsubj(am-2, I-1)
+root(ROOT-0, am-2)
+det(side-6, the-4)
+amod(side-6, south-5)
+prep_on(am-2, side-6)
+det(building-9, the-8)
+prep_of(side-6, building-9)
+dobj(walk-19, building-9)
+rel(walk-19, which-11)
+nsubj(walk-19, us-12)
+advmod(walk-19, just-13)
+det(left-16, the-15)
+prep_to(just-13, left-16)
+prep_of(left-16, professors-18)
+rcmod(building-9, walk-19)
+
+In/IN
+the/DT
+Treasury/NNP
+Theatre/NNP
+,/,
+a/DT
+place/NN
+hard/RB
+to/TO
+find/VB
+./.
+***
+det(Theatre-4, the-2)
+nn(Theatre-4, Treasury-3)
+prep_in(hard-8, Theatre-4)
+det(place-7, a-6)
+nsubj(hard-8, place-7)
+xsubj(find-10, place-7)
+root(ROOT-0, hard-8)
+aux(find-10, to-9)
+xcomp(hard-8, find-10)
+
+It/PRP
+is/VBZ
+behind/IN
+Old/NNP
+Treasury/NNP
+,/,
+the/DT
+landmark/JJ
+building/NN
+at/IN
+the/DT
+end/NN
+of/IN
+Collins/NNP
+Street/NNP
+,/,
+and/CC
+then/RB
+downstairs/NNS
+,/,
+below/IN
+street/NN
+level/NN
+./.
+***
+nsubj(downstairs-19, It-1)
+cop(downstairs-19, is-2)
+dep(downstairs-19, behind-3)
+nn(Treasury-5, Old-4)
+pobj(behind-3, Treasury-5)
+det(building-9, the-7)
+amod(building-9, landmark-8)
+appos(Treasury-5, building-9)
+det(end-12, the-11)
+prep_at(building-9, end-12)
+nn(Street-15, Collins-14)
+prep_of(end-12, Street-15)
+conj_and(behind-3, then-18)
+dep(downstairs-19, then-18)
+root(ROOT-0, downstairs-19)
+nn(level-23, street-22)
+prep_below(downstairs-19, level-23)
+
+three/CD
+hundred/CD
+meters/NNS
+far/RB
+from/IN
+auburn/NN
+train/VBP
+station/NN
+in/IN
+second/JJ
+floor/NN
+on/IN
+an/DT
+five/CD
+floor/NN
+apprtment/NN
+in/IN
+Gueens/NNP
+Ave/NNP
+which/WDT
+is/VBZ
+incide/NN
+of/IN
+Hawthorn/NNP
+suburb/NN
+district/NN
+./.
+***
+number(hundred-2, three-1)
+num(meters-3, hundred-2)
+nsubj(train-7, meters-3)
+prep_far_from(train-7, auburn-6)
+root(ROOT-0, train-7)
+dobj(train-7, station-8)
+amod(floor-11, second-10)
+prep_in(station-8, floor-11)
+det(apprtment-16, an-13)
+num(apprtment-16, five-14)
+nn(apprtment-16, floor-15)
+prep_on(floor-11, apprtment-16)
+nn(Ave-19, Gueens-18)
+prep_in(train-7, Ave-19)
+nsubj(incide-22, Ave-19)
+cop(incide-22, is-21)
+rcmod(Ave-19, incide-22)
+nn(district-26, Hawthorn-24)
+nn(district-26, suburb-25)
+prep_of(incide-22, district-26)
+
+three/CD
+hundred/CD
+meters/NNS
+far/RB
+from/IN
+auburn/NN
+train/VBP
+station/NN
+in/IN
+second/JJ
+floor/NN
+on/IN
+an/DT
+five/CD
+floor/NN
+apprtment/NN
+in/IN
+Gueens/NNP
+Ave/NNP
+which/WDT
+is/VBZ
+incide/NN
+of/IN
+Hawthorn/NNP
+suburb/NN
+district/NN
+./.
+***
+number(hundred-2, three-1)
+num(meters-3, hundred-2)
+nsubj(train-7, meters-3)
+prep_far_from(train-7, auburn-6)
+root(ROOT-0, train-7)
+dobj(train-7, station-8)
+amod(floor-11, second-10)
+prep_in(station-8, floor-11)
+det(apprtment-16, an-13)
+num(apprtment-16, five-14)
+nn(apprtment-16, floor-15)
+prep_on(floor-11, apprtment-16)
+nn(Ave-19, Gueens-18)
+prep_in(train-7, Ave-19)
+nsubj(incide-22, Ave-19)
+cop(incide-22, is-21)
+rcmod(Ave-19, incide-22)
+nn(district-26, Hawthorn-24)
+nn(district-26, suburb-25)
+prep_of(incide-22, district-26)
+
+three/CD
+hundred/CD
+meters/NNS
+far/RB
+from/IN
+auburn/NN
+train/VBP
+station/NN
+in/IN
+second/JJ
+floor/NN
+on/IN
+an/DT
+five/CD
+floor/NN
+apprtment/NN
+in/IN
+Gueens/NNP
+Ave/NNP
+which/WDT
+is/VBZ
+incide/NN
+of/IN
+Hawthorn/NNP
+suburb/NN
+district/NN
+./.
+***
+number(hundred-2, three-1)
+num(meters-3, hundred-2)
+nsubj(train-7, meters-3)
+prep_far_from(train-7, auburn-6)
+root(ROOT-0, train-7)
+dobj(train-7, station-8)
+amod(floor-11, second-10)
+prep_in(station-8, floor-11)
+det(apprtment-16, an-13)
+num(apprtment-16, five-14)
+nn(apprtment-16, floor-15)
+prep_on(floor-11, apprtment-16)
+nn(Ave-19, Gueens-18)
+prep_in(train-7, Ave-19)
+nsubj(incide-22, Ave-19)
+cop(incide-22, is-21)
+rcmod(Ave-19, incide-22)
+nn(district-26, Hawthorn-24)
+nn(district-26, suburb-25)
+prep_of(incide-22, district-26)
+
+three/CD
+hundred/CD
+meters/NNS
+far/RB
+from/IN
+auburn/NN
+train/VBP
+station/NN
+in/IN
+second/JJ
+floor/NN
+on/IN
+an/DT
+five/CD
+floor/NN
+apprtment/NN
+in/IN
+Gueens/NNP
+Ave/NNP
+which/WDT
+is/VBZ
+incide/NN
+of/IN
+Hawthorn/NNP
+suburb/NN
+district/NN
+./.
+***
+number(hundred-2, three-1)
+num(meters-3, hundred-2)
+nsubj(train-7, meters-3)
+prep_far_from(train-7, auburn-6)
+root(ROOT-0, train-7)
+dobj(train-7, station-8)
+amod(floor-11, second-10)
+prep_in(station-8, floor-11)
+det(apprtment-16, an-13)
+num(apprtment-16, five-14)
+nn(apprtment-16, floor-15)
+prep_on(floor-11, apprtment-16)
+nn(Ave-19, Gueens-18)
+prep_in(train-7, Ave-19)
+nsubj(incide-22, Ave-19)
+cop(incide-22, is-21)
+rcmod(Ave-19, incide-22)
+nn(district-26, Hawthorn-24)
+nn(district-26, suburb-25)
+prep_of(incide-22, district-26)
+
+In/IN
+front/NN
+of/IN
+the/DT
+Park/NNP
+Regis/NNP
+hotel/NN
+on/IN
+St/NNP
+kilda/NN
+rd/VBP
+,/,
+on/IN
+the/DT
+left/JJ
+hand/NN
+side/NN
+if/IN
+you/PRP
+are/VBP
+headed/VBN
+into/IN
+the/DT
+city/NN
+./.
+***
+det(hotel-7, the-4)
+nn(hotel-7, Park-5)
+nn(hotel-7, Regis-6)
+prep_in_front_of(rd-11, hotel-7)
+prep_on(hotel-7, St-9)
+nsubj(rd-11, kilda-10)
+root(ROOT-0, rd-11)
+det(side-17, the-14)
+amod(side-17, left-15)
+nn(side-17, hand-16)
+prep_on(rd-11, side-17)
+mark(headed-21, if-18)
+nsubjpass(headed-21, you-19)
+auxpass(headed-21, are-20)
+advcl(rd-11, headed-21)
+det(city-24, the-23)
+prep_into(headed-21, city-24)
+
+You/PRP
+need/VBP
+to/TO
+be/VB
+in/IN
+the/DT
+outside/JJ
+lane/NN
+if/IN
+driving/NN
+or/CC
+you/PRP
+wo/MD
+n't/RB
+be/VB
+able/JJ
+to/TO
+turn/VB
+in/RP
+./.
+***
+nsubj(need-2, You-1)
+xsubj(be-4, You-1)
+root(ROOT-0, need-2)
+aux(be-4, to-3)
+xcomp(need-2, be-4)
+det(lane-8, the-6)
+amod(lane-8, outside-7)
+prep_in(be-4, lane-8)
+mark(able-16, if-9)
+nsubj(able-16, driving-10)
+xsubj(turn-18, driving-10)
+conj_or(driving-10, you-12)
+nsubj(able-16, you-12)
+xsubj(turn-18, you-12)
+aux(able-16, wo-13)
+neg(able-16, n't-14)
+cop(able-16, be-15)
+advcl(be-4, able-16)
+aux(turn-18, to-17)
+xcomp(able-16, turn-18)
+prt(turn-18, in-19)
+
+There/EX
+is/VBZ
+a/DT
+semi/JJ
+circular/JJ
+driveway/NN
+in/IN
+front/NN
+,/,
+pull/VB
+in/IN
+there/RB
+./.
+***
+expl(is-2, There-1)
+root(ROOT-0, is-2)
+det(driveway-6, a-3)
+amod(driveway-6, semi-4)
+amod(driveway-6, circular-5)
+nsubj(is-2, driveway-6)
+prep_in(driveway-6, front-8)
+dep(is-2, pull-10)
+prep(pull-10, in-11)
+pobj(in-11, there-12)
+
+In/IN
+front/NN
+of/IN
+the/DT
+Park/NNP
+Regis/NNP
+hotel/NN
+on/IN
+St/NNP
+kilda/NN
+rd/VBP
+,/,
+on/IN
+the/DT
+left/JJ
+hand/NN
+side/NN
+if/IN
+you/PRP
+are/VBP
+headed/VBN
+into/IN
+the/DT
+city/NN
+./.
+***
+det(hotel-7, the-4)
+nn(hotel-7, Park-5)
+nn(hotel-7, Regis-6)
+prep_in_front_of(rd-11, hotel-7)
+prep_on(hotel-7, St-9)
+nsubj(rd-11, kilda-10)
+root(ROOT-0, rd-11)
+det(side-17, the-14)
+amod(side-17, left-15)
+nn(side-17, hand-16)
+prep_on(rd-11, side-17)
+mark(headed-21, if-18)
+nsubjpass(headed-21, you-19)
+auxpass(headed-21, are-20)
+advcl(rd-11, headed-21)
+det(city-24, the-23)
+prep_into(headed-21, city-24)
+
+You/PRP
+need/VBP
+to/TO
+be/VB
+in/IN
+the/DT
+outside/JJ
+lane/NN
+if/IN
+driving/NN
+or/CC
+you/PRP
+wo/MD
+n't/RB
+be/VB
+able/JJ
+to/TO
+turn/VB
+in/RP
+./.
+***
+nsubj(need-2, You-1)
+xsubj(be-4, You-1)
+root(ROOT-0, need-2)
+aux(be-4, to-3)
+xcomp(need-2, be-4)
+det(lane-8, the-6)
+amod(lane-8, outside-7)
+prep_in(be-4, lane-8)
+mark(able-16, if-9)
+nsubj(able-16, driving-10)
+xsubj(turn-18, driving-10)
+conj_or(driving-10, you-12)
+nsubj(able-16, you-12)
+xsubj(turn-18, you-12)
+aux(able-16, wo-13)
+neg(able-16, n't-14)
+cop(able-16, be-15)
+advcl(be-4, able-16)
+aux(turn-18, to-17)
+xcomp(able-16, turn-18)
+prt(turn-18, in-19)
+
+There/EX
+is/VBZ
+a/DT
+semi/JJ
+circular/JJ
+driveway/NN
+in/IN
+front/NN
+,/,
+pull/VB
+in/IN
+there/RB
+./.
+***
+expl(is-2, There-1)
+root(ROOT-0, is-2)
+det(driveway-6, a-3)
+amod(driveway-6, semi-4)
+amod(driveway-6, circular-5)
+nsubj(is-2, driveway-6)
+prep_in(driveway-6, front-8)
+dep(is-2, pull-10)
+prep(pull-10, in-11)
+pobj(in-11, there-12)
+
+In/IN
+front/NN
+of/IN
+the/DT
+Park/NNP
+Regis/NNP
+hotel/NN
+on/IN
+St/NNP
+kilda/NN
+rd/VBP
+,/,
+on/IN
+the/DT
+left/JJ
+hand/NN
+side/NN
+if/IN
+you/PRP
+are/VBP
+headed/VBN
+into/IN
+the/DT
+city/NN
+./.
+***
+det(hotel-7, the-4)
+nn(hotel-7, Park-5)
+nn(hotel-7, Regis-6)
+prep_in_front_of(rd-11, hotel-7)
+prep_on(hotel-7, St-9)
+nsubj(rd-11, kilda-10)
+root(ROOT-0, rd-11)
+det(side-17, the-14)
+amod(side-17, left-15)
+nn(side-17, hand-16)
+prep_on(rd-11, side-17)
+mark(headed-21, if-18)
+nsubjpass(headed-21, you-19)
+auxpass(headed-21, are-20)
+advcl(rd-11, headed-21)
+det(city-24, the-23)
+prep_into(headed-21, city-24)
+
+You/PRP
+need/VBP
+to/TO
+be/VB
+in/IN
+the/DT
+outside/JJ
+lane/NN
+if/IN
+driving/NN
+or/CC
+you/PRP
+wo/MD
+n't/RB
+be/VB
+able/JJ
+to/TO
+turn/VB
+in/RP
+./.
+***
+nsubj(need-2, You-1)
+xsubj(be-4, You-1)
+root(ROOT-0, need-2)
+aux(be-4, to-3)
+xcomp(need-2, be-4)
+det(lane-8, the-6)
+amod(lane-8, outside-7)
+prep_in(be-4, lane-8)
+mark(able-16, if-9)
+nsubj(able-16, driving-10)
+xsubj(turn-18, driving-10)
+conj_or(driving-10, you-12)
+nsubj(able-16, you-12)
+xsubj(turn-18, you-12)
+aux(able-16, wo-13)
+neg(able-16, n't-14)
+cop(able-16, be-15)
+advcl(be-4, able-16)
+aux(turn-18, to-17)
+xcomp(able-16, turn-18)
+prt(turn-18, in-19)
+
+There/EX
+is/VBZ
+a/DT
+semi/JJ
+circular/JJ
+driveway/NN
+in/IN
+front/NN
+,/,
+pull/VB
+in/IN
+there/RB
+./.
+***
+expl(is-2, There-1)
+root(ROOT-0, is-2)
+det(driveway-6, a-3)
+amod(driveway-6, semi-4)
+amod(driveway-6, circular-5)
+nsubj(is-2, driveway-6)
+prep_in(driveway-6, front-8)
+dep(is-2, pull-10)
+prep(pull-10, in-11)
+pobj(in-11, there-12)
+
+In/IN
+a/DT
+shopping/NN
+mall/NN
+,/,
+just/RB
+opened/VBN
+,/,
+calls/VBZ
+itself/PRP
+vogue/VBZ
+,/,
+but/CC
+consists/VBZ
+of/IN
+Safeway/NNP
+and/CC
+big/JJ
+w./NN
+One/CD
+of/IN
+these/DT
+places/NNS
+without/IN
+individual/JJ
+character/NN
+,/,
+other/JJ
+than/IN
+a/DT
+beautiful/JJ
+view/NN
+thru/VBG
+a/DT
+glass/NN
+roof/NN
+./.
+***
+det(mall-4, a-2)
+nn(mall-4, shopping-3)
+prep_in(calls-9, mall-4)
+advmod(opened-7, just-6)
+dep(calls-9, opened-7)
+root(ROOT-0, calls-9)
+nsubj(vogue-11, itself-10)
+nsubj(consists-14, itself-10)
+ccomp(calls-9, vogue-11)
+ccomp(calls-9, consists-14)
+conj_but(vogue-11, consists-14)
+prep_of(consists-14, Safeway-16)
+amod(w.-19, big-18)
+prep_of(consists-14, w.-19)
+conj_and(Safeway-16, w.-19)
+dobj(consists-14, One-20)
+det(places-23, these-22)
+prep_of(One-20, places-23)
+amod(character-26, individual-25)
+prep_without(consists-14, character-26)
+dep(consists-14, other-28)
+det(view-32, a-30)
+amod(view-32, beautiful-31)
+prep_than(other-28, view-32)
+partmod(view-32, thru-33)
+det(roof-36, a-34)
+nn(roof-36, glass-35)
+dobj(thru-33, roof-36)
+
+I/PRP
+am/VBP
+living/VBG
+in/IN
+an/DT
+appartment/NN
+just/RB
+3/CD
+minustes/NNS
+far/RB
+from/IN
+the/DT
+Auburn/NNP
+train/NN
+station/NN
+which/WDT
+is/VBZ
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+it/PRP
+./.
+***
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, it-26)
+
+I/PRP
+am/VBP
+living/VBG
+in/IN
+an/DT
+appartment/NN
+just/RB
+3/CD
+minustes/NNS
+far/RB
+from/IN
+the/DT
+Auburn/NNP
+train/NN
+station/NN
+which/WDT
+is/VBZ
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+it/PRP
+./.
+***
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, it-26)
+
+I/PRP
+am/VBP
+living/VBG
+in/IN
+an/DT
+appartment/NN
+just/RB
+3/CD
+minustes/NNS
+far/RB
+from/IN
+the/DT
+Auburn/NNP
+train/NN
+station/NN
+which/WDT
+is/VBZ
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+that/DT
+./.
+***
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, that-26)
+
+I/PRP
+am/VBP
+living/VBG
+in/IN
+an/DT
+appartment/NN
+just/RB
+3/CD
+minustes/NNS
+far/RB
+from/IN
+the/DT
+Auburn/NNP
+train/NN
+station/NN
+which/WDT
+is/VBZ
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+that/DT
+./.
+***
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, that-26)
+
+I/PRP
+am/VBP
+living/VBG
+in/IN
+an/DT
+appartment/NN
+just/RB
+3/CD
+minustes/NNS
+far/RB
+from/IN
+the/DT
+Auburn/NNP
+train/NN
+station/NN
+which/WDT
+is/VBZ
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+that/DT
+./.
+***
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, that-26)
+
+I/PRP
+am/VBP
+living/VBG
+in/IN
+an/DT
+appartment/NN
+just/RB
+3/CD
+minustes/NNS
+far/RB
+from/IN
+the/DT
+Auburn/NNP
+train/NN
+station/NN
+which/WDT
+is/VBZ
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+that/DT
+./.
+***
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, that-26)
+
+I/PRP
+'m/VBP
+in/IN
+my/PRP$
+office/NN
+at/IN
+215/NNP
+Spring/NNP
+St/NNP
+Melbourne/NNP
+./.
+***
+nsubj('m-2, I-1)
+root(ROOT-0, 'm-2)
+poss(office-5, my-4)
+prep_in('m-2, office-5)
+nn(Melbourne-10, 215-7)
+nn(Melbourne-10, Spring-8)
+nn(Melbourne-10, St-9)
+prep_at(office-5, Melbourne-10)
+
+Its/PRP$
+on/IN
+spring/NN
+near/IN
+the/DT
+corner/NN
+of/IN
+Lonsdale/NNP
+St/NNP
+-LRB-/-LRB-
+between/IN
+Little/NNP
+Bourke/NNP
+and/CC
+Lonsdale/NNP
+St/NNP
+-RRB-/-RRB-
+,/,
+just/RB
+across/IN
+from/IN
+the/DT
+Chinese/JJ
+sculpture/NN
+garden/NN
+and/CC
+the/DT
+entrance/NN
+to/TO
+Parliament/NNP
+Station/NNP
+./.
+***
+root(ROOT-0, Its-1)
+prep_on(Its-1, spring-3)
+det(corner-6, the-5)
+prep_near(spring-3, corner-6)
+nn(St-9, Lonsdale-8)
+prep_of(corner-6, St-9)
+dep(Its-1, between-11)
+nn(Bourke-13, Little-12)
+pobj(between-11, Bourke-13)
+nn(St-16, Lonsdale-15)
+pobj(between-11, St-16)
+conj_and(Bourke-13, St-16)
+advmod(Its-1, just-19)
+prepc_across_from(Its-1, from-21)
+det(garden-25, the-22)
+amod(garden-25, Chinese-23)
+nn(garden-25, sculpture-24)
+pobj(Its-1, garden-25)
+det(entrance-28, the-27)
+pobj(Its-1, entrance-28)
+conj_and(garden-25, entrance-28)
+nn(Station-31, Parliament-30)
+prep_to(Its-1, Station-31)
+
+I/PRP
+'m/VBP
+at/IN
+the/DT
+Carousel/NNP
+restaurant/NN
+./.
+***
+nsubj('m-2, I-1)
+root(ROOT-0, 'm-2)
+det(restaurant-6, the-4)
+nn(restaurant-6, Carousel-5)
+prep_at('m-2, restaurant-6)
+
+Its/PRP$
+right/NN
+on/IN
+Albert/NNP
+Park/NNP
+lake/NN
+,/,
+not/RB
+on/IN
+the/DT
+side/NN
+of/IN
+the/DT
+lake/NN
+where/WRB
+Queensway/NNP
+is/VBZ
+,/,
+on/IN
+the/DT
+opposite/JJ
+side/NN
+./.
+***
+poss(right-2, Its-1)
+root(ROOT-0, right-2)
+nn(lake-6, Albert-4)
+nn(lake-6, Park-5)
+prep_on(right-2, lake-6)
+advmod(right-2, not-8)
+det(side-11, the-10)
+prep_on(not-8, side-11)
+det(lake-14, the-13)
+prep_of(right-2, lake-14)
+advmod(is-17, where-15)
+nsubj(is-17, Queensway-16)
+rcmod(lake-14, is-17)
+det(side-22, the-20)
+amod(side-22, opposite-21)
+prep_on(right-2, side-22)
+
+In/IN
+the/DT
+city/NN
+,/,
+bourke/NN
+st/VBP
+,/,
+at/IN
+a/DT
+brutal/JJ
+iron/NN
+sculpture/NN
+that/WDT
+despite/IN
+it/PRP
+'s/POS
+size/NN
+disappears/VBZ
+between/IN
+the/DT
+high/JJ
+rising/JJ
+buildings/NNS
+here/RB
+./.
+***
+det(city-3, the-2)
+prep_in(st-6, city-3)
+nsubj(st-6, bourke-5)
+root(ROOT-0, st-6)
+det(sculpture-12, a-9)
+amod(sculpture-12, brutal-10)
+nn(sculpture-12, iron-11)
+prep_at(st-6, sculpture-12)
+nsubj(disappears-18, sculpture-12)
+poss(size-17, it-15)
+prep_despite(disappears-18, size-17)
+rcmod(sculpture-12, disappears-18)
+det(buildings-23, the-20)
+amod(buildings-23, high-21)
+amod(buildings-23, rising-22)
+prep_between(disappears-18, buildings-23)
+advmod(disappears-18, here-24)
+
+In/IN
+a/DT
+really/RB
+nice/JJ
+restaurant/NN
+on/IN
+Victoria/NNP
+street/NN
+,/,
+quite/VB
+out/RP
+of/IN
+place/NN
+./.
+***
+det(restaurant-5, a-2)
+advmod(nice-4, really-3)
+amod(restaurant-5, nice-4)
+prep_in(quite-10, restaurant-5)
+nn(street-8, Victoria-7)
+prep_on(restaurant-5, street-8)
+root(ROOT-0, quite-10)
+prep_out_of(quite-10, place-13)
+
+Not/RB
+far/JJ
+from/IN
+the/DT
+train/NN
+station/NN
+,/,
+to/TO
+the/DT
+south/NN
+./.
+***
+root(ROOT-0, Not-1)
+det(station-6, the-4)
+nn(station-6, train-5)
+prep_far_from(Not-1, station-6)
+det(south-10, the-9)
+prep_to(Not-1, south-10)
+
+I/PRP
+am/VBP
+living/VBG
+in/IN
+2nd/JJ
+floor/NN
+of/IN
+an/DT
+apartment/NN
+in/IN
+hawthorn/NN
+,/,
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+in/IN
+east/JJ
+of/IN
+it/PRP
+near/IN
+to/TO
+Auburn/NNP
+train/NN
+station/NN
+./.
+***
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+amod(floor-6, 2nd-5)
+prep_in(living-3, floor-6)
+det(apartment-9, an-8)
+prep_of(floor-6, apartment-9)
+prep_in(apartment-9, hawthorn-11)
+det(suburb-14, a-13)
+appos(hawthorn-11, suburb-14)
+prep_of(suburb-14, Melbourne-16)
+prep_in(Melbourne-16, east-18)
+prep_of(east-18, it-20)
+prepc_near_to(living-3, to-22)
+nn(station-25, Auburn-23)
+nn(station-25, train-24)
+pobj(living-3, station-25)
+
+I/PRP
+am/VBP
+in/IN
+the/DT
+second/JJ
+floor/NN
+of/IN
+university/NN
+of/IN
+Melbourne/NNP
+near/RB
+to/TO
+downtown/NN
+./.
+***
+nsubj(am-2, I-1)
+root(ROOT-0, am-2)
+det(floor-6, the-4)
+amod(floor-6, second-5)
+prep_in(am-2, floor-6)
+prep_of(floor-6, university-8)
+prep_of(university-8, Melbourne-10)
+prep_near_to(am-2, downtown-13)
+
+in/IN
+174/CD
+building/NN
+,/,
+located/VBN
+in/IN
+the/DT
+north/NN
+of/IN
+Grattan/NNP
+street/NN
+./.
+***
+num(building-3, 174-2)
+prep_in(located-5, building-3)
+root(ROOT-0, located-5)
+det(north-8, the-7)
+prep_in(located-5, north-8)
+nn(street-11, Grattan-10)
+prep_of(north-8, street-11)
+
+In/IN
+prahran/NN
+./.
+***
+root(ROOT-0, In-1)
+pobj(In-1, prahran-2)
+
+In/IN
+a/DT
+restaurant/NN
+just/RB
+after/IN
+prahran/NN
+market/NN
+,/,
+when/WRB
+you/PRP
+come/VBP
+from/IN
+chapel/JJ
+street/NN
+./.
+***
+root(ROOT-0, In-1)
+det(restaurant-3, a-2)
+pobj(In-1, restaurant-3)
+tmod(come-11, restaurant-3)
+advmod(restaurant-3, just-4)
+nn(market-7, prahran-6)
+prep_after(restaurant-3, market-7)
+advmod(come-11, when-9)
+nsubj(come-11, you-10)
+rcmod(restaurant-3, come-11)
+amod(street-14, chapel-13)
+prep_from(come-11, street-14)
+
+I/PRP
+do/VBP
+n't/RB
+know/VB
+the/DT
+name/NN
+,/,
+but/CC
+it/PRP
+is/VBZ
+a/DT
+modern/JJ
+western/JJ
+one/NN
+./.
+***
+nsubj(know-4, I-1)
+aux(know-4, do-2)
+neg(know-4, n't-3)
+root(ROOT-0, know-4)
+det(name-6, the-5)
+dobj(know-4, name-6)
+nsubj(one-14, it-9)
+cop(one-14, is-10)
+det(one-14, a-11)
+amod(one-14, modern-12)
+amod(one-14, western-13)
+conj_but(know-4, one-14)
+
+Diner/NNP
+in/IN
+parahn/NN
+which/WDT
+has/VBZ
+really/RB
+nice/JJ
+american/NN
+food/NN
+,/,
+easy/JJ
+to/TO
+get/VB
+to/TO
+from/IN
+st./NN
+kilda/NN
+but/CC
+its/PRP$
+hard/JJ
+from/IN
+S.E/NNP
+suburbs/NNS
+./.
+***
+root(ROOT-0, Diner-1)
+prep_in(Diner-1, parahn-3)
+nsubj(has-5, parahn-3)
+rcmod(parahn-3, has-5)
+advmod(nice-7, really-6)
+amod(food-9, nice-7)
+nn(food-9, american-8)
+dobj(has-5, food-9)
+amod(food-9, easy-11)
+aux(get-13, to-12)
+xcomp(easy-11, get-13)
+prep(get-13, to-14)
+nn(kilda-17, st.-16)
+prep_from(get-13, kilda-17)
+poss(hard-20, its-19)
+amod(food-9, hard-20)
+conj_but(easy-11, hard-20)
+nn(suburbs-23, S.E-22)
+prep_from(hard-20, suburbs-23)
+
+1/CD
+bewdley/JJ
+st/NN
+ormond/VBD
+vic/NN
+on/IN
+the/DT
+corner/NN
+of/IN
+walnut/JJ
+st/NN
+,/,
+off/IN
+north/RB
+rd/NN
+,/,
+directly/RB
+behind/IN
+mckinnon/JJ
+secondary/JJ
+college/NN
+opposite/IN
+the/DT
+back/JJ
+entrance/NN
+to/TO
+the/DT
+sports/NNS
+oval/NN
+./.
+***
+num(st-3, 1-1)
+amod(st-3, bewdley-2)
+nsubj(ormond-4, st-3)
+root(ROOT-0, ormond-4)
+dobj(ormond-4, vic-5)
+det(corner-8, the-7)
+prep_on(ormond-4, corner-8)
+amod(st-11, walnut-10)
+prep_of(corner-8, st-11)
+advmod(st-11, off-13)
+advmod(off-13, north-14)
+dep(st-11, rd-15)
+advmod(st-11, directly-17)
+amod(college-21, mckinnon-19)
+amod(college-21, secondary-20)
+prep_behind(ormond-4, college-21)
+det(entrance-25, the-23)
+amod(entrance-25, back-24)
+prep_opposite(ormond-4, entrance-25)
+det(oval-29, the-27)
+nn(oval-29, sports-28)
+prep_to(entrance-25, oval-29)
+
+i/FW
+am/VBP
+in/IN
+st/NN
+kilda/NN
+road/NN
+,/,
+melbourne/NN
+,/,
+two/CD
+buildings/NNS
+east/RB
+of/IN
+the/DT
+police/NN
+headquarters/NN
+./.
+***
+nsubj(am-2, i-1)
+root(ROOT-0, am-2)
+nn(road-6, st-4)
+nn(road-6, kilda-5)
+prep_in(am-2, road-6)
+appos(road-6, melbourne-8)
+num(buildings-11, two-10)
+npadvmod(east-12, buildings-11)
+advmod(road-6, east-12)
+det(headquarters-16, the-14)
+nn(headquarters-16, police-15)
+prep_of(road-6, headquarters-16)
+
+almost/RB
+opposite/JJ
+is/VBZ
+the/DT
+royce/JJ
+hotel/NN
+and/CC
+from/IN
+my/PRP$
+13th/JJ
+floor/NN
+balcony/NN
+i/FW
+can/MD
+see/VB
+on/IN
+my/PRP$
+left/JJ
+melbourne/JJ
+grammar/NN
+school/NN
+,/,
+the/DT
+botanical/JJ
+gardens/NNS
+and/CC
+the/DT
+shrine/NN
+of/IN
+remembrance/NN
+to/TO
+my/PRP$
+right/NN
+is/VBZ
+the/DT
+synagogue/NN
+and/CC
+fawkner/NN
+park/NN
+./.
+***
+advmod(opposite-2, almost-1)
+nsubj(hotel-6, opposite-2)
+cop(hotel-6, is-3)
+det(hotel-6, the-4)
+amod(hotel-6, royce-5)
+root(ROOT-0, hotel-6)
+poss(balcony-12, my-9)
+amod(balcony-12, 13th-10)
+nn(balcony-12, floor-11)
+prep_from(see-15, balcony-12)
+nsubj(see-15, i-13)
+aux(see-15, can-14)
+conj_and(hotel-6, see-15)
+poss(school-21, my-17)
+amod(school-21, left-18)
+amod(school-21, melbourne-19)
+nn(school-21, grammar-20)
+prep_on(see-15, school-21)
+det(gardens-25, the-23)
+amod(gardens-25, botanical-24)
+appos(school-21, gardens-25)
+det(shrine-28, the-27)
+nsubj(park-39, shrine-28)
+prep_of(shrine-28, remembrance-30)
+poss(right-33, my-32)
+prep_to(remembrance-30, right-33)
+cop(park-39, is-34)
+det(park-39, the-35)
+nn(park-39, synagogue-36)
+conj_and(synagogue-36, fawkner-38)
+nn(park-39, fawkner-38)
+conj_and(hotel-6, park-39)
+conj_and(see-15, park-39)
+
+i/FW
+'m/VBP
+stuck/VBN
+between/IN
+a/DT
+children/NNS
+'s/POS
+playground/NN
+,/,
+a/DT
+retirement/NN
+village/NN
+,/,
+a/DT
+new/JJ
+building/NN
+site/NN
+and/CC
+a/DT
+defiant/JJ
+old/JJ
+fisherman/NN
+'s/POS
+shack/NN
+,/,
+a/DT
+microcosm/NN
+of/IN
+this/DT
+strange/JJ
+little/JJ
+town/NN
+that/WDT
+'s/VBZ
+growing/VBG
+up/RP
+do/VBP
+fast/RB
+./.
+***
+nsubjpass(stuck-3, i-1)
+auxpass(stuck-3, 'm-2)
+ccomp(do-37, stuck-3)
+det(children-6, a-5)
+poss(playground-8, children-6)
+prep_between(stuck-3, playground-8)
+det(village-12, a-10)
+nn(village-12, retirement-11)
+prep_between(stuck-3, village-12)
+conj_and(playground-8, village-12)
+det(site-17, a-14)
+amod(site-17, new-15)
+nn(site-17, building-16)
+prep_between(stuck-3, site-17)
+conj_and(playground-8, site-17)
+det(fisherman-22, a-19)
+amod(fisherman-22, defiant-20)
+amod(fisherman-22, old-21)
+poss(shack-24, fisherman-22)
+prep_between(stuck-3, shack-24)
+conj_and(playground-8, shack-24)
+det(microcosm-27, a-26)
+nsubj(do-37, microcosm-27)
+det(town-32, this-29)
+amod(town-32, strange-30)
+amod(town-32, little-31)
+prep_of(microcosm-27, town-32)
+nsubj(growing-35, town-32)
+aux(growing-35, 's-34)
+rcmod(town-32, growing-35)
+prt(growing-35, up-36)
+root(ROOT-0, do-37)
+advmod(do-37, fast-38)
+
+i/FW
+'m/VBP
+an/DT
+expat/JJ
+australian/NN
+currently/RB
+living/VBG
+and/CC
+working/VBG
+in/IN
+brussels/NNS
+,/,
+belgium/NN
+./.
+***
+nsubj(australian-5, i-1)
+cop(australian-5, 'm-2)
+det(australian-5, an-3)
+amod(australian-5, expat-4)
+root(ROOT-0, australian-5)
+advmod(living-7, currently-6)
+partmod(australian-5, living-7)
+partmod(australian-5, working-9)
+conj_and(living-7, working-9)
+prep_in(living-7, brussels-11)
+appos(brussels-11, belgium-13)
+
+when/WRB
+in/IN
+australia/NN
+,/,
+i/FW
+stay/VBP
+with/IN
+family/NN
+in/IN
+cole/JJ
+st/NN
+brighton/NN
+,/,
+vic/VB
+./.
+***
+advmod(stay-6, when-1)
+prep_in(stay-6, australia-3)
+nsubj(stay-6, i-5)
+advcl(vic-14, stay-6)
+prep_with(stay-6, family-8)
+amod(brighton-12, cole-10)
+nn(brighton-12, st-11)
+prep_in(family-8, brighton-12)
+root(ROOT-0, vic-14)
+
+i/FW
+'m/VBP
+an/DT
+expat/JJ
+australian/NN
+currently/RB
+living/VBG
+and/CC
+working/VBG
+in/IN
+brussels/NNS
+,/,
+belgium/NN
+./.
+***
+nsubj(australian-5, i-1)
+cop(australian-5, 'm-2)
+det(australian-5, an-3)
+amod(australian-5, expat-4)
+root(ROOT-0, australian-5)
+advmod(living-7, currently-6)
+partmod(australian-5, living-7)
+partmod(australian-5, working-9)
+conj_and(living-7, working-9)
+prep_in(living-7, brussels-11)
+appos(brussels-11, belgium-13)
+
+when/WRB
+in/IN
+australia/NN
+,/,
+i/FW
+stay/VBP
+with/IN
+family/NN
+in/IN
+cole/JJ
+st/NN
+brighton/NN
+,/,
+vic/VB
+./.
+***
+advmod(stay-6, when-1)
+prep_in(stay-6, australia-3)
+nsubj(stay-6, i-5)
+advcl(vic-14, stay-6)
+prep_with(stay-6, family-8)
+amod(brighton-12, cole-10)
+nn(brighton-12, st-11)
+prep_in(family-8, brighton-12)
+root(ROOT-0, vic-14)
+
+i/FW
+am/VBP
+at/IN
+the/DT
+corner/NN
+of/IN
+flinders/JJ
+st/NN
+and/CC
+st/NN
+kilda/NN
+rd./NN
+opposite/NN
+is/VBZ
+flinders/JJ
+st/NN
+station/NN
+and/CC
+on/IN
+the/DT
+other/JJ
+corners/NNS
+are/VBP
+young/JJ
+and/CC
+jacksons/NNS
+and/CC
+st/NN
+pauls/NNS
+cathedral/JJ
+./.
+***
+nsubj(am-2, i-1)
+nsubj(am-2', i-1)
+root(ROOT-0, am-2)
+conj_and(am-2, am-2')
+det(corner-5, the-4)
+prep_at(am-2, corner-5)
+amod(st-8, flinders-7)
+prep_of(corner-5, st-8)
+nn(kilda-11, st-10)
+prep_of(corner-5, kilda-11)
+conj_and(st-8, kilda-11)
+nn(opposite-13, rd.-12)
+nsubj(station-17, opposite-13)
+cop(station-17, is-14)
+amod(station-17, flinders-15)
+nn(station-17, st-16)
+rcmod(st-8, station-17)
+det(corners-22, the-20)
+amod(corners-22, other-21)
+nsubj(young-24, corners-22)
+nsubj(cathedral-30, corners-22)
+cop(young-24, are-23)
+prepc_on(am-2', young-24)
+dep(cathedral-30, jacksons-26)
+nn(pauls-29, st-28)
+conj_and(jacksons-26, pauls-29)
+dep(cathedral-30, pauls-29)
+prepc_on(am-2', cathedral-30)
+conj_and(young-24, cathedral-30)
+
+i/FW
+am/VBP
+in/IN
+my/PRP$
+office/NN
+at/IN
+the/DT
+united/VBN
+faculty/NN
+of/IN
+theology/NN
+,/,
+within/IN
+the/DT
+center/NN
+for/IN
+theology/NN
+and/CC
+ministry/NN
+at/IN
+29/CD
+college/NN
+crescent/NN
+,/,
+parkville/NN
+,/,
+directly/RB
+opposite/IN
+the/DT
+melbourne/JJ
+general/JJ
+cemetery/NN
+main/JJ
+gate/NN
+./.
+***
+nsubj(am-2, i-1)
+root(ROOT-0, am-2)
+poss(office-5, my-4)
+prep_in(am-2, office-5)
+det(faculty-9, the-7)
+amod(faculty-9, united-8)
+prep_at(am-2, faculty-9)
+prep_of(faculty-9, theology-11)
+advmod(faculty-9, within-13)
+det(center-15, the-14)
+pobj(within-13, center-15)
+prep_for(within-13, theology-17)
+prep_for(within-13, ministry-19)
+conj_and(theology-17, ministry-19)
+num(crescent-23, 29-21)
+nn(crescent-23, college-22)
+prep_at(theology-17, crescent-23)
+appos(crescent-23, parkville-25)
+advmod(within-13, directly-27)
+det(cemetery-32, the-29)
+amod(cemetery-32, melbourne-30)
+amod(cemetery-32, general-31)
+prep_opposite(within-13, cemetery-32)
+amod(gate-34, main-33)
+dep(faculty-9, gate-34)
+
+10k/CD
+east/JJ
+of/IN
+melbourne/NN
+,/,
+1k/JJ
+north/NN
+of/IN
+camberwell/JJ
+station/NN
+,/,
+near/IN
+the/DT
+t/NN
+junction/NN
+of/IN
+barkers/JJ
+rd/NN
+and/CC
+burke/NN
+rd/NN
+,/,
+just/RB
+off/RB
+harcourt/JJ
+st./NN
+i/NNS
+'m/VBP
+in/IN
+an/DT
+office/NN
+on/IN
+the/DT
+eighth/JJ
+floor/NN
+./.
+***
+num(i-27, 10k-1)
+advmod(harcourt-25, east-2)
+prep_of(east-2, melbourne-4)
+amod(north-7, 1k-6)
+appos(melbourne-4, north-7)
+amod(station-10, camberwell-9)
+prep_of(north-7, station-10)
+det(junction-15, the-13)
+nn(junction-15, t-14)
+prep_near(melbourne-4, junction-15)
+amod(rd-18, barkers-17)
+prep_of(junction-15, rd-18)
+nn(rd-21, burke-20)
+prep_of(junction-15, rd-21)
+conj_and(rd-18, rd-21)
+advmod(off-24, just-23)
+advmod(east-2, off-24)
+amod(i-27, harcourt-25)
+nn(i-27, st.-26)
+nsubj('m-28, i-27)
+root(ROOT-0, 'm-28)
+det(office-31, an-30)
+prep_in('m-28, office-31)
+det(floor-35, the-33)
+amod(floor-35, eighth-34)
+prep_on(office-31, floor-35)
+
+my/PRP$
+office/NN
+does/VBZ
+n't/RB
+have/VB
+windows/NNS
+,/,
+but/CC
+if/IN
+i/FW
+look/VBP
+through/IN
+my/PRP$
+glass/NN
+door/NN
+i/FW
+can/MD
+see/VB
+across/IN
+the/DT
+university/NN
+campus/NN
+to/TO
+the/DT
+redmond/JJ
+barry/NN
+building/NN
+./.
+***
+poss(office-2, my-1)
+nsubj(have-5, office-2)
+aux(have-5, does-3)
+neg(have-5, n't-4)
+root(ROOT-0, have-5)
+dobj(have-5, windows-6)
+mark(look-11, if-9)
+nsubj(look-11, i-10)
+advcl(see-18, look-11)
+poss(door-15, my-13)
+nn(door-15, glass-14)
+prep_through(look-11, door-15)
+nsubj(see-18, i-16)
+aux(see-18, can-17)
+conj_but(have-5, see-18)
+det(campus-22, the-20)
+nn(campus-22, university-21)
+prep_across(see-18, campus-22)
+det(building-27, the-24)
+amod(building-27, redmond-25)
+nn(building-27, barry-26)
+prep_to(see-18, building-27)
+
+i/FW
+can/MD
+hear/VB
+the/DT
+hum/NN
+of/IN
+the/DT
+airconditioner/NN
+and/CC
+the/DT
+sound/NN
+of/IN
+typing/NN
+./.
+***
+nsubj(hear-3, i-1)
+aux(hear-3, can-2)
+root(ROOT-0, hear-3)
+det(hum-5, the-4)
+dobj(hear-3, hum-5)
+det(airconditioner-8, the-7)
+prep_of(hum-5, airconditioner-8)
+det(sound-11, the-10)
+dobj(hear-3, sound-11)
+conj_and(hum-5, sound-11)
+prep_of(sound-11, typing-13)
+
+i/FW
+'m/VBP
+surrounded/VBN
+by/IN
+books/NNS
+and/CC
+papers/NNS
+and/CC
+photographs/VBZ
+./.
+***
+nsubjpass(surrounded-3, i-1)
+nsubj(photographs-9, i-1)
+auxpass(surrounded-3, 'm-2)
+root(ROOT-0, surrounded-3)
+agent(surrounded-3, books-5)
+agent(surrounded-3, papers-7)
+conj_and(books-5, papers-7)
+conj_and(surrounded-3, photographs-9)
+
+i/FW
+'m/VBP
+sitting/VBG
+on/IN
+a/DT
+bench/NN
+./.
+***
+nsubj(sitting-3, i-1)
+aux(sitting-3, 'm-2)
+root(ROOT-0, sitting-3)
+det(bench-6, a-5)
+prep_on(sitting-3, bench-6)
+
+near/IN
+a/DT
+building/NN
+./.
+***
+root(ROOT-0, near-1)
+det(building-3, a-2)
+pobj(near-1, building-3)
+
+i/FW
+think/VBP
+it/PRP
+'s/VBZ
+a/DT
+public/JJ
+building/NN
+./.
+***
+nsubj(think-2, i-1)
+root(ROOT-0, think-2)
+nsubj(building-7, it-3)
+cop(building-7, 's-4)
+det(building-7, a-5)
+amod(building-7, public-6)
+ccomp(think-2, building-7)
+
+there/EX
+is/VBZ
+a/DT
+busy/JJ
+road/NN
+nearby/RB
+./.
+***
+expl(is-2, there-1)
+root(ROOT-0, is-2)
+det(road-5, a-3)
+amod(road-5, busy-4)
+nsubj(is-2, road-5)
+advmod(is-2, nearby-6)
+
+there/EX
+are/VBP
+some/DT
+grassy/JJ
+sculptures/NNS
+./.
+***
+expl(are-2, there-1)
+root(ROOT-0, are-2)
+det(sculptures-5, some-3)
+amod(sculptures-5, grassy-4)
+nsubj(are-2, sculptures-5)
+
+and/VB
+bike/NN
+racks/NNS
+./.
+***
+root(ROOT-0, and-1)
+nn(racks-3, bike-2)
+dobj(and-1, racks-3)
+
+and/CC
+a/DT
+car/NN
+park/VB
+nearby/RB
+./.
+***
+cc(park-4, and-1)
+det(car-3, a-2)
+nsubj(park-4, car-3)
+root(ROOT-0, park-4)
+advmod(park-4, nearby-5)
+
+i/FW
+think/VBP
+the/DT
+neaby/JJ
+building/NN
+is/VBZ
+a/DT
+council/NN
+building/NN
+./.
+***
+nsubj(think-2, i-1)
+root(ROOT-0, think-2)
+det(building-5, the-3)
+amod(building-5, neaby-4)
+nsubj(building-9, building-5)
+cop(building-9, is-6)
+det(building-9, a-7)
+nn(building-9, council-8)
+ccomp(think-2, building-9)
+
+it/PRP
+is/VBZ
+a/DT
+few/JJ
+decades/NNS
+old/JJ
+./.
+***
+nsubj(old-6, it-1)
+cop(old-6, is-2)
+det(decades-5, a-3)
+amod(decades-5, few-4)
+attr(old-6, decades-5)
+root(ROOT-0, old-6)
+
+there/EX
+are/VBP
+lots/NNS
+of/IN
+people/NNS
+coming/VBG
+and/CC
+going/VBG
+from/IN
+the/DT
+building/NN
+./.
+***
+expl(are-2, there-1)
+root(ROOT-0, are-2)
+nsubj(are-2, lots-3)
+prep_of(lots-3, people-5)
+partmod(people-5, coming-6)
+partmod(people-5, going-8)
+conj_and(coming-6, going-8)
+det(building-11, the-10)
+prep_from(coming-6, building-11)
+
+lots/NNS
+of/IN
+kids/NNS
+too/RB
+./.
+***
+root(ROOT-0, lots-1)
+prep_of(lots-1, kids-3)
+advmod(lots-1, too-4)
+
+i/FW
+live/VBP
+in/IN
+a/DT
+leafy/JJ
+street/NN
+which/WDT
+has/VBZ
+a/DT
+footpath/NN
+running/VBG
+down/RP
+one/CD
+side/NN
+./.
+***
+nsubj(live-2, i-1)
+root(ROOT-0, live-2)
+det(street-6, a-4)
+amod(street-6, leafy-5)
+prep_in(live-2, street-6)
+nsubj(has-8, street-6)
+rcmod(street-6, has-8)
+det(footpath-10, a-9)
+dobj(has-8, footpath-10)
+partmod(footpath-10, running-11)
+prt(running-11, down-12)
+num(side-14, one-13)
+dobj(running-11, side-14)
+
+it/PRP
+is/VBZ
+a/DT
+beautiful/JJ
+tranquil/JJ
+area/NN
+with/IN
+many/JJ
+family/NN
+connections/NNS
+for/IN
+me/PRP
+./.
+***
+nsubj(area-6, it-1)
+cop(area-6, is-2)
+det(area-6, a-3)
+amod(area-6, beautiful-4)
+amod(area-6, tranquil-5)
+root(ROOT-0, area-6)
+amod(connections-10, many-8)
+nn(connections-10, family-9)
+prep_with(area-6, connections-10)
+prep_for(connections-10, me-12)
+
+ith/NN
+a./NN
+corner/NN
+of/IN
+como/JJ
+parade/NN
+east/NNS
+and/CC
+parkers/NNS
+road/NN
+,/,
+in/IN
+the/DT
+library/NN
+building/NN
+,/,
+next/RB
+to/TO
+the/DT
+bee/NN
+shop/NN
+and/CC
+across/IN
+from/IN
+the/DT
+parkdale/JJ
+railway/NN
+station/NN
+./.
+***
+nn(corner-3, ith-1)
+nn(corner-3, a.-2)
+root(ROOT-0, corner-3)
+amod(east-7, como-5)
+nn(east-7, parade-6)
+prep_of(corner-3, east-7)
+nn(road-10, parkers-9)
+prep_of(corner-3, road-10)
+conj_and(east-7, road-10)
+det(building-15, the-13)
+nn(building-15, library-14)
+prep_in(corner-3, building-15)
+det(shop-21, the-19)
+nn(shop-21, bee-20)
+prep_next_to(corner-3, shop-21)
+conj_and(corner-3, across-23)
+pcomp(across-23, from-24)
+det(station-28, the-25)
+amod(station-28, parkdale-26)
+nn(station-28, railway-27)
+pobj(from-24, station-28)
+
+on/IN
+the/DT
+border/NN
+between/IN
+the/DT
+old/JJ
+workers/NNS
+'/POS
+district/NN
+and/CC
+a/DT
+new/JJ
+industrial/JJ
+zone/NN
+,/,
+now/RB
+turning/VBN
+into/IN
+a/DT
+very/RB
+desirable/JJ
+inner-city/JJ
+suburban/JJ
+area/NN
+./.
+***
+det(border-3, the-2)
+prep_on(turning-17, border-3)
+det(workers-7, the-5)
+amod(workers-7, old-6)
+poss(district-9, workers-7)
+prep_between(border-3, district-9)
+det(zone-14, a-11)
+amod(zone-14, new-12)
+amod(zone-14, industrial-13)
+prep_between(border-3, zone-14)
+conj_and(district-9, zone-14)
+advmod(turning-17, now-16)
+root(ROOT-0, turning-17)
+det(area-24, a-19)
+advmod(desirable-21, very-20)
+amod(area-24, desirable-21)
+amod(area-24, inner-city-22)
+amod(area-24, suburban-23)
+prep_into(turning-17, area-24)
+
+from/IN
+the/DT
+nepean/JJ
+hwy/NN
+service/NN
+road/NN
+,/,
+going/VBG
+\*/SYM
+towards/IN
+\*/JJ
+mentone/NN
+beach/NN
+,/,
+turn/NN
+left/VBD
+into/IN
+swinden/JJ
+ave/NN
+i.e./NNS
+before/IN
+the/DT
+royal/JJ
+oak/NN
+hotel/NN
+./.
+***
+det(road-6, the-2)
+amod(road-6, nepean-3)
+nn(road-6, hwy-4)
+nn(road-6, service-5)
+prep_from(left-16, road-6)
+csubj(left-16, going-8)
+dep(going-8, \*-9)
+amod(beach-13, \*-11)
+nn(beach-13, mentone-12)
+prep_towards(going-8, beach-13)
+appos(beach-13, turn-15)
+root(ROOT-0, left-16)
+amod(i.e.-20, swinden-18)
+nn(i.e.-20, ave-19)
+prep_into(left-16, i.e.-20)
+det(hotel-25, the-22)
+amod(hotel-25, royal-23)
+nn(hotel-25, oak-24)
+prep_before(left-16, hotel-25)
+
+my/PRP$
+house/NN
+is/VBZ
+on/IN
+the/DT
+lhs/NN
+about/RB
+1\/3/CD
+of/IN
+the/DT
+way/NN
+up/RB
+the/DT
+street/NN
+./.
+***
+poss(house-2, my-1)
+nsubj(1\/3-8, house-2)
+cop(1\/3-8, is-3)
+det(lhs-6, the-5)
+prep_on(1\/3-8, lhs-6)
+quantmod(1\/3-8, about-7)
+root(ROOT-0, 1\/3-8)
+det(way-11, the-10)
+prep_of(1\/3-8, way-11)
+advmod(way-11, up-12)
+det(street-14, the-13)
+pobj(up-12, street-14)
+
+it/PRP
+has/VBZ
+a/DT
+mushroom/NN
+pink\/brown/NN
+wire/NN
+1940s/CD
+style/NN
+fence/NN
+and/CC
+a/DT
+double/JJ
+carport/NN
+in/IN
+the/DT
+driveway/NN
+./.
+***
+nsubj(has-2, it-1)
+root(ROOT-0, has-2)
+det(fence-9, a-3)
+nn(fence-9, mushroom-4)
+nn(fence-9, pink\/brown-5)
+nn(fence-9, wire-6)
+num(fence-9, 1940s-7)
+nn(fence-9, style-8)
+dobj(has-2, fence-9)
+det(carport-13, a-11)
+amod(carport-13, double-12)
+dobj(has-2, carport-13)
+conj_and(fence-9, carport-13)
+det(driveway-16, the-15)
+prep_in(carport-13, driveway-16)
+
+ps/NNP
+i/FW
+'d/NNP
+\*/RB
+hate/VBP
+\*/NNP
+to/TO
+see/VB
+the/DT
+development/NN
+of/IN
+automated/VBN
+systems/NNS
+for/IN
+emergency/NN
+services/NNS
+,/,
+not/RB
+if/IN
+telstra/NNP
+'s/POS
+automated/JJ
+service/NN
+is/VBZ
+anything/NN
+to/TO
+go/VB
+by/IN
+./.
+***
+nn('d-3, ps-1)
+nn('d-3, i-2)
+nsubj(hate-5, 'd-3)
+advmod(hate-5, \*-4)
+root(ROOT-0, hate-5)
+nsubj(see-8, \*-6)
+aux(see-8, to-7)
+xcomp(hate-5, see-8)
+det(development-10, the-9)
+dobj(see-8, development-10)
+amod(systems-13, automated-12)
+prep_of(development-10, systems-13)
+nn(services-16, emergency-15)
+prep_for(systems-13, services-16)
+dep(anything-25, not-18)
+mark(anything-25, if-19)
+poss(service-23, telstra-20)
+amod(service-23, automated-22)
+nsubj(anything-25, service-23)
+cop(anything-25, is-24)
+advcl(hate-5, anything-25)
+ccomp(hate-5, anything-25)
+aux(go-27, to-26)
+infmod(anything-25, go-27)
+prep(go-27, by-28)
+
+i/FW
+am/VBP
+located/VBN
+on/IN
+the/DT
+grange/JJ
+estate/NN
+on/IN
+the/DT
+eastern/JJ
+side/NN
+of/IN
+jacksons/JJ
+hill/NN
+within/IN
+the/DT
+precincts/NNS
+of/IN
+the/DT
+township/NN
+of/IN
+sunbury/JJ
+approximately/RB
+40/CD
+kms/NN
+from/IN
+the/DT
+center/NN
+of/IN
+melbourne/NN
+./.
+***
+nsubjpass(located-3, i-1)
+auxpass(located-3, am-2)
+root(ROOT-0, located-3)
+det(estate-7, the-5)
+amod(estate-7, grange-6)
+prep_on(located-3, estate-7)
+det(side-11, the-9)
+amod(side-11, eastern-10)
+prep_on(estate-7, side-11)
+amod(hill-14, jacksons-13)
+prep_of(side-11, hill-14)
+det(precincts-17, the-16)
+prep_within(located-3, precincts-17)
+det(township-20, the-19)
+prep_of(precincts-17, township-20)
+amod(kms-25, sunbury-22)
+quantmod(40-24, approximately-23)
+num(kms-25, 40-24)
+prep_of(township-20, kms-25)
+det(center-28, the-27)
+prep_from(located-3, center-28)
+prep_of(center-28, melbourne-30)
+
+i/FW
+am/VBP
+in/IN
+west/NN
+footscray/JJ
+at/IN
+71/CD
+pitt/NN
+st/NN
+this/DT
+is/VBZ
+a/DT
+street/NN
+that/WDT
+runs/VBZ
+off/RP
+ashley/JJ
+st/NN
+opposite/IN
+a/DT
+shopping/NN
+center/NN
+called/VBN
+central/JJ
+west/NN
+./.
+***
+nsubj(footscray-5, i-1)
+cop(footscray-5, am-2)
+advmod(footscray-5, in-3)
+dep(in-3, west-4)
+root(ROOT-0, footscray-5)
+num(st-9, 71-7)
+nn(st-9, pitt-8)
+prep_at(footscray-5, st-9)
+nsubj(runs-15, st-9)
+nsubj(street-13, this-10)
+cop(street-13, is-11)
+det(street-13, a-12)
+rcmod(st-9, street-13)
+rcmod(street-13, runs-15)
+prt(runs-15, off-16)
+amod(st-18, ashley-17)
+dobj(runs-15, st-18)
+det(center-22, a-20)
+nn(center-22, shopping-21)
+prep_opposite(runs-15, center-22)
+partmod(center-22, called-23)
+amod(west-25, central-24)
+dobj(called-23, west-25)
+
+i/FW
+am/VBP
+about/IN
+10/CD
+minutes/NNS
+walk/NN
+from/IN
+tottenham/NN
+station/NN
+./.
+***
+nsubj(walk-6, i-1)
+aux(walk-6, am-2)
+advmod(walk-6, about-3)
+num(minutes-5, 10-4)
+pobj(about-3, minutes-5)
+root(ROOT-0, walk-6)
+nn(station-9, tottenham-8)
+prep_from(walk-6, station-9)
+
+in/IN
+my/PRP$
+office/NN
+on/IN
+the/DT
+second/JJ
+floor/NN
+of/IN
+the/DT
+baldwin/NN
+spencer/NN
+building/NN
+,/,
+corner/NN
+of/IN
+tin/NN
+alley/NN
+and/CC
+union/NN
+rd/VBP
+at/IN
+the/DT
+university/NN
+of/IN
+melbourne/NN
+./.
+***
+poss(office-3, my-2)
+prep_in(rd-20, office-3)
+det(floor-7, the-5)
+amod(floor-7, second-6)
+prep_on(office-3, floor-7)
+det(building-12, the-9)
+nn(building-12, baldwin-10)
+nn(building-12, spencer-11)
+prep_of(floor-7, building-12)
+nsubj(rd-20, corner-14)
+nn(alley-17, tin-16)
+prep_of(corner-14, alley-17)
+prep_of(corner-14, union-19)
+conj_and(alley-17, union-19)
+root(ROOT-0, rd-20)
+det(university-23, the-22)
+prep_at(rd-20, university-23)
+prep_of(university-23, melbourne-25)
+
+i/FW
+'m/VBP
+in/IN
+the/DT
+north-east/NN
+corner/NN
+of/IN
+warragul/NN
+,/,
+as/RB
+close/RB
+as/IN
+you/PRP
+can/MD
+be/VB
+to/TO
+lillico/NN
+while/IN
+being/VBG
+in/IN
+warragul/NN
+./.
+***
+nsubj('m-2, i-1)
+root(ROOT-0, 'm-2)
+det(corner-6, the-4)
+nn(corner-6, north-east-5)
+prep_in('m-2, corner-6)
+prep_of(corner-6, warragul-8)
+advmod(close-11, as-10)
+advmod(be-15, close-11)
+mark(be-15, as-12)
+nsubj(be-15, you-13)
+aux(be-15, can-14)
+advcl('m-2, be-15)
+ccomp('m-2, be-15)
+prep_to(be-15, lillico-17)
+prepc_while(be-15, being-19)
+prep_in(being-19, warragul-21)
+
+i/FW
+am/VBP
+literally/RB
+on/IN
+the/DT
+edge/NN
+of/IN
+town/NN
+./.
+***
+nsubj(am-2, i-1)
+root(ROOT-0, am-2)
+advmod(am-2, literally-3)
+det(edge-6, the-5)
+prep_on(am-2, edge-6)
+prep_of(edge-6, town-8)
+
+i/FW
+am/VBP
+across/IN
+the/DT
+paddock/NN
+from/IN
+the/DT
+old/JJ
+warragul/JJ
+drive-in/NN
+cinema/NN
+./.
+***
+nsubj(am-2, i-1)
+root(ROOT-0, am-2)
+det(paddock-5, the-4)
+prep_across(am-2, paddock-5)
+det(cinema-11, the-7)
+amod(cinema-11, old-8)
+amod(cinema-11, warragul-9)
+nn(cinema-11, drive-in-10)
+prep_from(paddock-5, cinema-11)
+
+the/DT
+address/NN
+is/VBZ
+23/CD
+nicolas/NNS
+crt/JJ
+./.
+***
+det(address-2, the-1)
+nsubj(crt-6, address-2)
+cop(crt-6, is-3)
+num(nicolas-5, 23-4)
+npadvmod(crt-6, nicolas-5)
+root(ROOT-0, crt-6)
+
+it/PRP
+used/VBD
+to/TO
+be/VB
+called/VBN
+bunyip/NN
+crt/NN
+./.
+***
+nsubj(used-2, it-1)
+xsubj(called-5, it-1)
+root(ROOT-0, used-2)
+aux(called-5, to-3)
+auxpass(called-5, be-4)
+xcomp(used-2, called-5)
+nn(crt-7, bunyip-6)
+dobj(called-5, crt-7)
+
+i/FW
+am/VBP
+currently/RB
+at/IN
+home/NN
+in/IN
+the/DT
+sixth/JJ
+house/NN
+from/IN
+the/DT
+end/NN
+of/IN
+princess/NNS
+st/VBN
+south/RB
+on/IN
+the/DT
+left/JJ
+hand/NN
+side/NN
+as/IN
+you/PRP
+enter/VBP
+the/DT
+street/NN
+from/IN
+brougham/NN
+st./NN
+i/NNS
+am/VBP
+in/IN
+richmond/NN
+,/,
+a/DT
+suburb/NN
+about/IN
+three/CD
+kilometres/NNS
+directly/RB
+east/JJ
+of/IN
+the/DT
+city/NN
+./.
+***
+nsubjpass(st-15, i-1)
+auxpass(st-15, am-2)
+advmod(st-15, currently-3)
+advmod(st-15, at-4)
+dep(at-4, home-5)
+det(house-9, the-7)
+amod(house-9, sixth-8)
+prep_in(at-4, house-9)
+det(end-12, the-11)
+prep_from(house-9, end-12)
+prep_of(end-12, princess-14)
+root(ROOT-0, st-15)
+advmod(enter-24, south-16)
+det(side-21, the-18)
+amod(side-21, left-19)
+nn(side-21, hand-20)
+prep_on(south-16, side-21)
+mark(enter-24, as-22)
+nsubj(enter-24, you-23)
+advcl(st-15, enter-24)
+ccomp(st-15, enter-24)
+det(street-26, the-25)
+nsubj(am-31, street-26)
+nn(i-30, brougham-28)
+nn(i-30, st.-29)
+prep_from(street-26, i-30)
+ccomp(enter-24, am-31)
+prep_in(am-31, richmond-33)
+det(suburb-36, a-35)
+appos(richmond-33, suburb-36)
+num(kilometres-39, three-38)
+prep_about(suburb-36, kilometres-39)
+advmod(east-41, directly-40)
+amod(kilometres-39, east-41)
+det(city-44, the-43)
+prep_of(kilometres-39, city-44)
+
+brougham/NN
+st/NN
+runs/NNS
+east/JJ
+off/IN
+church/NN
+st/NN
+south/RB
+of/IN
+bridge/JJ
+rd/NN
+and/CC
+princess/NNS
+st/NN
+south/RB
+is/VBZ
+the/DT
+third/JJ
+turn/NN
+on/IN
+the/DT
+left/NN
+./.
+***
+nn(runs-3, brougham-1)
+nn(runs-3, st-2)
+nsubj(turn-19, runs-3)
+advmod(turn-19, east-4)
+nn(st-7, church-6)
+prep_off(east-4, st-7)
+advmod(east-4, south-8)
+amod(rd-11, bridge-10)
+prep_of(south-8, rd-11)
+nn(st-14, princess-13)
+prep_of(south-8, st-14)
+conj_and(rd-11, st-14)
+advmod(south-8, south-15)
+cop(turn-19, is-16)
+det(turn-19, the-17)
+amod(turn-19, third-18)
+root(ROOT-0, turn-19)
+det(left-22, the-21)
+prep_on(turn-19, left-22)
+
+if/IN
+you/PRP
+return/VB
+to/TO
+church/NN
+st/NN
+and/CC
+go/VB
+back/RB
+north/RB
+to/TO
+the/DT
+corner/NN
+of/IN
+bridge/NN
+rd/NN
+and/CC
+turn/VB
+left/RB
+there/RB
+and/CC
+follow/VB
+this/DT
+road/NN
+which/WDT
+becomes/VBZ
+wellington/NN
+parade/NN
+and/CC
+later/JJ
+flinders/NNS
+st/VBP
+you/PRP
+will/MD
+arrive/VB
+at/IN
+federation/NN
+square/NN
+on/IN
+your/PRP$
+left/JJ
+at/IN
+the/DT
+corner/NN
+of/IN
+flinders/JJ
+st/NN
+and/CC
+swanston/NN
+st./NN
+97/CD
+ebden/NN
+street/NN
+,/,
+ainslie/VB
+-/:
+starting/VBG
+at/IN
+the/DT
+ainslie/JJ
+shops/NNS
+,/,
+head/VB
+up/RP
+the/DT
+middle/JJ
+street/NN
+opposite/IN
+the/DT
+iga/NN
+supermarket/NN
+,/,
+turn/VB
+left/VBN
+at/IN
+the/DT
+end/NN
+of/IN
+the/DT
+street/NN
+and/CC
+head/VB
+250m/CD
+up/RB
+the/DT
+road/NN
+,/,
+with/IN
+the/DT
+house/NN
+the/DT
+third/JJ
+house/NN
+on/IN
+the/DT
+left/NN
+before/IN
+the/DT
+roundabout/NN
+./.
+***
+mark(return-3, if-1)
+nsubj(return-3, you-2)
+nsubj(go-8, you-2)
+nsubj(turn-18, you-2)
+advcl(ainslie-55, return-3)
+nn(st-6, church-5)
+prep_to(return-3, st-6)
+conj_and(return-3, go-8)
+advcl(ainslie-55, go-8)
+advmod(north-10, back-9)
+advmod(go-8, north-10)
+det(corner-13, the-12)
+prep_to(go-8, corner-13)
+nn(rd-16, bridge-15)
+prep_of(corner-13, rd-16)
+conj_and(return-3, turn-18)
+advcl(ainslie-55, turn-18)
+advmod(there-20, left-19)
+advmod(turn-18, there-20)
+conj_and(return-3, follow-22)
+conj_and(turn-18, follow-22)
+det(road-24, this-23)
+dobj(follow-22, road-24)
+nsubj(becomes-26, road-24)
+rcmod(road-24, becomes-26)
+nn(parade-28, wellington-27)
+nsubj(st-32, parade-28)
+amod(flinders-31, later-30)
+conj_and(parade-28, flinders-31)
+nsubj(st-32, flinders-31)
+ccomp(becomes-26, st-32)
+nsubj(arrive-35, you-33)
+aux(arrive-35, will-34)
+ccomp(st-32, arrive-35)
+nn(square-38, federation-37)
+prep_at(arrive-35, square-38)
+poss(street-53, your-40)
+amod(street-53, left-41)
+det(corner-44, the-43)
+prep_at(left-41, corner-44)
+amod(st-47, flinders-46)
+prep_of(corner-44, st-47)
+nn(st.-50, swanston-49)
+prep_of(corner-44, st.-50)
+conj_and(st-47, st.-50)
+num(street-53, 97-51)
+nn(street-53, ebden-52)
+prep_on(square-38, street-53)
+root(ROOT-0, ainslie-55)
+parataxis(ainslie-55, starting-57)
+det(shops-61, the-59)
+amod(shops-61, ainslie-60)
+prep_at(starting-57, shops-61)
+dep(ainslie-55, head-63)
+prt(head-63, up-64)
+det(street-67, the-65)
+amod(street-67, middle-66)
+dobj(head-63, street-67)
+det(supermarket-71, the-69)
+nn(supermarket-71, iga-70)
+prep_opposite(head-63, supermarket-71)
+dep(ainslie-55, turn-73)
+conj_and(head-63, turn-73)
+dep(turn-73, left-74)
+det(end-77, the-76)
+prep_at(left-74, end-77)
+det(street-80, the-79)
+prep_of(end-77, street-80)
+dep(ainslie-55, head-82)
+conj_and(head-63, head-82)
+dobj(head-82, 250m-83)
+advmod(head-82, up-84)
+det(road-86, the-85)
+pobj(up-84, road-86)
+det(house-90, the-89)
+prep_with(head-82, house-90)
+det(house-93, the-91)
+amod(house-93, third-92)
+dobj(ainslie-55, house-93)
+det(left-96, the-95)
+prep_on(ainslie-55, left-96)
+det(roundabout-99, the-98)
+prep_before(left-96, roundabout-99)
+
+under/IN
+the/DT
+shade/NN
+of/IN
+a/DT
+golden/JJ
+elm/NN
+,/,
+in/IN
+the/DT
+beautiful/JJ
+goulburn/NN
+river/NN
+town/NN
+of/IN
+shepparton/NN
+,/,
+close/VBP
+to/TO
+the/DT
+heart/NN
+of/IN
+this/DT
+thriving/JJ
+regional/JJ
+arts/NNS
+city/NN
+./.
+***
+det(shade-3, the-2)
+prep_under(close-18, shade-3)
+det(elm-7, a-5)
+amod(elm-7, golden-6)
+prep_of(shade-3, elm-7)
+det(town-14, the-10)
+amod(town-14, beautiful-11)
+nn(town-14, goulburn-12)
+nn(town-14, river-13)
+prep_in(close-18, town-14)
+prep_of(town-14, shepparton-16)
+root(ROOT-0, close-18)
+det(heart-21, the-20)
+prep_to(close-18, heart-21)
+det(city-27, this-23)
+amod(city-27, thriving-24)
+amod(city-27, regional-25)
+nn(city-27, arts-26)
+prep_of(heart-21, city-27)
+
+i/FW
+am/VBP
+in/IN
+st/NN
+kilda/NN
+road/NN
+where/WRB
+there/EX
+is/VBZ
+an/DT
+amusement/NN
+park/NN
+called/VBD
+luna/NN
+park/NN
+which/WDT
+is/VBZ
+located/VBN
+near/IN
+to/TO
+the/DT
+see/VBP
+./.
+***
+nsubj(am-2, i-1)
+root(ROOT-0, am-2)
+nn(road-6, st-4)
+nn(road-6, kilda-5)
+prep_in(am-2, road-6)
+advmod(is-9, where-7)
+expl(is-9, there-8)
+rcmod(road-6, is-9)
+det(park-12, an-10)
+nn(park-12, amusement-11)
+nsubj(is-9, park-12)
+rcmod(park-12, called-13)
+nn(park-15, luna-14)
+nsubjpass(located-18, park-15)
+nsubj(see-22, park-15)
+auxpass(located-18, is-17)
+rcmod(park-15, located-18)
+prepc_near_to(located-18, to-20)
+pobj(located-18, the-21)
+ccomp(called-13, see-22)
+
+in/IN
+the/DT
+st/NN
+called/VBD
+neerim/NN
+rd/NN
+in/IN
+carnegie/NN
+which/WDT
+holds/VBZ
+the/DT
+same/JJ
+distance/NN
+from/IN
+two/CD
+train/NN
+stations/NNS
+of/IN
+carnegie/NN
+and/CC
+murrumbeena/NN
+./.
+***
+det(st-3, the-2)
+prep_in(called-4, st-3)
+root(ROOT-0, called-4)
+nn(rd-6, neerim-5)
+nsubj(called-4, rd-6)
+nsubj(holds-10, rd-6)
+prep_in(rd-6, carnegie-8)
+rcmod(rd-6, holds-10)
+det(distance-13, the-11)
+amod(distance-13, same-12)
+dobj(holds-10, distance-13)
+num(stations-17, two-15)
+nn(stations-17, train-16)
+prep_from(holds-10, stations-17)
+prep_of(stations-17, carnegie-19)
+prep_of(stations-17, murrumbeena-21)
+conj_and(carnegie-19, murrumbeena-21)
+
+there/EX
+is/VBZ
+a/DT
+large/JJ
+expanse/NN
+of/IN
+lawn/NN
+bordering/VBG
+the/DT
+merri/JJ
+river/NN
+surrounded/VBN
+by/IN
+tall/JJ
+gum/NN
+trees/NNS
+and/CC
+beyond/IN
+that/DT
+,/,
+a/DT
+hill/NN
+with/IN
+a/DT
+single/JJ
+house/NN
+./.
+***
+expl(is-2, there-1)
+root(ROOT-0, is-2)
+det(expanse-5, a-3)
+amod(expanse-5, large-4)
+nsubj(is-2, expanse-5)
+prep_of(expanse-5, lawn-7)
+partmod(lawn-7, bordering-8)
+det(river-11, the-9)
+amod(river-11, merri-10)
+dobj(bordering-8, river-11)
+partmod(river-11, surrounded-12)
+partmod(river-11, surrounded-12')
+conj_and(surrounded-12, surrounded-12')
+amod(trees-16, tall-14)
+nn(trees-16, gum-15)
+agent(surrounded-12, trees-16)
+prep_beyond(surrounded-12', that-19)
+det(hill-22, a-21)
+appos(that-19, hill-22)
+det(house-26, a-24)
+amod(house-26, single-25)
+prep_with(hill-22, house-26)
+
+the/DT
+town/NN
+of/IN
+trentham/NN
+in/IN
+the/DT
+central/JJ
+highlands/NNS
+of/IN
+victoria/NN
+,/,
+australia/NN
+./.
+***
+det(town-2, the-1)
+root(ROOT-0, town-2)
+prep_of(town-2, trentham-4)
+det(highlands-8, the-6)
+amod(highlands-8, central-7)
+prep_in(town-2, highlands-8)
+prep_of(highlands-8, victoria-10)
+appos(victoria-10, australia-12)
+
+once/RB
+known/VBN
+for/IN
+logging/VBG
+and/CC
+gold/NN
+but/CC
+now/RB
+potatoes/NNS
+and/CC
+truffles/NNS
+and/CC
+boutique/NN
+get/VBP
+aways/NNS
+./.
+***
+advmod(known-2, once-1)
+root(ROOT-0, known-2)
+prep_for(known-2, logging-4)
+prep_for(known-2, gold-6)
+conj_and(logging-4, gold-6)
+dep(potatoes-9, now-8)
+conj_but(known-2, potatoes-9)
+conj_but(known-2, truffles-11)
+conj_and(potatoes-9, truffles-11)
+nsubj(get-14, boutique-13)
+conj_and(known-2, get-14)
+dobj(get-14, aways-15)
+
+close/NN
+to/TO
+e/JJ
+melbourne/NN
+,/,
+ballarat/NN
+,/,
+bendigo/NN
+,/,
+and/CC
+on/IN
+the/DT
+edge/NN
+of/IN
+the/DT
+spa/NN
+country/NN
+'s/VBZ
+./.
+***
+conj_and(close-1, close-1')
+nsubj('s-18, close-1)
+nsubj('s-18, close-1')
+amod(melbourne-4, e-3)
+prep_to(close-1, melbourne-4)
+appos(melbourne-4, ballarat-6)
+appos(ballarat-6, bendigo-8)
+det(edge-13, the-12)
+prep_on(close-1', edge-13)
+det(country-17, the-15)
+nn(country-17, spa-16)
+prep_of(edge-13, country-17)
+root(ROOT-0, 's-18)
+
+63/CD
+./.
+***
+root(ROOT-0, 63-1)
+
