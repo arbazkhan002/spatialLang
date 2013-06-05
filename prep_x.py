@@ -1,6 +1,19 @@
+from copy import deepcopy
 DEP_POS = 2
 GOV_POS = 1
 REL_POS = 0
+
+class MyError(Exception):
+	def __init__(self, value):
+	 self.value = value
+	def __str__(self):
+	 return repr(self.value)
+
+subject_arguments = [
+			"nsubj" , # - nominal subject
+			"nsubjpass" , # - passive nominal subject
+			]
+
 modifiers = [
 			"amod" , #  adjectival modifier
 			"appos" , #  appositional modifier
@@ -26,6 +39,7 @@ modifiers = [
 			"possessive" , # possessive modifier ('s)
 			"prt" , #  phrasal verb particle
 			]
+
 
 
 
@@ -87,13 +101,14 @@ def query_triplet(t,rel=None,gov=None,dep=None):
 def output_parser(f):
 	sentences=[]
 	sentence=""
+	count_le = 0 		#number of locative expressions identified
 	for line in f:
 		if line=="\n":
 			sentences.append(sentence)
 			sentence=""
 		else:
 			sentence+=line
-
+	
 	for sent in sentences:
 		#~ print sent
 		[pos,dep] = sent.split("***")
@@ -136,28 +151,71 @@ def output_parser(f):
 		f=0
 		for rel,raw_gov,raw_dep in raw_triples:
 			gov,dep=map(unraw,[raw_gov,raw_dep])
+			#~ print rel , rel.startswith("prep_")
 			if rel.startswith("prep_"):
+				#~ Get the spatial relation out from the grammatical relation
+				sr = rel[rel.find("prep_")+5:]
+				
 				if 1:
-					#~ Direct case of a noun preposition noun				
+					#--------------- Direct case of a noun preposition noun  -----------------------------#				
 					if pos_dict[gov]==pos_dict[dep]:
 						
-						#~ Get the spatial relation out from the grammatical relation
-						sr = rel[rel.find("prep_")+5:]
-						#~ print raw_gov,rel,raw_dep
+						print ":".join(direct_NN_to_NN(sr, raw_triples, raw_gov, raw_dep))
 						
-						#~ Find the list of modifiers adjoining the nouns
-						l = find_modifiers(raw_triples,raw_gov)
-						
-						ro = find_modifiers(raw_triples,raw_dep)
-						
-						
-						#--------------- For gov  -------------------#
+						count_le+=1
 					
-						# Identifying locatum (l), RO(ro) and spatial relation (sr)
-						print ":".join([l,sr,ro])
+					
+					#---------------- Preposition clause of modifying a verb -------------------------#	
+					elif pos_dict[gov].startswith("VB"):
+						print rel,raw_gov,raw_dep
+						print ":".join(verb_to_NN(sr, raw_triples, raw_gov, raw_dep))
+						
+						count_le+=1
+						
+						
 				else:
 					print "Error!!!"
-					exit		
+					exit
+					
+					
+	print count_le					
+
+
+def direct_NN_to_NN(sr, raw_triples, raw_gov, raw_dep):
+	#~ print raw_gov,rel,raw_dep
+	
+	#~ Find the list of modifiers adjoining the nouns
+	l = " ".join(find_modifiers(raw_triples,raw_gov))
+	
+	
+	ro = " ".join(find_modifiers(raw_triples,raw_dep))
+	
+
+	
+	#--------------- For gov  -------------------#
+
+	# Identifying locatum (l), RO(ro) and spatial relation (sr)
+	return [l,sr,ro]
+
+def verb_to_NN(sr, raw_triples, raw_gov, raw_dep):
+	subjects = []
+
+	for arg in subject_arguments:
+		subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
+	
+	
+	if len(subjects)>1:
+		raise MyError("more than one subject to a verb!")
+	
+	elif len(subjects)==1:
+		#~ print subjects
+		[rel_r,gov_r,dep_r],tindex = subjects[0]
+		raw_nn = raw_triples[tindex][DEP_POS]
+		
+		return direct_NN_to_NN (sr, raw_triples, raw_nn, raw_dep)
+	else:
+		print "***subject of the verb couldn't be found***",
+		return []	
 
 #~ raw word is as it is mentioned in typed dependencies
 #~ 'house-8' is raw, 'house' is unraw. A general example is 't-intersection-6'
@@ -170,41 +228,43 @@ def unraw(raw_word):
 #~ the order of occurrence in the sentence
 """ ASSUMPTION : Finds the modifiers from the triplets where it stays in the gov position """
 def find_modifiers (raw_triples, raw_gov):
-		
-		gov = unraw(raw_gov)
-		gov_pos = find_position_in_raw_word(raw_gov)
-		#~ Find all the triplets where our word occurs at gov position
-		result= query_triplet(raw_triples,None,raw_gov,None)
 	
-		#~ Attach the modifiers in the order they occured in the sentence
-		sorted_mods=[]
-		mods=[]
-		
-		#~ raw_gov_word=raw_triples[result[0][1]][GOV_POS]				# Since, result is of the form [  [[rel_r,gov_r,dep_r],tindex] , ... ]
-		#~ gov_pos=int(raw_gov_word[raw_gov_word.find("-")+1:])
-		
-		for [[rel_r,gov_r,dep_r],tindex] in result:
-			if rel_r in modifiers:			
-				#~ find the word position of the modifier
-				#~ raw_triples[tindex] has the word in raw form
-				alpha = raw_triples[tindex][DEP_POS]
-				if alpha.startswith(dep_r):
-					dep_r_pos=find_position_in_raw_word(dep_r)
-					mods.append([dep_r_pos,unraw(dep_r)])
-					
-				
+	gov = unraw(raw_gov)
+	gov_pos = find_position_in_raw_word(raw_gov)
+	#~ Find all the triplets where our word occurs at gov position
+	result= query_triplet(raw_triples,None,raw_gov,None)
 
-		mods.append([gov_pos,gov])											
-		mods.sort()
-		sorted_mods = map(listGet(1),mods)
-		return " ".join(sorted_mods)
+	#~ Attach the modifiers in the order they occured in the sentence
+	sorted_mods=[]
+	mods=[]
+	
+	#~ raw_gov_word=raw_triples[result[0][1]][GOV_POS]				# Since, result is of the form [  [[rel_r,gov_r,dep_r],tindex] , ... ]
+	#~ gov_pos=int(raw_gov_word[raw_gov_word.find("-")+1:])
+	
+	for [[rel_r,gov_r,dep_r],tindex] in result:
+		if rel_r in modifiers:			
+			#~ find the word position of the modifier
+			#~ raw_triples[tindex] has the word in raw form
+			alpha = raw_triples[tindex][DEP_POS]
+			if alpha.startswith(dep_r):
+				dep_r_pos=find_position_in_raw_word(dep_r)
+				mods.append([dep_r_pos,unraw(dep_r)])
+				
+	#~ print raw_gov,gov_pos		
+	mods.append([gov_pos,gov])											
+	mods.sort()
+	sorted_mods = map(listGet(1),mods)
+	return sorted_mods
 
 #~ Give 6 from 'house-6' or 1 from 't-intersection-1'
 def find_position_in_raw_word(raw_word):
 	reverse_ind = raw_word[::-1].find("-")
 	ind = len(raw_word)-reverse_ind-1
 	word_pos=raw_word[ind+1:]
-	return (word_pos)	
+	try:
+		return int(word_pos)
+	except ValueError:
+		return int(word_pos[:-1])					#handles the apostrophe in word position		
 		
 #~ print len(sentences)
 if __name__=="__main__":
