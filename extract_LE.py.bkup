@@ -1,0 +1,133 @@
+from degenerate_LE import extract_degenerate_LEs
+from prep_x import *
+
+inp_file = "above20desc.in"
+
+#~ Get words of a le. Returns them with ":"  between them
+def le_word_get(le):
+	le_word=""
+	for l in le.split():
+		le_word += ":"+l.rsplit("_",3)[0]
+	return le_word
+
+
+def get_prep(le_word):
+	first=le_word.split()[0]
+	if first[first.rfind("_")+1:]=="PP":
+		return first.rsplit(("_"),3)[0]
+	else:
+		return ""	
+	
+#~ Find the subject of the dependent in the dependency prep_"prep" (e.g. prep_at)
+def get_subject(pos_dict, raw_triples, prep, raw_dep):
+	results=query_triplet(raw_triples,"prep_"+prep,None,raw_dep)
+	#~ print results
+	if len(results)==1:
+		#~ If pos tag of the 1st result's dep gives a noun, we end the search
+		word=results[0][0][1][:results[0][0][1].rfind("-")]
+		#~ print "******* ", results[0][0][1][:results[0][0][1].rfind("-")], pos_dict[word]
+		if pos_dict[word].startswith("NN"):
+			return results[0][0][1]
+		#~ print results	 
+		return get_nsubject(raw_triples, results[0][0][1])
+	elif len(results)>1:
+		raise MyError("too many subjects for the same prep and dep")
+	else:
+		return ""	
+			
+
+if __name__=="__main__":
+	dge = extract_degenerate_LEs()
+	
+	f=open(inp_file)
+	
+	sentences=[]
+	sentence=""
+	count_le = 0 		#number of locative expressions identified
+	
+	
+	
+	for line in f:
+		if line=="\n":
+			sentences.append(sentence)
+			sentence=""
+		else:
+			sentence+=line
+	
+	for sent in sentences:
+		#~ print sent
+		[pos,dep] = sent.split("***")
+
+		pos=pos.split("\n")[:-1]
+		# example format of pos - ['I/PRP', 'am/VBP', 'at/IN', .. ]
+
+		deps=dep.strip().split("\n")
+		# example format of deps - ['det(house-2, The-1)', 'nsubjpass(located-4, house-2)', .... ]
+
+		loc_dict={}					# dictionary storing words' positions
+		pos_dict={}					# dictionary storing words' pos tags
+
+		counter=1
+		orig_sent = []
+
+		for tag in pos:
+			try:
+				key,value=tag.split("/")
+				orig_sent.append(key)
+			except ValueError:
+				reverse_index=tag[::-1].find("/")
+				index=len(tag)-reverse_index-1
+				key,value=tag[:index],tag[index+1:]	
+				orig_sent.append(key)
+			#~ print key,value
+			#~ add_to_pos(key,value)
+			pos_dict[key]=value
+			loc_dict[key]=counter
+			counter+=1
+
+		
+		raw_triples = []			#triples with the word postions
+		for rel in deps:
+			s=rel
+			raw_gov,raw_dep=s[s.find("(")+1:s.find(")")].split(",")
+			raw_gov=raw_gov.strip()	
+			raw_dep=raw_dep.strip()	
+			rel=s[:s.find("(")]
+			rel.strip()
+			raw_triples.append([rel,raw_gov,raw_dep])				
+				
+		for desc in dge:
+			for le in desc:
+				if le!="":
+					le_word=le_word_get(le)
+					#~ print le_word, orig_sent
+					#~ See whether this le is in the sentence
+					""" Potential error here, there can be differences between the words seperated by Felix and that obtained from stanford parsed '.in' file"""
+					if le_word in ":".join(orig_sent): 
+						#~ print "true"
+						prep = get_prep(le)
+						
+						for words in le.split():
+							word=words.rsplit("_",3)[0]
+							#~ print word,"-",loc_dict[word]
+							try:
+								subj = get_subject(pos_dict,raw_triples, prep, word+"-"+str(loc_dict[word]))
+								if subj!="":
+									subj = " ".join(find_modifiers(raw_triples,subj))
+								#~ subj=subj[:subj.rfind("-")]
+									print subj," ".join(map(lambda x: x.rsplit("_",3)[0], le.split()))
+							except KeyError as e:
+								print "####### error in dictionaries ",e
+								break
+					#~ if prep!="":
+						#~ query
+						#~ print get_subject(raw_triples, prep, 
+						
+					#~ get_subject(raw_triples, 
+				#~ print "".join(le_word.split())
+				#~ break
+			#~ break
+		#~ break		
+	#~ pass
+
+

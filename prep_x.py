@@ -1,13 +1,9 @@
 from copy import deepcopy
+from degenerate_LE import extract_degenerate_LEs
+from error import MyError 
 DEP_POS = 2
 GOV_POS = 1
 REL_POS = 0
-
-class MyError(Exception):
-	def __init__(self, value):
-	 self.value = value
-	def __str__(self):
-	 return repr(self.value)
 
 subject_arguments = [
 			"nsubj" , # - nominal subject
@@ -15,33 +11,32 @@ subject_arguments = [
 			]
 
 modifiers = [
+
 			"amod" , #  adjectival modifier
 			"appos" , #  appositional modifier
-			"advcl" , #  adverbial clause modifier
+			#"advcl" , #  adverbial clause modifier
 			"det" , #  determiner
 			"predet" , #  predeterminer
 			"preconj" , #  preconjunct
-			"infmod" , #  infinitival modifier
-			"mwe" , #  multi, # word expression modifier
-			"mark" , #  marker (word introducing an advcl or ccomp
-			"partmod" , #  participial modifier
+			#"infmod" , #  infinitival modifier
+			#"mwe" , #  multi, # word expression modifier
+			#"mark" , #  marker (word introducing an advcl or ccomp
+			#"partmod" , #  participial modifier
 			"advmod" , #  adverbial modifier
 			"neg" , #  negation modifier
-			"rcmod" , #  relative clause modifier
+			#"rcmod" , #  relative clause modifier
 			"quantmod" , #  quantifier modifier
 			"nn" , #  noun compound modifier
 			"npadvmod" , #  noun phrase adverbial modifier
-			"tmod" , #  temporal modifier
+			#"tmod" , #  temporal modifier
 			"num" , #  numeric modifier
 			"number" , #  element of compound number
 			"prep" , #  prepositional modifier
 			"poss" , #  possession modifier
 			"possessive" , # possessive modifier ('s)
-			"prt" , #  phrasal verb particle
+			#"prt" , #  phrasal verb particle
+			"dep" , # usual dependent
 			]
-
-
-
 
 #~ def add_to_pos(key,value):
 	#~ pos_dict[key]=value
@@ -153,13 +148,12 @@ def output_parser(f):
 			gov,dep=map(unraw,[raw_gov,raw_dep])
 			#~ print rel , rel.startswith("prep_")
 			if rel.startswith("prep_"):
+				
 				#~ Get the spatial relation out from the grammatical relation
 				sr = rel[rel.find("prep_")+5:]
-				
 				if 1:
 					#--------------- Direct case of a noun preposition noun  -----------------------------#				
-					if pos_dict[gov]==pos_dict[dep]:
-						
+					if is_noun(pos_dict[gov]) and is_noun(pos_dict[dep]):
 						print ":".join(direct_NN_to_NN(sr, raw_triples, raw_gov, raw_dep))
 						
 						count_le+=1
@@ -167,10 +161,15 @@ def output_parser(f):
 					
 					#---------------- Preposition clause of modifying a verb -------------------------#	
 					elif pos_dict[gov].startswith("VB"):
-						print rel,raw_gov,raw_dep
-						print ":".join(verb_to_NN(sr, raw_triples, raw_gov, raw_dep))
 						
-						count_le+=1
+						triplets = verb_to_NN(sr, raw_triples, raw_gov, raw_dep)
+						if len(triplets)>0:
+							count_le+=1
+							print ":".join(triplets)
+						else:
+							print " in --> ",
+							print sr,raw_gov,raw_dep
+						
 						
 						
 				else:
@@ -180,6 +179,27 @@ def output_parser(f):
 					
 	print count_le					
 
+#~ Get the nominal subject (nsubj, nsubjpass) of a verb in the dependency titles 
+def get_nsubject(raw_triples, raw_gov):
+	subjects = []
+
+	for arg in subject_arguments:
+		subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
+	
+	
+	if len(subjects)>1:
+		raise MyError("more than one subject to a verb!")
+	
+	elif len(subjects)==1:
+		#~ print subjects
+		[rel_r,gov_r,dep_r],tindex = subjects[0]
+		raw_nn = raw_triples[tindex][DEP_POS]
+		return raw_nn
+	else:
+		# "***subject of the verb couldn't be found***",
+		return ""	
+
+	
 
 def direct_NN_to_NN(sr, raw_triples, raw_gov, raw_dep):
 	#~ print raw_gov,rel,raw_dep
@@ -228,33 +248,50 @@ def unraw(raw_word):
 #~ the order of occurrence in the sentence
 """ ASSUMPTION : Finds the modifiers from the triplets where it stays in the gov position """
 def find_modifiers (raw_triples, raw_gov):
-	
-	gov = unraw(raw_gov)
-	gov_pos = find_position_in_raw_word(raw_gov)
-	#~ Find all the triplets where our word occurs at gov position
-	result= query_triplet(raw_triples,None,raw_gov,None)
+	def find_modifiers_aux(raw_triples, raw_gov):		
+		gov = unraw(raw_gov)
+		gov_pos = find_position_in_raw_word(raw_gov)
+		#~ Find all the triplets where our word occurs at gov position
+		result= query_triplet(raw_triples,None,raw_gov,None)
 
-	#~ Attach the modifiers in the order they occured in the sentence
-	sorted_mods=[]
-	mods=[]
-	
-	#~ raw_gov_word=raw_triples[result[0][1]][GOV_POS]				# Since, result is of the form [  [[rel_r,gov_r,dep_r],tindex] , ... ]
-	#~ gov_pos=int(raw_gov_word[raw_gov_word.find("-")+1:])
-	
-	for [[rel_r,gov_r,dep_r],tindex] in result:
-		if rel_r in modifiers:			
-			#~ find the word position of the modifier
-			#~ raw_triples[tindex] has the word in raw form
-			alpha = raw_triples[tindex][DEP_POS]
-			if alpha.startswith(dep_r):
-				dep_r_pos=find_position_in_raw_word(dep_r)
-				mods.append([dep_r_pos,unraw(dep_r)])
+		#~ Attach the modifiers in the order they occured in the sentence
+		sorted_mods=[]
+		mods=[]
+		
+		#~ raw_gov_word=raw_triples[result[0][1]][GOV_POS]				# Since, result is of the form [  [[rel_r,gov_r,dep_r],tindex] , ... ]
+		#~ gov_pos=int(raw_gov_word[raw_gov_word.find("-")+1:])
+		
+		for [[rel_r,gov_r,dep_r],tindex] in result:
+			if rel_r in modifiers:			
+				#~ find the word position of the modifier
+				#~ raw_triples[tindex] has the word in raw form
+				alpha = raw_triples[tindex][DEP_POS]
+				if alpha.startswith(dep_r):
+					dep_r_pos=find_position_in_raw_word(dep_r)
+					mods.append([dep_r_pos,unraw(dep_r)])
+					
+		#~ print raw_gov,gov_pos		
+		mods.append([gov_pos,gov])											
+		mods.sort()
+		#~ print mods, "for ",gov
+		#~ sorted_mods = map(listGet(1),mods)
+		if len(mods)>1:
+			for index,[pos, mod] in enumerate(mods):
+				if mod!=gov:
+					modlist=find_modifiers_aux(raw_triples,mod+"-"+str(pos))
+					try:
+						sorted_mods.extend(modlist)
+					except:
+						print sorted_mods, "**"
+						raise	
+			#~ map(lambda x: find_modifiers(raw_triples,x), sorted_mods)
+		#~ else:
+		sorted_mods.append([gov_pos,gov])
+		sorted_mods.sort()
 				
-	#~ print raw_gov,gov_pos		
-	mods.append([gov_pos,gov])											
-	mods.sort()
-	sorted_mods = map(listGet(1),mods)
-	return sorted_mods
+		return sorted_mods
+	
+	return map(listGet(1),find_modifiers_aux(raw_triples,raw_gov))
 
 #~ Give 6 from 'house-6' or 1 from 't-intersection-1'
 def find_position_in_raw_word(raw_word):
@@ -264,11 +301,14 @@ def find_position_in_raw_word(raw_word):
 	try:
 		return int(word_pos)
 	except ValueError:
+		print "Warning: position ", word_pos," for ", raw_word
 		return int(word_pos[:-1])					#handles the apostrophe in word position		
-		
+
+def is_noun(word):
+	return word.startswith("NN") or word.startswith("PRP")		
 #~ print len(sentences)
 if __name__=="__main__":
 	f=open("test.in")
+	#~ print degenerate_LEs()
 	output_parser(f)
-
 	

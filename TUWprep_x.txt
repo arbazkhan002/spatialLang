@@ -1,0 +1,335 @@
+I:at:a 3 stories town house number 7 Chetwynd Place
+The house:in:a small alley
+a small alley:behind:a row
+a row:of:town house
+The house:along:Chetwynd Street
+The house:near:the corner
+the corner:between:Chetwynd Street
+the corner:between:Queensberry Street
+a construction site:in:the alley
+***subject of the verb couldn't be found***  in -->  from Its-1 head-7
+the head:of:the alley
+I:on:the Docklands esplanade
+the Docklands esplanade:in:the multi colored 6 story building
+La Trobe Street:past:Etihad Stadium
+the second building:on:your right
+seven meters:in:Swan St Optometrist
+Swan St Optometrist:in:Docker Street
+seven meters:from:the North-east
+7o meters:on:Morotai Parade
+7o meters:at:a t-intersection
+a t-intersection:of:Coomalie Crescent
+7o meters:from:The Tobruk Avenue end
+The Tobruk Avenue end:of:the Bell St
+7o meters:in:West Heidelberg
+my apartment:in:the big block
+the big block:of:flats
+flats:on:the corner
+the corner:of:Park Street
+the corner:of:Kings Way
+the whole block:of:Park Street
+the whole block:of:Eastern Road
+the whole block:of:Napier Street
+the whole block:of:Kings Way
+You:on:Napier Street
+Lee Street:at:9
+I:in:my house
+my house:on:the right side
+an arch:with:roses
+***subject of the verb couldn't be found***  in -->  on growing-7 it-9
+***subject of the verb couldn't be found***  in -->  at growing-7 gate-12
+Melbourne:near:Melbourne Central shopping center
+Its:on:Elizabeth
+Its:from:the intersection
+the intersection:of:Elizabeth
+the intersection:of:Latrobe
+the Harley shop:on:Elizabeth
+I:in:apartment 22
+apartment 22:of:the Byfass apartment
+I:in:8 Trenerry Crescent
+8 Trenerry Crescent:in:Abbotsford
+the last street:on:the north side
+the north side:of:Johnston St
+The Byfass building:on:the east side
+the east side:of:Trenerry
+***subject of the verb couldn't be found***  in -->  at crescent-26 Institute-38
+***subject of the verb couldn't be found***  in -->  in crescent-26 W1043-42
+***subject of the verb couldn't be found***  in -->  on crescent-26 Floor-47
+the 10th Floor:of:the Royal Children Hospital Victoria
+I:in:the Baillieu library
+the Baillieu library:in:the University
+the University:of:Melbourne
+This:in:Carlton\/Parkville
+Carlton\/Parkville:in:the city
+the city:of:Melbourne
+This:between:Royal Pde
+This:between:Swanston Street
+West:to:East
+This:between:Grattan St.
+This:between:College Crescent
+South:to:North
+I:on:the 1st floor
+the 1st floor:of:the library
+the library:in:the Percy Baxter Collaborative Learning Centre
+I:in:my chair
+I:at:computer terminal
+the screen:in:a roughly south-easterly direction
+I:on:high street
+inadequate drainage:for:this region
+constant construction:at:night
+The view:towards:the beach
+a colorful sunset most except:of:the time
+I:at:a private residence
+***subject of the verb couldn't be found***  in -->  on located-7 side-11
+the western side:of:Barrington Avenue
+Barrington Avenue:in:Kew approximately halfway
+I:in:the lobby
+the lobby:of:the University House
+you:in:the room just
+***subject of the verb couldn't be found***  in -->  in Waiting-1 front-3
+front:of:the state library
+***subject of the verb couldn't be found***  in -->  under Waiting-1 statue-11
+the statue:of:Redmond Barry
+the one just:in_front_of:the entrance
+my office:on:the 7th floor
+the 7th floor:of:the Babel building
+University:of:Melbourne Parkville
+the Babel building:on:the campus
+I:on:the south side
+the south side:of:the building
+the left:of:professors
+the landmark building:at:the end
+the end:of:Collins Street
+downstairs:below:street level
+three hundred meters:far_from:auburn
+station:in:second floor
+second floor:on:an five floor apprtment
+three hundred meters:in:Gueens Ave
+incide:of:Hawthorn suburb district
+three hundred meters:far_from:auburn
+station:in:second floor
+second floor:on:an five floor apprtment
+three hundred meters:in:Gueens Ave
+incide:of:Hawthorn suburb district
+three hundred meters:far_from:auburn
+station:in:second floor
+second floor:on:an five floor apprtment
+three hundred meters:in:Gueens Ave
+incide:of:Hawthorn suburb district
+three hundred meters:far_from:auburn
+station:in:second floor
+second floor:on:an five floor apprtment
+three hundred meters:in:Gueens Ave
+incide:of:Hawthorn suburb district
+kilda:in_front_of:the Park Regis hotel
+the Park Regis hotel:on:St
+kilda:on:the left hand side
+you:into:the city
+***subject of the verb couldn't be found***  in -->  in be-4 lane-8
+a semi circular driveway:in:front
+kilda:in_front_of:the Park Regis hotel
+the Park Regis hotel:on:St
+kilda:on:the left hand side
+you:into:the city
+***subject of the verb couldn't be found***  in -->  in be-4 lane-8
+a semi circular driveway:in:front
+kilda:in_front_of:the Park Regis hotel
+the Park Regis hotel:on:St
+kilda:on:the left hand side
+you:into:the city
+***subject of the verb couldn't be found***  in -->  in be-4 lane-8
+a semi circular driveway:in:front
+***subject of the verb couldn't be found***  in -->  in calls-9 mall-4
+itself:of:Safeway
+itself:of:big w.
+itself:without:individual character
+I:in:an appartment
+I:far_from:the Auburn train station
+a suburb:of:Melbourne
+***subject of the verb couldn't be found***  in -->  in located-22 east-24
+I:in:an appartment
+I:far_from:the Auburn train station
+a suburb:of:Melbourne
+***subject of the verb couldn't be found***  in -->  in located-22 east-24
+I:in:an appartment
+I:far_from:the Auburn train station
+a suburb:of:Melbourne
+***subject of the verb couldn't be found***  in -->  in located-22 east-24
+I:in:an appartment
+I:far_from:the Auburn train station
+a suburb:of:Melbourne
+***subject of the verb couldn't be found***  in -->  in located-22 east-24
+I:in:an appartment
+I:far_from:the Auburn train station
+a suburb:of:Melbourne
+***subject of the verb couldn't be found***  in -->  in located-22 east-24
+I:in:an appartment
+I:far_from:the Auburn train station
+a suburb:of:Melbourne
+***subject of the verb couldn't be found***  in -->  in located-22 east-24
+I:in:my office
+my office:at:215 Spring St Melbourne
+Its just:on:spring
+spring:near:the corner
+the corner:of:Lonsdale St
+Its just:to:Parliament Station
+I:at:the Carousel restaurant
+Its right not:on:Albert Park lake
+Its right not:of:the lake
+Its right not:on:the opposite side
+bourke:in:the city
+bourke:at:a brutal iron sculpture
+a brutal iron sculpture:despite:it size
+a brutal iron sculpture:between:the high rising buildings
+***subject of the verb couldn't be found***  in -->  in quite-10 restaurant-5
+a really nice restaurant:on:Victoria street
+***subject of the verb couldn't be found***  in -->  out_of quite-10 place-13
+I:in:2nd floor
+2nd floor:of:an apartment
+an apartment:in:hawthorn a suburb
+a suburb:of:Melbourne
+I:in:the second floor
+the second floor:of:university
+university:of:Melbourne
+I:near_to:downtown
+***subject of the verb couldn't be found***  in -->  in located-5 building-3
+***subject of the verb couldn't be found***  in -->  in located-5 north-8
+the north:of:Grattan street
+a restaurant just:after:prahran market
+you:from:chapel street
+Diner:in:parahn
+***subject of the verb couldn't be found***  in -->  from get-13 kilda-17
+1 bewdley st:on:the corner
+the corner:of:walnut st off north directly
+1 bewdley st:behind:mckinnon secondary college
+1 bewdley st:opposite:the back entrance
+the back entrance:to:the sports oval
+i:in:st kilda road melbourne two buildings east
+st kilda road melbourne two buildings east:of:the police headquarters
+i:from:my 13th floor balcony
+i:on:my left melbourne grammar school the botanical gardens
+the shrine:of:remembrance
+remembrance:to:my right
+i:between:a children playground
+i:between:a retirement village
+i:between:a new building site
+i:between:a defiant old fisherman shack
+a microcosm:of:this strange little town
+***subject of the verb couldn't be found***  in -->  in living-7 brussels-11
+i:in:australia
+i:with:family
+family:in:cole st brighton
+***subject of the verb couldn't be found***  in -->  in living-7 brussels-11
+i:in:australia
+i:with:family
+family:in:cole st brighton
+i:at:the corner
+the corner:of:flinders st
+the corner:of:st kilda
+i:in:my office
+i:at:the united faculty within directly
+the united faculty within directly:of:theology
+theology:at:29 college crescent parkville
+1k north:of:camberwell station
+melbourne 1k north:near:the t junction
+the t junction:of:barkers rd
+the t junction:of:burke rd
+10k east just off harcourt st. i:in:an office
+an office:on:the eighth floor
+i:through:my glass door
+i:across:the university campus
+i:to:the redmond barry building
+the hum:of:the airconditioner
+the sound:of:typing
+i:on:a bench
+lots:of:people
+***subject of the verb couldn't be found***  in -->  from coming-6 building-11
+lots too:of:kids
+i:in:a leafy street
+a beautiful tranquil area:with:many family connections
+many family connections:for:me
+ith a. corner:of:como parade east
+ith a. corner:of:parkers road
+ith a. corner:in:the library building
+ith a. corner:next_to:the bee shop
+***subject of the verb couldn't be found***  in -->  on turning-17 border-3
+the border:between:the old workers district
+the border:between:a new industrial zone
+***subject of the verb couldn't be found***  in -->  into turning-17 area-24
+***subject of the verb couldn't be found***  in -->  from left-16 road-6
+***subject of the verb couldn't be found***  in -->  towards going-8 beach-13
+***subject of the verb couldn't be found***  in -->  into left-16 i.e.-20
+***subject of the verb couldn't be found***  in -->  before left-16 hotel-25
+a double carport:in:the driveway
+the development:of:automated systems
+automated systems:for:emergency services
+i:on:the grange estate
+the grange estate:on:the eastern side
+the eastern side:of:jacksons hill
+i:within:the precincts
+the precincts:of:the township
+the township:of:sunbury approximately 40 kms
+i:from:the center
+the center:of:melbourne
+71 pitt st:opposite:a shopping center
+about walk:from:tottenham station
+corner:in:my office
+my office:on:the second floor
+the second floor:of:the baldwin spencer building
+corner:of:tin alley
+corner:of:union
+corner:at:the university
+the university:of:melbourne
+i:in:the north-east corner
+the north-east corner:of:warragul
+you:to:lillico
+***subject of the verb couldn't be found***  in -->  in being-19 warragul-21
+i:on:the edge
+the edge:of:town
+i:across:the paddock
+the paddock:from:the old warragul drive-in cinema
+the sixth house:from:the end
+the end:of:princess
+the street:from:brougham st. i
+the street:in:richmond a suburb
+a suburb:about:three kilometres directly east
+three kilometres directly east:of:the city
+east south the third turn:on:the left
+you:to:church st
+you:to:the corner
+the corner:of:bridge rd
+you:at:federation square
+left:at:the corner
+the corner:of:flinders st
+the corner:of:swanston st.
+federation square:on:your left 97 ebden street
+***subject of the verb couldn't be found***  in -->  at starting-57 shops-61
+***subject of the verb couldn't be found***  in -->  opposite head-63 supermarket-71
+left:at:the end
+the end:of:the street
+***subject of the verb couldn't be found***  in -->  with head-82 house-90
+the left:before:the roundabout
+***subject of the verb couldn't be found***  in -->  under close-18 shade-3
+the shade:of:a golden elm
+***subject of the verb couldn't be found***  in -->  in close-18 town-14
+the beautiful goulburn river town:of:shepparton
+***subject of the verb couldn't be found***  in -->  to close-18 heart-21
+the heart:of:this thriving regional arts city
+i:in:st kilda road
+neerim rd:in:the st
+neerim rd:in:carnegie
+neerim rd:from:two train stations
+two train stations:of:carnegie
+two train stations:of:murrumbeena
+a large expanse:of:lawn
+***subject of the verb couldn't be found***  in -->  beyond surrounded-12' that-19
+a hill:with:a single house
+the town:of:trentham
+the town:in:the central highlands
+the central highlands:of:victoria australia
+***subject of the verb couldn't be found***  in -->  for known-2 logging-4
+***subject of the verb couldn't be found***  in -->  for known-2 gold-6
+close:to:e melbourne ballarat bendigo
+close:on:the edge
+the edge:of:the spa country
+291
