@@ -1,8 +1,8 @@
 from degenerate_LE import extract_degenerate_LEs
 from prep_x import *
 
-#~ inp_file = "test.in"
-inp_file = "above20desc.in"
+inp_file = "test.in"
+#~ inp_file = "above20desc.in"
 
 
 #~ Get words of a le. Returns them with ":"  between them
@@ -22,7 +22,8 @@ def get_prep(le_word):
 	
 #~ Find the subject of the dependent in the dependency prep_"prep" (e.g. prep_at)
 def get_subject(pos_dict, raw_triples, prep, raw_dep):
-	results=query_triplet(raw_triples,"prep_"+prep,None,raw_dep)
+	results=query_triplet_advanced(raw_triples,"prep_"+prep,None,raw_dep)
+	#~ print prep,raw_dep,results
 	if prep=="along":
 		pass
 		#~ print "************",results,prep,raw_dep,raw_triples
@@ -74,6 +75,23 @@ def get_word_location(loc_dict,word,words_index,le_words):
 	
 	raise KeyError		
 			
+def verb_mods(raw_triples,prep,raw_dep):
+	#~ If pos tag of the 1st result's dep gives a noun, we end the search
+	#~ print results
+	results=query_triplet_advanced(raw_triples,"prep_"+prep,None,words+"-"+str(word_loc))
+	
+	#~ print prep,raw_dep,results
+	
+	#~ for prepositions not of the form "in","on","at" one needs to find the modifiers.
+	#~ e.g. 2 minutes from, 3 blocks from, next to
+	if len(results)==1:		
+		word=results[0][0][1][:results[0][0][1].rfind("-")]
+		if not pos_dict[word].startswith("NN"):	
+			#~ print "pos tag of prep :",pos_dict[prep]			
+			return " ".join(filter(lambda x: True if x!=word else False, find_modifiers(raw_triples,results[0][0][1])))
+	return ""
+		
+	#~ print results	 
 
 if __name__=="__main__":
 	dge = extract_degenerate_LEs()
@@ -144,6 +162,10 @@ if __name__=="__main__":
 		#~ print
 		#~ print raw_triples
 				#~ 
+		#~ 
+		#~ for desc in dge:
+			#~ for le in desc:
+				#~ print le
 				
 		#~ for every sentence check whether it belongs to a LE. If it does, give it a subject		
 		for desc in dge:
@@ -156,7 +178,16 @@ if __name__=="__main__":
 					if le_word in ":".join(orig_sent): 
 						#~ print "true"
 						prep = get_prep(le)
+						
 						#~ print "in le ",le_word, " with prep: ",prep	
+						
+						if prep=="":
+							#~ print " \t A LE STARTING WITHOUT A PREPOSITION ", le
+							le_duet=map(lambda x: x.rsplit("_",3)[0], le.split())
+							print " ".join(le_duet)
+							continue
+							
+						
 						le_words=map(lambda words : words.rsplit("_",3)[0], le.split())
 						
 						#~ subject of any of one of the words (except the preposition) in the LE gives you the subject of LE.
@@ -166,13 +197,21 @@ if __name__=="__main__":
 							try:
 								#~ print words
 								word_loc=get_word_location(loc_dict,words,words_index,le_words)
+								
+								
 								subj = get_subject(pos_dict,raw_triples, prep, words+"-"+str(word_loc))
+
+								#~ print "In LE",le,"subj of ", prep, " and ",words, " is ", subj
+								
 								#~ print words, word_loc, le_words
 								#~ print subj
 								if subj!="":
 									subj = " ".join(find_modifiers(raw_triples,subj))
-								#~ subj=subj[:subj.rfind("-")]
-									print subj," ".join(map(lambda x: x.rsplit("_",3)[0], le.split()))
+									le_duet=map(lambda x: x.rsplit("_",3)[0], le.split())
+									if prep not in ["in","at","on"]:
+										le_duet[0]=verb_mods(raw_triples, prep, words+"-"+str(word_loc))+ " " +le_duet[0]									
+									print subj," ".join(le_duet)
+									break
 							#~ else:
 							except KeyError as e:
 								print "####### error in dictionaries. Felix's word:",e#, " and the dict:\n", loc_dict, pos_dict,le_word

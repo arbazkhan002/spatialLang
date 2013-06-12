@@ -21,10 +21,10 @@ modifiers = [
 			#"infmod" , #  infinitival modifier
 			#"mwe" , #  multi, # word expression modifier
 			#"mark" , #  marker (word introducing an advcl or ccomp
-			#"partmod" , #  participial modifier
+			"partmod" , #  participial modifier
 			"advmod" , #  adverbial modifier
 			"neg" , #  negation modifier
-			#"rcmod" , #  relative clause modifier
+			"rcmod" , #  relative clause modifier
 			"quantmod" , #  quantifier modifier
 			"nn" , #  noun compound modifier
 			"npadvmod" , #  noun phrase adverbial modifier
@@ -91,6 +91,83 @@ def query_triplet(t,rel=None,gov=None,dep=None):
 				if temp==knowns:	
 					out.append([triple,tindex])
 		return out		
+
+#~ return the set of all triplets that satisfy the provided query of rel,gov,dep
+#~ Query search is for those arguments that are set to None
+#~ If all are provided, there exists a unique triplet
+#~ If atleast one of them is set as None, there can be more than one triplets returned
+#~ Finds all queries where rel is contained in the dependency relation. e.g finds prep_far_from, prep_away_from, if provided prep_form
+def query_triplet_advanced(t,rel=None,gov=None,dep=None):
+	def condition_true(item_l,item_m):
+		if (item_l in item_m) or (item_m in item_l) or exceptions(item_l,item_m) or exceptions(item_m,item_l):
+			return True
+		else:
+			return False	
+	def equals_advanced(l1,l2):
+		if l1==l2:
+			return True
+		
+		elif condition_true(l1[0],l2[0]):
+			return equals_advanced(l1[1:],l2[1:])
+		
+		else:
+			return False	
+			
+	def exceptions(item_l,item_m):
+		if item_l==None or item_m==None:
+			return False
+		if (item_l.startswith("prep_") and item_m.startswith("prep_")):
+			if item_l.split("_")[-1]==item_m.split("_")[-1]:
+				return True
+		return False
+				 
+		
+	def intersect_advanced(l,m):
+		intersect=[]
+		for item_l in l:
+			for item_m in m:
+				if item_l==None and item_m==None:
+					intersect.append(item_l)
+				elif item_l==None or item_m==None:
+					continue	
+				else:					
+					if condition_true(item_m,item_l):						
+						intersect.append(item_l if len(item_l) >= len(item_m) else item_m)
+		return intersect			 
+		
+	triplet=[rel,gov,dep]
+	out=[]
+	
+	knowns=filter(is_None,triplet)
+	#~ print  t,"####", triplet
+	if len(knowns)==0:
+		return t
+	
+	else:
+		for tindex, triple in enumerate(t):
+			
+			#~ Check whether the intersection size is equal to the number of knowns
+			if len(intersect_advanced(triple,triplet))==len(knowns):
+				#~ if item_l=="prep_from" or item_m=="prep_from":
+					#~ print exceptions(item_l,item_m), exceptions(item_m,item_l),item_l,item_m
+				
+				#~ print "triple",triple,"\t",triplet
+
+				#~ check whether the order is correct for the intersection
+				index_set=map(is_None,triplet)
+				
+				
+				temp=[]
+				
+				for index,value in enumerate(index_set):
+					if value==1:
+						temp.append(triple[index])
+						
+				#~ print triple,triplet,knowns,temp
+						
+				if equals_advanced(temp,knowns):
+					out.append([triple,tindex])
+		return out
 		
 		
 def output_parser(f):
@@ -196,6 +273,12 @@ def get_nsubject(raw_triples, raw_gov):
 		raw_nn = raw_triples[tindex][DEP_POS]
 		return raw_nn
 	else:
+		#~ at the dependent position no subject could be found
+		#~ the subject of a verb can also be the noun it is modifying.
+		#~ so find the nouns getting modified by it.
+		subjects.extend(query_triplet(raw_triples, arg, None, raw_gov))
+		print raw_gov," modifies ",subjects
+		
 		# "***subject of the verb couldn't be found***",
 		return ""	
 

@@ -1,62 +1,49 @@
-At/IN
-9/CD
-Lee/NNP
-Street/NNP
-Flemington/VBZ
-where/WRB
 I/PRP
 am/VBP
+living/VBG
 in/IN
-my/PRP$
-house/NN
+an/DT
+appartment/NN
+just/RB
+3/CD
+minustes/NNS
+far/RB
+from/IN
+the/DT
+Auburn/NNP
+train/NN
+station/NN
 which/WDT
 is/VBZ
-on/IN
-the/DT
-right/JJ
-side/NN
-if/IN
-you/PRP
-'re/VBP
-facing/VBG
-the/DT
-city/NN
-and/CC
-about/RB
-half/PDT
-way/NN
-down/RB
-the/DT
-street/NN
+a/DT
+suburb/NN
+of/IN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+it/PRP
 ./.
 ***
-prep_at(Flemington-5, 9-2)
-nn(Street-4, Lee-3)
-nsubj(Flemington-5, Street-4)
-root(ROOT-0, Flemington-5)
-advmod(am-8, where-6)
-nsubj(am-8, I-7)
-advcl(Flemington-5, am-8)
-poss(house-11, my-10)
-prep_in(am-8, house-11)
-nsubj(is-13, house-11)
-rcmod(house-11, is-13)
-det(side-17, the-15)
-amod(side-17, right-16)
-prep_on(is-13, side-17)
-mark(facing-21, if-18)
-nsubj(facing-21, you-19)
-aux(facing-21, 're-20)
-advcl(is-13, facing-21)
-det(city-23, the-22)
-dobj(facing-21, city-23)
-quantmod(half-26, about-25)
-num(way-27, half-26)
-npadvmod(down-28, way-27)
-dobj(facing-21, down-28)
-advmod(city-23, down-28)
-conj_and(city-23, down-28)
-det(street-30, the-29)
-dobj(facing-21, street-30)
-conj_and(city-23, street-30)
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, it-26)
 
