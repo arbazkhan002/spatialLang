@@ -1,49 +1,41 @@
 I/PRP
 am/VBP
-living/VBG
-in/IN
-an/DT
-appartment/NN
-just/RB
-3/CD
-minustes/NNS
-far/RB
-from/IN
-the/DT
-Auburn/NNP
-train/NN
-station/NN
-which/WDT
-is/VBZ
+at/IN
 a/DT
-suburb/NN
-of/IN
-Melbourne/NNP
+private/JJ
+residence/NN
 located/VBN
-in/IN
-east/JJ
+on/IN
+the/DT
+western/JJ
+side/NN
 of/IN
-it/PRP
+Barrington/NNP
+Avenue/NNP
+in/IN
+Kew/NNP
+,/,
+approximately/RB
+halfway/CD
+along/IN
+the/DT
+street/NN
 ./.
 ***
-nsubj(living-3, I-1)
-aux(living-3, am-2)
-root(ROOT-0, living-3)
-det(appartment-6, an-5)
-prep_in(living-3, appartment-6)
-advmod(minustes-9, just-7)
-num(minustes-9, 3-8)
-npadvmod(living-3, minustes-9)
-det(station-15, the-12)
-nn(station-15, Auburn-13)
-nn(station-15, train-14)
-prep_far_from(living-3, station-15)
-nsubj(suburb-19, station-15)
-cop(suburb-19, is-17)
-det(suburb-19, a-18)
-rcmod(station-15, suburb-19)
-prep_of(suburb-19, Melbourne-21)
-partmod(Melbourne-21, located-22)
-prep_in(located-22, east-24)
-prep_of(east-24, it-26)
+nsubj(am-2, I-1)
+root(ROOT-0, am-2)
+det(residence-6, a-4)
+amod(residence-6, private-5)
+prep_at(am-2, residence-6)
+partmod(residence-6, located-7)
+det(side-11, the-9)
+amod(side-11, western-10)
+prep_on(located-7, side-11)
+nn(Avenue-14, Barrington-13)
+prep_of(side-11, Avenue-14)
+prep_in(Avenue-14, Kew-16)
+quantmod(halfway-19, approximately-18)
+appos(Kew-16, halfway-19)
+det(street-22, the-21)
+prep_along(halfway-19, street-22)
 

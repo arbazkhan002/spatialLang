@@ -1,8 +1,11 @@
 from degenerate_LE import extract_degenerate_LEs
 from prep_x import *
+import sys
+#~ inp_file = "test.in"
+inp_file = "above20desc.in"
 
-inp_file = "test.in"
-#~ inp_file = "above20desc.in"
+
+ABLAPTIVES = ["from","of","to"]
 
 
 #~ Get words of a le. Returns them with ":"  between them
@@ -32,14 +35,20 @@ def get_subject(pos_dict, raw_triples, prep, raw_dep):
 		#~ If pos tag of the 1st result's dep gives a noun, we end the search
 		word=results[0][0][1][:results[0][0][1].rfind("-")]
 		#~ print "******* ", results[0][0][1][:results[0][0][1].rfind("-")], pos_dict[word]
+		
 		if pos_dict[word].startswith("NN"):
-			return results[0][0][1]
+			#~ If the noun has a subj, return the subject, else return the noun
+			return results[0][0][1] 
+			
+		nsubject= get_nsubject(raw_triples, results[0][0][1])					
 		#~ print results	 
-		return get_nsubject(raw_triples, results[0][0][1])
+		return nsubject 
 	elif len(results)>1:
 		raise MyError("too many subjects for the same prep and dep")
 	else:
 		return ""	
+
+
 
 #~ Gets the location of a word on the basis of the words nearby to it in the locative expression "le_words"
 #~ words_index is the index of the word in le_words 
@@ -74,7 +83,22 @@ def get_word_location(loc_dict,word,words_index,le_words):
 			return word_loc
 	
 	raise KeyError		
-			
+
+def words_of_LE(le):
+	return map(lambda x: x.rsplit("_",3)[0], le.split())
+
+#~ get reference object out from the Locative expression which is accepted in the form of space 
+#~ seperated words with format "word_postag_chunktag"
+def get_ro(le):
+	if len(le.split())==0:
+		return ""
+	
+	if le.split()[0].split("_")[2]!="PP":
+		return words_of_LE(le)
+	else:
+		return get_ro(" ".join(le.split()[1:]))	
+		
+				
 def verb_mods(raw_triples,prep,raw_dep):
 	#~ If pos tag of the 1st result's dep gives a noun, we end the search
 	#~ print results
@@ -85,13 +109,83 @@ def verb_mods(raw_triples,prep,raw_dep):
 	#~ for prepositions not of the form "in","on","at" one needs to find the modifiers.
 	#~ e.g. 2 minutes from, 3 blocks from, next to
 	if len(results)==1:		
-		word=results[0][0][1][:results[0][0][1].rfind("-")]
-		if not pos_dict[word].startswith("NN"):	
+		word=results[0][0][1][:results[0][0][1].rfind("-")]			#the subject
+		if pos_dict[word].startswith("V"):							#only verb modifiers	
 			#~ print "pos tag of prep :",pos_dict[prep]			
+			#~ print " ", results[0][0][1]
 			return " ".join(filter(lambda x: True if x!=word else False, find_modifiers(raw_triples,results[0][0][1])))
 	return ""
 		
 	#~ print results	 
+
+#~  Find all locative expressions linked to this subject
+def linked_LE(raw_triples,pos_dict,subj):
+	#~ print "linked locativeExprsns to ", subj ," on dep position "
+	#~ find dependencies where it occurs in the dep_pos with a prep relation 
+	for subj_x in subj.split():
+		results=query_triplet_advanced(raw_triples,"prep",None,subj_x)
+		#~ print "subj_x: ", subj_x, results
+		if len(results)>0:
+			break 
+		
+	#~ for each prepositional relation
+	#~ see for the subject of the preposition relation 
+	for res in results:
+		sr = res[0][0]				#spatial relation
+		ro = unraw(res[0][2])				#reference object
+		
+		#~ print sr,ro, unraw(ro)
+		
+		if ro!=subj_x:				#from above
+			continue
+		
+		if not sr.startswith("prep"):
+			continue
+			
+		#~ print pos_dict[unraw(res[0][1])]
+			
+		if is_noun(pos_dict[unraw(res[0][1])]):
+			ro1=res[0][1]
+			
+		#~ a verb definitely 
+		else:	
+			
+			try:
+				assert(pos_dict[unraw(res[0][1])].startswith("V"))
+				ro1 = get_subject(pos_dict, raw_triples,sr.rsplit("_",2)[1],res[0][2])
+			except AssertionError:
+				print "/----------------- Assertion Error ---------------------"
+				print "startswith ",res[0][1],pos_dict[unraw(res[0][1])] , res
+				print "------------------------------------------------------/"
+				ro1 = "" 	
+		
+			#~ print "subject of ",res[0][1],":",ro1
+			
+		if ro1=="":
+			# subject of the verb (almost definitely as nouns would never return empty ro1) couldnt be found
+			return "",""
+		
+		ro1list=find_modifiers(raw_triples,ro1)
+		#~ print ro1list
+		#~ check for all locative expressions in this description and find the one which matches this ro
+		maximum=0
+		max_LE=[]
+		for locE in desc:
+			#~ print "here"
+			locE_words=map(lambda words : words.rsplit("_",3)[0], locE.split())		
+			
+			#~ print set(ro1list) & set(locE_words)
+			if len(set(ro1list) & set(locE_words)) >= maximum:
+				max_LE=locE
+				maximum = len(set(ro1list) & set(locE_words))
+		
+		if maximum!=0:
+			#~ print "LE matching ",ro1, " is ",max_LE		
+			noun = " ".join(get_ro(max_LE))
+			return noun , sr
+	return "", ""
+				
+		
 
 if __name__=="__main__":
 	dge = extract_degenerate_LEs()
@@ -183,8 +277,10 @@ if __name__=="__main__":
 						
 						if prep=="":
 							#~ print " \t A LE STARTING WITHOUT A PREPOSITION ", le
-							le_duet=map(lambda x: x.rsplit("_",3)[0], le.split())
-							print " ".join(le_duet)
+							le_duet=words_of_LE(le)							
+							le_string=" ".join(le_duet)
+							print le_string
+							#~ print linked_LE(raw_triples,pos_dict,le_string)
 							continue
 							
 						
@@ -201,15 +297,34 @@ if __name__=="__main__":
 								
 								subj = get_subject(pos_dict,raw_triples, prep, words+"-"+str(word_loc))
 
-								#~ print "In LE",le,"subj of ", prep, " and ",words, " is ", subj
+								#~ print "In LE",le,"subj of prep:", prep, " and dep:",words, " is ", subj
 								
 								#~ print words, word_loc, le_words
 								#~ print subj
 								if subj!="":
 									subj = " ".join(find_modifiers(raw_triples,subj))
-									le_duet=map(lambda x: x.rsplit("_",3)[0], le.split())
-									if prep not in ["in","at","on"]:
-										le_duet[0]=verb_mods(raw_triples, prep, words+"-"+str(word_loc))+ " " +le_duet[0]									
+									le_duet=words_of_LE(le)
+									#~ print prep
+									if prep in ABLAPTIVES:
+										extras=verb_mods(raw_triples, prep, words+"-"+str(word_loc))
+										
+										#~ print "extras:",extras
+										le_duet[0]=le_duet[0] if extras=="" else extras+ " " +le_duet[0]									
+										
+										#~ print le_duet[0]
+										#--- ablaptiveLEs -----
+							
+										#find prep attaching to the subject
+										
+										#~ print "linked locativeExprsns to ", subj ," on dep position "
+										
+										
+										locE,spatialr= linked_LE(raw_triples,pos_dict,subj)
+										
+										#~ print locE, spatialr
+										if locE!="" and spatialr!="":
+											print locE + " " +" ".join(spatialr.split("_")[1:]) + " ", 
+										
 									print subj," ".join(le_duet)
 									break
 							#~ else:

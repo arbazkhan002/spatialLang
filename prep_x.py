@@ -5,12 +5,26 @@ DEP_POS = 2
 GOV_POS = 1
 REL_POS = 0
 
-subject_arguments = [
+DIRECT_OBJECT = [
+			"dobj" , #direct object (can only be a NP)
+			]
+
+SUBJECT_ARGUMENTS = [
 			"nsubj" , # - nominal subject
 			"nsubjpass" , # - passive nominal subject
 			]
 
-modifiers = [
+VERB_MODIFIERS = [
+			"partmod" , #  participial modifier			
+			"rcmod" , #  relative clause modifier			
+			"poss" , #  possession modifier
+			"possessive" , # possessive modifier ('s)
+			#"prt" , #  phrasal verb particle
+			"dep" , # usual dependent
+			"appos" , #  appositional modifier
+			]
+			
+MODIFIERS = [
 
 			"amod" , #  adjectival modifier
 			"appos" , #  appositional modifier
@@ -21,10 +35,8 @@ modifiers = [
 			#"infmod" , #  infinitival modifier
 			#"mwe" , #  multi, # word expression modifier
 			#"mark" , #  marker (word introducing an advcl or ccomp
-			"partmod" , #  participial modifier
 			"advmod" , #  adverbial modifier
 			"neg" , #  negation modifier
-			"rcmod" , #  relative clause modifier
 			"quantmod" , #  quantifier modifier
 			"nn" , #  noun compound modifier
 			"npadvmod" , #  noun phrase adverbial modifier
@@ -260,12 +272,18 @@ def output_parser(f):
 def get_nsubject(raw_triples, raw_gov):
 	subjects = []
 
-	for arg in subject_arguments:
+	for arg in DIRECT_OBJECT:
+		subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
+	
+	for arg in SUBJECT_ARGUMENTS:
 		subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
 	
 	
 	if len(subjects)>1:
-		raise MyError("more than one subject to a verb!")
+		#~ print "verb:",raw_gov,
+		#~ print  "subjects:",subjects	
+		return subjects[0][0][DEP_POS]
+		#~ raise MyError("more than one subject to a verb!")
 	
 	elif len(subjects)==1:
 		#~ print subjects
@@ -276,8 +294,14 @@ def get_nsubject(raw_triples, raw_gov):
 		#~ at the dependent position no subject could be found
 		#~ the subject of a verb can also be the noun it is modifying.
 		#~ so find the nouns getting modified by it.
-		subjects.extend(query_triplet(raw_triples, arg, None, raw_gov))
-		print raw_gov," modifies ",subjects
+		for m in VERB_MODIFIERS:
+			#~ print m,raw_gov
+			subjects.extend(query_triplet(raw_triples, m, None, raw_gov))
+		#~ print raw_gov," modifies ",subjects
+		
+		for item in subjects:
+			subj=item[0][GOV_POS]
+			return subj
 		
 		# "***subject of the verb couldn't be found***",
 		return ""	
@@ -287,7 +311,7 @@ def get_nsubject(raw_triples, raw_gov):
 def direct_NN_to_NN(sr, raw_triples, raw_gov, raw_dep):
 	#~ print raw_gov,rel,raw_dep
 	
-	#~ Find the list of modifiers adjoining the nouns
+	#~ Find the list of MODIFIERS adjoining the nouns
 	l = " ".join(find_modifiers(raw_triples,raw_gov))
 	
 	
@@ -303,10 +327,9 @@ def direct_NN_to_NN(sr, raw_triples, raw_gov, raw_dep):
 def verb_to_NN(sr, raw_triples, raw_gov, raw_dep):
 	subjects = []
 
-	for arg in subject_arguments:
+	for arg in SUBJECT_ARGUMENTS:
 		subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
-	
-	
+
 	if len(subjects)>1:
 		raise MyError("more than one subject to a verb!")
 	
@@ -327,9 +350,9 @@ def unraw(raw_word):
 	ind = len(raw_word)-reverse_ind-1
 	return raw_word[:ind]
 								
-#~ Take the set of all typed dependencies for a sentence and return a word with all its modifiers attached in
+#~ Take the set of all typed dependencies for a sentence and return a word with all its MODIFIERS attached in
 #~ the order of occurrence in the sentence
-""" ASSUMPTION : Finds the modifiers from the triplets where it stays in the gov position """
+""" ASSUMPTION : Finds the MODIFIERS from the triplets where it stays in the gov position """
 def find_modifiers (raw_triples, raw_gov):
 	def find_modifiers_aux(raw_triples, raw_gov):		
 		gov = unraw(raw_gov)
@@ -337,7 +360,7 @@ def find_modifiers (raw_triples, raw_gov):
 		#~ Find all the triplets where our word occurs at gov position
 		result= query_triplet(raw_triples,None,raw_gov,None)
 
-		#~ Attach the modifiers in the order they occured in the sentence
+		#~ Attach the MODIFIERS in the order they occured in the sentence
 		sorted_mods=[]
 		mods=[]
 		
@@ -345,7 +368,7 @@ def find_modifiers (raw_triples, raw_gov):
 		#~ gov_pos=int(raw_gov_word[raw_gov_word.find("-")+1:])
 		
 		for [[rel_r,gov_r,dep_r],tindex] in result:
-			if rel_r in modifiers:			
+			if rel_r in MODIFIERS:			
 				#~ find the word position of the modifier
 				#~ raw_triples[tindex] has the word in raw form
 				alpha = raw_triples[tindex][DEP_POS]
@@ -373,7 +396,7 @@ def find_modifiers (raw_triples, raw_gov):
 		sorted_mods.sort()
 				
 		return sorted_mods
-	
+	#~ print "for ",raw_gov
 	return map(listGet(1),find_modifiers_aux(raw_triples,raw_gov))
 
 #~ Give 6 from 'house-6' or 1 from 't-intersection-1'
@@ -384,7 +407,9 @@ def find_position_in_raw_word(raw_word):
 	try:
 		return int(word_pos)
 	except ValueError:
-		print "Warning: position ", word_pos," for ", raw_word
+		print "/----------- Warning ----------- "  
+		print "position ", word_pos," for ", raw_word
+		print "-------------------------------/ "  
 		return int(word_pos[:-1])					#handles the apostrophe in word position		
 
 def is_noun(word):
