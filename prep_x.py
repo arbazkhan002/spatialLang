@@ -20,7 +20,7 @@ VERB_MODIFIERS = [
 			"poss" , #  possession modifier
 			"possessive" , # possessive modifier ('s)
 			#"prt" , #  phrasal verb particle
-			"dep" , # usual dependent
+			#"dep" , # usual dependent
 			"appos" , #  appositional modifier
 			]
 			
@@ -47,7 +47,7 @@ MODIFIERS = [
 			"poss" , #  possession modifier
 			"possessive" , # possessive modifier ('s)
 			#"prt" , #  phrasal verb particle
-			"dep" , # usual dependent
+			#"dep" , # usual dependent
 			]
 
 #~ def add_to_pos(key,value):

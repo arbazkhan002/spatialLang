@@ -2,11 +2,11 @@ from degenerate_LE import extract_degenerate_LEs
 from prep_x import *
 import sys
 #~ inp_file = "test.in"
-inp_file = "../above20desc.in"
-#~ inp_file="../campus_data/campusdesc1.in"
-result_file=None
+#~ inp_file = "../above20desc.in"
+inp_file="../campus_data/campusdesc4.in"
+#~ result_file=None
 #~ result_file=open("result_felix_test.txt")
-#~ result_file=open("../campus_data/result_1.txt")
+result_file=open("../campus_data/result_4.txt")
 
 ABLAPTIVES = ["from","of","to"]
 
@@ -24,6 +24,22 @@ def get_prep(le_word):
 		return first.rsplit(("_"),3)[0]
 	else:
 		return ""	
+
+#~ Get the complete prep relation from the dependencies 
+def prep_in_dependencies(raw_triples, prep, raw_gov, raw_dep):
+	results=query_triplet_advanced(raw_triples,"prep_"+prep,None,raw_dep)
+
+	try:	
+		assert(len(results)<=1)
+		
+		if len(results)==1:
+			prep_ext=results[0][0][0]	
+			prep_ext= " ".join(prep_ext.split(("_"),2)[1:])
+			#~ print "prep_ext",prep_ext
+			return prep_ext
+	except AssertionError:
+		print "Same 3s in more than one triplet",results
+		return prep		
 	
 #~ Find the subject of the dependent in the dependency prep_"prep" (e.g. prep_at)
 def get_subject(pos_dict, raw_triples, prep, raw_dep):
@@ -309,11 +325,13 @@ def search_in_desc(desc, ro1):
 
 def extend_ablaptives(raw_triples,raw_word):
 	extras = get_dobj(raw_triples,raw_word)
-	#~ print "###################### extras for ",words,":",extras
 
 	if extras=="":
 		extras=verb_mods(raw_triples, prep, raw_word)
-	
+
+	#~ print "###################### extras for ",words,":",extras
+
+		
 	return extras
 	
 if __name__=="__main__":
@@ -328,7 +346,7 @@ if __name__=="__main__":
 	sentence=""
 	count_le = 0 		#number of locative expressions identified
 	
-	
+	#~ print dge
 	
 	for line in f:
 		if line=="\n":
@@ -434,7 +452,9 @@ if __name__=="__main__":
 								
 								
 								subj = get_subject(pos_dict,raw_triples, prep, words+"-"+str(word_loc))
-
+								
+								#~ extend prep from dependencies
+								prep_ext=prep_in_dependencies(raw_triples,prep,subj, words+"-"+str(word_loc))
 								#~ print "In LE",le,"subj of prep:", prep, " and dep:",words, " is ", subj
 								
 								#~ print words, word_loc, le_words
@@ -448,10 +468,15 @@ if __name__=="__main__":
 									locE,spatialr= linked_dir_LE(raw_triples,pos_dict,subj,words)
 									if locE!="" and spatialr!="":
 										subj += " " + " ".join(spatialr.split("_")[1:]) + " " + locE  
-									#~ print "LETS FANCY A LINKED_DIR_LE",locE,spatialr
+									#~ print "LETS FANCY A LINKED_DIR_LE",locE,spatialr,subj
 									le_duet=words_of_LE(le)
-									#~ print prep
+									le_duet[0]=prep_ext
+									#~ print le_duet,words
+									
 									if prep in ABLAPTIVES:
+			
+												
+										#~ Get the modifiers of spatial relation by using the verb's modifiers
 										extras = extend_ablaptives(raw_triples,words+"-"+str(word_loc))
 										#~ print extras,":#######"
 

@@ -1,116 +1,49 @@
 I/PRP
 am/VBP
-at/IN
-a/DT
+living/VBG
+in/IN
+an/DT
+appartment/NN
+just/RB
 3/CD
-stories/NNS
-town/NN
-house/NN
-,/,
-number/NN
-7/CD
-Chetwynd/NNP
-Place/NNP
-./.
-***
-nsubj(am-2, I-1)
-root(ROOT-0, am-2)
-det(house-8, a-4)
-num(stories-6, 3-5)
-amod(house-8, stories-6)
-nn(house-8, town-7)
-prep_at(am-2, house-8)
-nn(Place-13, number-10)
-num(Place-13, 7-11)
-nn(Place-13, Chetwynd-12)
-appos(house-8, Place-13)
-
-The/DT
-house/NN
-is/VBZ
-located/VBN
-in/IN
-a/DT
-small/JJ
-alley/NN
-behind/IN
-a/DT
-row/NN
-of/IN
-town/NN
-house/NN
-along/IN
-Chetwynd/NNP
-Street/NNP
-,/,
-near/IN
-the/DT
-corner/NN
-between/IN
-Chetwynd/NNP
-Street/NNP
-and/CC
-Queensberry/NNP
-Street/NNP
-./.
-***
-det(house-2, The-1)
-nsubjpass(located-4, house-2)
-auxpass(located-4, is-3)
-root(ROOT-0, located-4)
-det(alley-8, a-6)
-amod(alley-8, small-7)
-prep_in(located-4, alley-8)
-det(row-11, a-10)
-prep_behind(alley-8, row-11)
-nn(house-14, town-13)
-prep_of(row-11, house-14)
-nn(Street-17, Chetwynd-16)
-prep_along(located-4, Street-17)
-det(corner-21, the-20)
-prep_near(located-4, corner-21)
-nn(Street-24, Chetwynd-23)
-prep_between(corner-21, Street-24)
-nn(Street-27, Queensberry-26)
-prep_between(corner-21, Street-27)
-conj_and(Street-24, Street-27)
-
-There/EX
-is/VBZ
-a/DT
-construction/NN
-site/NN
-in/IN
-the/DT
-alley/NN
-./.
-***
-expl(is-2, There-1)
-root(ROOT-0, is-2)
-det(site-5, a-3)
-nn(site-5, construction-4)
-nsubj(is-2, site-5)
-det(alley-8, the-7)
-prep_in(site-5, alley-8)
-
-Its/VB
-the/DT
-3rd/JJ
-house/NN
+minustes/NNS
+far/RB
 from/IN
 the/DT
-head/NN
+Auburn/NNP
+train/NN
+station/NN
+which/WDT
+is/VBZ
+a/DT
+suburb/NN
 of/IN
-the/DT
-alley/NN
+Melbourne/NNP
+located/VBN
+in/IN
+east/JJ
+of/IN
+it/PRP
 ./.
 ***
-root(ROOT-0, Its-1)
-det(house-4, the-2)
-amod(house-4, 3rd-3)
-dobj(Its-1, house-4)
-det(head-7, the-6)
-prep_from(Its-1, head-7)
-det(alley-10, the-9)
-prep_of(head-7, alley-10)
+nsubj(living-3, I-1)
+aux(living-3, am-2)
+root(ROOT-0, living-3)
+det(appartment-6, an-5)
+prep_in(living-3, appartment-6)
+advmod(minustes-9, just-7)
+num(minustes-9, 3-8)
+npadvmod(living-3, minustes-9)
+det(station-15, the-12)
+nn(station-15, Auburn-13)
+nn(station-15, train-14)
+prep_far_from(living-3, station-15)
+nsubj(suburb-19, station-15)
+cop(suburb-19, is-17)
+det(suburb-19, a-18)
+rcmod(station-15, suburb-19)
+prep_of(suburb-19, Melbourne-21)
+partmod(Melbourne-21, located-22)
+prep_in(located-22, east-24)
+prep_of(east-24, it-26)
 
