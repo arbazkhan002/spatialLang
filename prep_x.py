@@ -111,7 +111,7 @@ def query_triplet(t,rel=None,gov=None,dep=None):
 #~ Finds all queries where rel is contained in the dependency relation. e.g finds prep_far_from, prep_away_from, if provided prep_form
 def query_triplet_advanced(t,rel=None,gov=None,dep=None):
 	def condition_true(item_l,item_m):
-		if (item_l in item_m) or (item_m in item_l) or exceptions(item_l,item_m) or exceptions(item_m,item_l):
+		if (item_l.lower() in item_m.lower()) or (item_m.lower() in item_l.lower()) or exceptions(item_l,item_m) or exceptions(item_m,item_l):
 			return True
 		else:
 			return False	
@@ -128,6 +128,7 @@ def query_triplet_advanced(t,rel=None,gov=None,dep=None):
 	def exceptions(item_l,item_m):
 		if item_l==None or item_m==None:
 			return False
+		# to handle exceptions e.g. prep_from and prep_far_from 
 		if (item_l.startswith("prep_") and item_m.startswith("prep_")):
 			if item_l.split("_")[-1]==item_m.split("_")[-1]:
 				return True
@@ -268,10 +269,29 @@ def output_parser(f):
 					
 	print count_le					
 
+#~ Get the direct object
+def get_dobj(raw_triples, raw_gov):
+	subjects = []
+
+	# for use in directional dle	
+	#for arg in DIRECT_OBJECT:
+	#	subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
+
+	if len(subjects)>=1:
+		#~ print "verb:",raw_gov,
+		#~ print  "subjects:",subjects	
+		return " ".join(find_modifiers(raw_triples,subjects[0][0][DEP_POS]))
+		#~ raise MyError("more than one subject to a verb!")
+
+	else:
+		return ""
+
+	
 #~ Get the nominal subject (nsubj, nsubjpass) of a verb in the dependency titles 
 def get_nsubject(raw_triples, raw_gov):
 	subjects = []
 
+	# for use in directional dle
 	for arg in DIRECT_OBJECT:
 		subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
 	
@@ -354,7 +374,8 @@ def unraw(raw_word):
 #~ the order of occurrence in the sentence
 """ ASSUMPTION : Finds the MODIFIERS from the triplets where it stays in the gov position """
 def find_modifiers (raw_triples, raw_gov):
-	def find_modifiers_aux(raw_triples, raw_gov):		
+	def find_modifiers_aux(raw_triples, raw_gov):	
+		#~ print "in modifiers " ,raw_gov
 		gov = unraw(raw_gov)
 		gov_pos = find_position_in_raw_word(raw_gov)
 		#~ Find all the triplets where our word occurs at gov position
@@ -384,6 +405,7 @@ def find_modifiers (raw_triples, raw_gov):
 		if len(mods)>1:
 			for index,[pos, mod] in enumerate(mods):
 				if mod!=gov:
+					#~ print "recursin ",mod, pos
 					modlist=find_modifiers_aux(raw_triples,mod+"-"+str(pos))
 					try:
 						sorted_mods.extend(modlist)
@@ -396,11 +418,12 @@ def find_modifiers (raw_triples, raw_gov):
 		sorted_mods.sort()
 				
 		return sorted_mods
-	#~ print "for ",raw_gov
+	#~ print "for ",raw_gov, (find_modifiers_aux(raw_triples,raw_gov)), listGet(1)((find_modifiers_aux(raw_triples,raw_gov))[0])
 	return map(listGet(1),find_modifiers_aux(raw_triples,raw_gov))
 
 #~ Give 6 from 'house-6' or 1 from 't-intersection-1'
 def find_position_in_raw_word(raw_word):
+	#~ print "raw-word",raw_word
 	reverse_ind = raw_word[::-1].find("-")
 	ind = len(raw_word)-reverse_ind-1
 	word_pos=raw_word[ind+1:]

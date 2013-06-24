@@ -1,0 +1,274 @@
+I at a 3 stories town house
+Chetwynd Place
+The house in a small alley
+a small alley behind a row of town house
+The house along Chetwynd Street
+The house near the corner
+the corner between Chetwynd Street and Queensberry Street
+a construction site
+a construction site in the alley
+the head of the alley
+I on the Docklands esplanade
+the Docklands esplanade in  6 story building
+La Trobe Street
+La Trobe Street past Etihad Stadium turn
+the second building
+Swan St Optometrist in Docker Street
+7o meters from The Tobruk Avenue end of the Bell St Mall
+7o meters in West Heidelberg
+my apartment in the big block of flats
+flats on the corner of Park Street and Kings Way
+You on Napier Street
+Lee Street
+Flemington
+I in my house
+my house
+the street
+an arch
+roses at the gate and the house
+Melbourne central office towers near Melbourne Central shopping center
+Melbourne
+Its just down from the intersection of Elizabeth and Latrobe
+the Harley shop on Elizabeth st
+the Harley shop on Elizabeth st
+I in apartment 22 of the Byfass apartment
+I in 8 Trenerry Crescent
+8 Trenerry Crescent in Abbotsford
+the last street
+the last street on  the north side of Johnston St
+the Yarra river
+Flemington
+a three storey red brick building
+####### error in dictionaries. Felix's word: 'St'
+office at  Research Institute
+1
+10
+I in the Baillieu library
+the Baillieu library in the University of Melbourne
+the Chinese sculpture garden and the entrance of  Melbourne
+Carlton\/Parkville in the city of Melbourne
+This between Royal Pde & Swanston Street
+####### error in dictionaries. Felix's word: 'St'
+College Crescent
+the Chinese sculpture garden and the entrance of  Melbourne
+the library in the Percy Baxter Collaborative Learning Centre siting
+I in my chair
+1
+I on high street
+beauty park
+a lake
+constant construction
+constant construction at night
+The view towards the beach
+I at a private residence
+a private residence on  the western side of Barrington Avenue
+Barrington Avenue in Kew
+Kew approximately halfway along the street
+/----------------- Assertion Error ---------------------
+startswith  halfway-19 CD [['prep_along', 'halfway-19', 'street-22'], 15]
+------------------------------------------------------/
+the street
+the lobby of the University House
+you in the room
+front of the state library
+the one just of the entrance
+the Babel building on the University of Melbourne Parkville campus
+Melbourne
+my office
+the south side of the building
+the landmark building at the end of Collins Street
+behind then downstairs below street level
+three hundred meters from auburn train station
+station in second floor
+second floor on an five floor apprtment
+three hundred meters in Gueens Ave
+incide of Hawthorn suburb district
+three hundred meters from auburn train station
+station in second floor
+second floor on an five floor apprtment
+three hundred meters in Gueens Ave
+incide of Hawthorn suburb district
+three hundred meters from auburn train station
+station in second floor
+second floor on an five floor apprtment
+three hundred meters in Gueens Ave
+incide of Hawthorn suburb district
+three hundred meters from auburn train station
+station in second floor
+second floor on an five floor apprtment
+three hundred meters in Gueens Ave
+incide of Hawthorn suburb district
+kilda of the Park Regis hotel
+the Park Regis hotel on St kilda rd
+you into the city
+a semi circular driveway
+kilda of the Park Regis hotel
+the Park Regis hotel on St kilda rd
+you into the city
+a semi circular driveway
+kilda of the Park Regis hotel
+the Park Regis hotel on St kilda rd
+you into the city
+a semi circular driveway
+itself other of Safeway and big w
+itself without individual character
+a glass roof
+I in an appartment
+I just 3 minustes from the Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+Melbourne
+Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+Melbourne
+Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+Melbourne
+Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+Melbourne
+Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+Melbourne
+Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+Melbourne
+Auburn train station
+I in my office
+Spring St
+my office at  Melbourne
+I in my office
+my office
+I in my office
+spring near the corner
+spring near the corner of Lonsdale St
+I at the Carousel restaurant
+Its right not on Albert Park lake
+Its right not of the lake
+a really nice restaurant on Victoria street
+Melbourne
+2nd floor of an apartment
+Auburn train station
+Melbourne
+I in the second floor of university of Melbourne
+I to downtown
+the north of Grattan street
+1
+a restaurant just after prahran market
+you when from chapel street
+Diner in parahn
+from st
+the corner of walnut st of  bewdley st
+ormond vic
+1 bewdley st on the corner of walnut st
+1 bewdley st behind mckinnon secondary college
+1 bewdley st opposite the back entrance
+bewdley st opposite  the back entrance to the sports oval
+st kilda road melbourne two buildings east of the police headquarters
+i in st kilda road
+1
+the royce hotel
+the synagogue and fawkner park
+a microcosm of this strange little town
+i in australia
+i in australia
+i at the corner of flinders st and st kilda rd
+flinders st station
+jacksons and st pauls cathedral
+i in my office
+i in my office
+i at the united faculty of theology
+melbourne general cemetery main gate
+my office
+i in my office
+1
+1k north of camberwell station
+melbourne 1k north near the t junction of barkers rd and burke rd
+harcourt st
+10k east just off harcourt st. i in an office
+an office on the eighth floor
+i through my glass door
+i across the university campus
+i to the redmond barry building
+i on a bench
+a public building
+a busy road
+the neaby building
+a council building
+lots of people
+people from the building
+i in a leafy street
+a beautiful tranquil area
+corner of como parade east and parkers road of  corner of como parade east and parkers road
+ith a. corner in the library building
+ith a. corner to the bee shop
+the border between  industrial zone
+1
+####### error in dictionaries. Felix's word: '1'
+the street
+1
+fence and a double carport
+a double carport in the driveway
+i on the grange estate
+the grange estate on the eastern side of jacksons hill
+the precincts of the township of sunbury
+/----------------- Assertion Error ---------------------
+startswith  footscray-5 JJ [['prep_at', 'footscray-5', 'st-9'], 7]
+------------------------------------------------------/
+pitt st
+a street
+1
+10
+####### error in dictionaries. Felix's word: '1'
+about walk from tottenham station
+my office
+corner at the university of melbourne
+the edge of town
+i across the paddock
+####### error in dictionaries. Felix's word: 'drive'
+nicolas crt
+bunyip crt
+/----------------- Assertion Error ---------------------
+startswith  at-4 IN [['prep_in', 'at-4', 'house-9'], 7]
+------------------------------------------------------/
+the sixth house from the end of princess st
+the street
+the street in richmond
+three kilometres directly east of the city
+the third turn
+federation square on  the street
+you to church st
+you back north to the corner of bridge rd and turn
+this road
+you at federation square
+left at the corner of flinders st and swanston st
+97
+the ainslie shops head with  the third house
+the left before the roundabout
+goulburn river town of shepparton of  goulburn river town of shepparton
+i in st kilda road
+an amusement park
+luna park
+neerim rd in carnegie
+the st called neerim rd from  two train stations of carnegie and murrumbeena
+a large expanse of lawn of  a large expanse of lawn
+the merri river
+/----------- Warning ----------- 
+position  1'  for  close-1'
+-------------------------------/ 
+the edge of the spa country

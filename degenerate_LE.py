@@ -11,6 +11,7 @@ def extract_degenerate_LEs(f=open("/home/arbazk/MTT/UniMelb/Code/Dependencies ex
 			le=""
 			les=[]		
 		else:
+			#~ print f.read()
 			last=f_l.split()[-1]
 			pos=f_l.split()[1]
 			chunk=f_l.split()[11]

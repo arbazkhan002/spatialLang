@@ -1,0 +1,319 @@
+I at a 3 stories town house
+Chetwynd Place
+a row of  The house
+The house in a small alley
+a small alley behind a row of town house
+The house along Chetwynd Street
+The house near the corner
+the corner between Chetwynd Street and Queensberry Street
+a construction site
+a construction site in the alley
+the 3 rd house  from  the head of the alley
+I on the Docklands esplanade
+the Docklands esplanade in  6 story building
+La Trobe Street
+La Trobe Street past Etihad Stadium turn
+the second building
+seven meters In Swan St Optometrist
+Swan St Optometrist in Docker Street
+7o meters on Morotai Parade
+7o meters from The Tobruk Avenue end of the Bell St Mall
+7o meters in West Heidelberg
+my apartment in the big block of flats
+flats on the corner of Park Street and Kings Way
+my flat on Napier Street
+Lee Street At 9
+Lee Street
+Flemington
+I in my house
+I  in  my house
+the street
+an arch
+roses at the gate and the house
+fronted Victorian house
+Melbourne central office towers
+Melbourne central office towers near Melbourne Central shopping center
+Melbourne
+Its on Elizabeth st
+Its just down from the intersection of Elizabeth and Latrobe
+Its on Elizabeth st
+the Harley shop on Elizabeth st
+the Harley shop on Elizabeth st
+I in apartment 22 of the Byfass apartment
+I in 8 Trenerry Crescent
+8 Trenerry Crescent in Abbotsford
+the last street
+the last street on  the north side of Johnston St
+the Yarra river
+Flemington
+The Byfass building
+a three storey red brick building
+####### error in dictionaries. Felix's word: 'St'
+100 metres  at  Research Institute
+1
+10
+I in the Baillieu library
+the Baillieu library in the University of Melbourne
+the University of  Melbourne
+Carlton\/Parkville in the city of Melbourne
+This between Royal Pde & Swanston Street
+####### error in dictionaries. Felix's word: 'St'
+This  between  College Crescent
+the city of  Melbourne
+the library in the Percy Baxter Collaborative Learning Centre siting
+I in my chair
+1
+I on high street
+beauty park
+This park
+a lake
+constant construction
+all residents at night
+The view towards the beach
+I at a private residence
+a private residence  on  the western side of Barrington Avenue
+Barrington Avenue in Kew
+approximately halfway along the street
+/----------------- Assertion Error Below ---------------------
+startswith  halfway-19 CD [['prep_along', 'halfway-19', 'street-22'], 15]
+------------------------------------------------------/
+approximately halfway  along  the street
+I  in  the lobby of the University House
+me in the room
+in  front of the state library
+the one just of the entrance
+the Babel building on the University of Melbourne Parkville campus
+Melbourne
+my office
+I  on  the south side of the building
+hard In the Treasury Theatre
+the landmark building at the end of Collins Street
+behind then downstairs below street level
+station from auburn train station
+station in second floor
+second floor on an five floor apprtment
+station in Gueens Ave
+incide of Hawthorn suburb district
+station from auburn train station
+station in second floor
+second floor on an five floor apprtment
+station in Gueens Ave
+incide of Hawthorn suburb district
+station from auburn train station
+station in second floor
+second floor on an five floor apprtment
+station in Gueens Ave
+incide of Hawthorn suburb district
+station from auburn train station
+station in second floor
+second floor on an five floor apprtment
+station in Gueens Ave
+incide of Hawthorn suburb district
+kilda of the Park Regis hotel
+the Park Regis hotel on St kilda rd
+you into the city
+a semi circular driveway
+kilda of the Park Regis hotel
+the Park Regis hotel on St kilda rd
+you into the city
+a semi circular driveway
+kilda of the Park Regis hotel
+the Park Regis hotel on St kilda rd
+you into the city
+a semi circular driveway
+One of these places other of Safeway and big w
+One of these places without individual character
+a glass roof
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+a suburb of  Melbourne
+I  far from  Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+a suburb of  Melbourne
+I  far from  Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+a suburb of  Melbourne
+I  far from  Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+a suburb of  Melbourne
+I  far from  Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+a suburb of  Melbourne
+I  far from  Auburn train station
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+I in an appartment
+I just 3 minustes from the Auburn train station
+a suburb of Melbourne
+a suburb of  Melbourne
+I  far from  Auburn train station
+I in my office
+Spring St
+my office at  Melbourne
+1
+I in my office
+I  in  my office
+I in my office
+spring near the corner
+Its between just on spring
+spring near the corner of Lonsdale St
+Its between just to Parliament Station
+I at the Carousel restaurant
+Its right not on Albert Park lake
+Its right not of the lake
+a really nice restaurant on Victoria street
+a really nice restaurant on  a street
+Not from the train station
+Not to the south
+a suburb of Melbourne
+a suburb of Melbourne
+a suburb of  Melbourne
+I  in  2nd floor of an apartment
+Auburn train station
+university of  Melbourne
+I in the second floor of university of Melbourne
+I to downtown
+in  the north of Grattan street
+1
+a restaurant just after prahran market
+you when from chapel street
+Diner in parahn
+from st
+1
+the corner of  bewdley st
+ormond vic
+vic on the corner of walnut st
+vic behind mckinnon secondary college
+vic opposite the back entrance
+ormond vic  opposite  the back entrance to the sports oval
+st kilda road melbourne two buildings east of the police headquarters
+i in st kilda road
+1
+the royce hotel
+the synagogue and fawkner park
+a microcosm of this strange little town
+i in australia
+i in australia
+i at the corner of flinders st and st kilda rd
+flinders st station
+on  jacksons and st pauls cathedral
+i in my office
+i in my office
+i at the united faculty of theology
+melbourne general cemetery main gate
+i  in  my office
+i in my office
+1
+10
+1k north of camberwell station
+melbourne 1k north of camberwell station near the t junction of barkers rd and burke rd
+harcourt st
+10k east just off harcourt st. i in an office
+an office on the eighth floor
+my office
+i through my glass door
+i across the university campus
+i to the redmond barry building
+i on a bench
+a public building
+a busy road
+the neaby building
+a council building
+lots of people
+lots of  people from the building
+i in a leafy street
+a beautiful tranquil area
+corner of como parade east and parkers road
+ith a. corner of corner of como parade east and parkers road in the library building
+ith a. corner of corner of como parade east and parkers road to the bee shop
+the border between  industrial zone
+1
+my house
+####### error in dictionaries. Felix's word: '1'
+the street
+1
+fence and a double carport
+a double carport in the driveway
+i on the grange estate
+the grange estate on the eastern side of jacksons hill
+i  within  the precincts of the township of sunbury
+1
+/----------------- Assertion Error Below ---------------------
+startswith  footscray-5 JJ [['prep_at', 'footscray-5', 'st-9'], 7]
+------------------------------------------------------/
+west footscray  at  pitt st
+a street
+1
+10
+####### error in dictionaries. Felix's word: '1'
+about walk from tottenham station
+corner of tin alley in my office
+corner of tin alley in my office
+corner of tin alley  in  my office
+corner of the second floor of the baldwin spencer building corner of tin alley and union rd in my office
+corner of the second floor of the baldwin spencer building corner of tin alley and union rd at the university of melbourne
+i  on  the edge of town
+i across the paddock
+####### error in dictionaries. Felix's word: 'drive'
+####### error in dictionaries. Felix's word: 'in'
+the address
+nicolas crt
+bunyip crt
+at home in the sixth house
+/----------------- Assertion Error Below ---------------------
+startswith  at-4 IN [['prep_in', 'at-4', 'house-9'], 7]
+------------------------------------------------------/
+home  in  the sixth house from the end of princess st
+the street
+the street in richmond
+three kilometres directly east of the city
+east south of the corner of bridge rd and turn off church st south of bridge rd and princess st
+the third turn
+federation square on  the street
+you to church st
+you back north to the corner of bridge rd and turn
+this road
+you at federation square
+left at the corner of flinders st and swanston st
+97
+250m  with  the third house
+the left before the roundabout
+goulburn river town of shepparton
+i in st kilda road
+an amusement park
+luna park
+neerim rd in the st called neerim rd
+neerim rd in carnegie
+the st called neerim rd  from  two train stations of carnegie and murrumbeena
+a large expanse of lawn
+the merri river
+the town of trentham
+/----------- Warning ----------- 
+position  1'  for  close-1'
+-------------------------------/ 
+close on  the edge of the spa country
