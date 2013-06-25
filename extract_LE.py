@@ -8,7 +8,7 @@ inp_file="../campus_data/campusdesc4.in"
 #~ result_file=open("result_felix_test.txt")
 result_file=open("../campus_data/result_4.txt")
 
-ABLAPTIVES = ["from","of","to"]
+ABLAPTIVES = ["from","of","to"]#,"along"]
 
 #~ Get words of a le. Returns them with ":"  between them
 def le_word_get(le):
@@ -49,22 +49,25 @@ def get_subject(pos_dict, raw_triples, prep, raw_dep):
 		pass
 		#~ print "************",results,prep,raw_dep,raw_triples
 	#~ print results
-	if len(results)>=1:
-		#~ If pos tag of the 1st result's dep gives a noun, we end the search
-		word=results[0][0][1][:results[0][0][1].rfind("-")]
-		#~ print "******* ", results[0][0][1][:results[0][0][1].rfind("-")], pos_dict[word]
-		
-		if not pos_dict[word].startswith("V"):
-			return results[0][0][1] 
+	subject=[]
+	if len(results)>=1:	
+		for result in results:
+			#~ If pos tag of the 1st result's dep gives a noun, we end the search
+			word=result[0][1][:result[0][1].rfind("-")]
+			#~ print "******* ", results[0][0][1][:results[0][0][1].rfind("-")], pos_dict[word]
 			
-		nsubject= get_nsubject(raw_triples, results[0][0][1])					
-		#~ print results	 
-		return nsubject 
-	if len(results)>1:
-		#~ print results
-		raise MyError("too many subjects for the same prep and dep")
-	else:
-		return ""	
+			if not pos_dict[word].startswith("V"):
+				subject.append(result[0][1])
+				continue
+				
+			nsubject= get_nsubject(raw_triples, result[0][1])					
+			#~ print results	 
+			if len(nsubject)>0:
+				subject.extend(nsubject)
+		if len(subject)>0:
+			return subject	
+	
+	return [""]	
 
 
 
@@ -253,8 +256,9 @@ def linked_LE(raw_triples,pos_dict,subj):
 				assert(pos_dict[unraw(res[0][1])].startswith("V"))
 				
 				#~ print "pos:",pos_dict[unraw(res[0][1])],res[0][1],res
-				
-				ro1 = get_subject(pos_dict, raw_triples,sr.rsplit("_",2)[1],res[0][2])
+
+				"""For now only one subject tackled"""
+				ro1 = get_subject(pos_dict, raw_triples,sr.rsplit("_",2)[1],res[0][2])[0]
 							
 				#~ If sr is ablaptive, extend it
 				if sr.rsplit(("_"),2)[1] in ABLAPTIVES:
@@ -451,49 +455,51 @@ if __name__=="__main__":
 								word_loc=get_word_location(loc_dict,words,words_index,le_words)
 								
 								
-								subj = get_subject(pos_dict,raw_triples, prep, words+"-"+str(word_loc))
+								subjects = get_subject(pos_dict,raw_triples, prep, words+"-"+str(word_loc))
 								
-								#~ extend prep from dependencies
-								prep_ext=prep_in_dependencies(raw_triples,prep,subj, words+"-"+str(word_loc))
-								#~ print "In LE",le,"subj of prep:", prep, " and dep:",words, " is ", subj
-								
-								#~ print words, word_loc, le_words
-								#~ print subj
-								if subj!="":
-									#~ print "******",search_in_desc(desc,subj)
-									subj = " ".join(find_modifiers(raw_triples,subj))
-									#~ locE,spatialr= linked_LE(raw_triples,pos_dict,subj)
-									#~ print "LETS FANCY A LINKED_LE",locE,spatialr
-									
-									locE,spatialr= linked_dir_LE(raw_triples,pos_dict,subj,words)
-									if locE!="" and spatialr!="":
-										subj += " " + " ".join(spatialr.split("_")[1:]) + " " + locE  
-									#~ print "LETS FANCY A LINKED_DIR_LE",locE,spatialr,subj
-									le_duet=words_of_LE(le)
-									le_duet[0]=prep_ext
-									#~ print le_duet,words
-									
-									if prep in ABLAPTIVES:
-			
-												
-										#~ Get the modifiers of spatial relation by using the verb's modifiers
-										extras = extend_ablaptives(raw_triples,words+"-"+str(word_loc))
-										#~ print extras,":#######"
+								if len(filter(lambda x: x!="", subjects))>0:		
+									for subj in subjects:
+										#~ extend prep from dependencies
+										prep_ext=prep_in_dependencies(raw_triples,prep,subj, words+"-"+str(word_loc))
+										#~ print "In LE",le,"subj of prep:", prep, " and dep:",words, " is ", subj
+										
+										#~ print words, word_loc, le_words
+										#~ print repr(subj)
+										if subj!="":
+											#~ print "******",search_in_desc(desc,subj)
+											subj = " ".join(find_modifiers(raw_triples,subj))
+											#~ locE,spatialr= linked_LE(raw_triples,pos_dict,subj)
+											#~ print "LETS FANCY A LINKED_LE",locE,spatialr
+											
+											locE,spatialr= linked_dir_LE(raw_triples,pos_dict,subj,words)
+											if locE!="" and spatialr!="":
+												subj += " " + " ".join(spatialr.split("_")[1:]) + " " + locE  
+											#~ print "LETS FANCY A LINKED_DIR_LE",locE,spatialr,subj
+											le_duet=words_of_LE(le)
+											le_duet[0]=prep_ext
+											#~ print le_duet,words
+											
+											if prep in ABLAPTIVES:
+					
+														
+												#~ Get the modifiers of spatial relation by using the verb's modifiers
+												extras = extend_ablaptives(raw_triples,words+"-"+str(word_loc))
+												#~ print extras,":#######"
 
-										le_duet[0]=le_duet[0] if extras=="" else extras+ " " +le_duet[0]									
-										
-										#find prep attaching to the subject
-										
-										locE,spatialr= linked_LE(raw_triples,pos_dict,subj)
-										#~ print "linked locativeExprsns (locE,sr) to ", subj ," on dep position ",(locE,spatialr)
-										
-										#~ print "Gorsdf ",locE, spatialr
-										if locE!="":
-											print locE + " ", 
-										if spatialr!="":
-											print spatialr + " ",
-									#~ print "HERE"	
-									print subj," ".join(le_duet)
+												le_duet[0]=le_duet[0] if extras=="" else extras+ " " +le_duet[0]									
+												
+												#find prep attaching to the subject
+												
+												locE,spatialr= linked_LE(raw_triples,pos_dict,subj)
+												#~ print "linked locativeExprsns (locE,sr) to ", subj ," on dep position ",(locE,spatialr)
+												
+												#~ print "Gorsdf ",locE, spatialr
+												if locE!="":
+													print locE + " ", 
+												if spatialr!="":
+													print spatialr + " ",
+											#~ print "HERE"	
+											print subj," ".join(le_duet)									
 									break
 							#~ else:
 							except KeyError as e:

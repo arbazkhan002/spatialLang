@@ -298,18 +298,20 @@ def get_nsubject(raw_triples, raw_gov):
 	for arg in SUBJECT_ARGUMENTS:
 		subjects.extend(query_triplet(raw_triples, arg, raw_gov, None))
 	
-	
-	if len(subjects)>1:
-		#~ print "verb:",raw_gov,
-		#~ print  "subjects:",subjects	
-		return subjects[0][0][DEP_POS]
-		#~ raise MyError("more than one subject to a verb!")
-	
-	elif len(subjects)==1:
-		#~ print subjects
-		[rel_r,gov_r,dep_r],tindex = subjects[0]
-		raw_nn = raw_triples[tindex][DEP_POS]
-		return raw_nn
+	retsubj=[]
+	if len(subjects)>=1:
+		for subject in subjects:
+			#~ print "verb:",raw_gov,
+			#~ print  "subjects:",subjects	
+			retsubj.append(subject[0][DEP_POS])
+			#~ raise MyError("more than one subject to a verb!")
+		#~ 
+		#~ elif len(subjects)==1:
+			#print subjects
+			#~ [rel_r,gov_r,dep_r],tindex = subject[0]
+			#~ raw_nn = raw_triples[tindex][DEP_POS]
+			#~ return raw_nn
+		return retsubj	
 	else:
 		#~ at the dependent position no subject could be found
 		#~ the subject of a verb can also be the noun it is modifying.
@@ -321,10 +323,13 @@ def get_nsubject(raw_triples, raw_gov):
 		
 		for item in subjects:
 			subj=item[0][GOV_POS]
-			return subj
+			retsubj.append(subj)
 		
-		# "***subject of the verb couldn't be found***",
-		return ""	
+		if len(retsubj)>0:
+			return retsubj
+		else:	
+			# "***subject of the verb couldn't be found***",
+			return []	
 
 	
 
