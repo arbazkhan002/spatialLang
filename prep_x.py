@@ -435,9 +435,9 @@ def find_position_in_raw_word(raw_word):
 	try:
 		return int(word_pos)
 	except ValueError:
-		print "/----------- Warning ----------- "  
-		print "position ", word_pos," for ", raw_word
-		print "-------------------------------/ "  
+		#print "/----------- Warning ----------- "  
+		#print "position ", word_pos," for ", raw_word
+		#print "-------------------------------/ "  
 		return int(word_pos[:-1])					#handles the apostrophe in word position		
 
 def is_noun(word):

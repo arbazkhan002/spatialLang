@@ -1,23 +1,32 @@
-'''#THIS PART OF THE CODE GIVES MORE ACCURACY AND MORE CLEANER BUT LESS RECALL
+#THIS PART OF THE CODE GIVES MORE ACCURACY AND MORE CLEANER BUT LESS RECALL
 from degenerate_LE import extract_degenerate_LEs
 from prep_x import *
 import sys
 #~ inp_file = "test.in"
 #~ inp_file = "/home/arbazk/MTT/UniMelb/Code/Dependencies exploitation/newdata/campus1.in"
 #~ inp_file = "../above20desc.in"
-inp_file="../campus_data/campusdesc4.in"
-#~ result_file=None
+#~ inp_file="../campus_data/campusdesc4.in"
 
-#For tests
-#~ result_file=open("result_felix_test.txt")
+if len(sys.argv)>1:
+	inp_file=sys.argv[1]
+	result_file=open(sys.argv[2])
 
-#Real data
-result_file=open("../campus_data/result_4.txt")
+else:
+	inp_file="/home/arbazk/MTT/UniMelb/Code/Dependencies exploitation/test_cases/campus4.in"
 
-#Without manual annotations
-#result_file=open("/home/arbazk/MTT/UniMelb/Code/Dependencies exploitation/campus_results/Without manual annotations/results/result_4")
+	#~ result_file=None
 
-#result_file=open("/home/arbazk/MTT/UniMelb/test/Felix_last/trunk/bin/result0.txt")
+	#For tests
+	#~ result_file=open("result_felix_test.txt")
+
+	#Real data
+	#~ result_file=open("../campus_data/result_4.txt")
+	result_file=open("/home/arbazk/MTT/UniMelb/Code/Dependencies exploitation/test_cases/result0.txt")
+
+	#Without manual annotations
+	#result_file=open("/home/arbazk/MTT/UniMelb/Code/Dependencies exploitation/campus_results/Without manual annotations/results/result_4")
+
+	#result_file=open("/home/arbazk/MTT/UniMelb/test/Felix_last/trunk/bin/result0.txt")
 
 #Prepositions of direction
 ABLAPTIVES = ["from","of","to","along","past","towards"]
@@ -50,7 +59,7 @@ def prep_in_dependencies(raw_triples, prep, raw_gov, raw_dep):
 			#~ print "prep_ext",prep_ext
 			return prep_ext
 	except AssertionError:
-		print "Same 3s in more than one triplet",results
+		#print "Same 3s in more than one triplet",results
 		return prep		
 	
 #~ Find the subject of the dependent in the dependency prep_"prep" (e.g. prep_at)
@@ -1048,4 +1057,4 @@ if __name__=="__main__":
 			#~ break
 		#~ break		
 	#~ pass
-
+'''
